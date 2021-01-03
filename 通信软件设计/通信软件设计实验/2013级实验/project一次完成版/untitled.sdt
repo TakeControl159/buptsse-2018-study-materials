@@ -1,0 +1,59 @@
+SDT-SYSTEM-4.3
+[DRIVES]
+[SOURCE-TARGET-DIRECTORY]
+SourceDirectory=E:\TeleLogic\project\
+TargetDirectory=E:\TeleLogic\project\
+[LINKS]
+Endpoints=""
+File=untitled.sli
+[DIAGRAMS]
+0 23 "Analysis Model" %unconnected% 0 0 0 ""
+0 23 "Used Files" %unconnected% 0 0 0 ""
+0 23 "SDL System Structure" %unconnected% 0 0 0 ""
+0 23 "TTCN Test Specification" %unconnected% 0 0 0 ""
+0 1 GoBackN goback.ssy 0 1167025611 GoBackN ""
+1 2 DataLink2 p2.sbk 0 1167025653 p2 ""
+2 5 p2 p2.spr 0 1167025701 p21 ""
+1 2 DataLink1 p1 0 1167025570 DataLink1 ""
+2 5 p1 p1.spr 0 1167027639 p1 ""
+[VIEWOPTIONS]
+ShowDirectories=True
+ShowLongMenus=True
+[ANALYSEROPTIONS]
+ASN1KeywordFile=False
+ASN1Parameter=False
+CoderBufferInSDL=Octet-String
+Filter=False
+InstanceFile=False
+[H2SDLOPTIONS]
+AllWarnings=False
+Preprocessor=""
+PreprocessorOptions=""
+TranslateEnum=True
+UseFullPath=True
+UsePreprocessorOptions=False
+[STATEMATRIXOPTIONS]
+[INDEXOPTIONS]
+ShowSelectedTypes=True
+ShowSelectedUses=True
+ShowSelectedDiagrams=True
+FilterTypes=
+FilterUses=
+FilterDiagrams=
+NameFirst=True
+IndexAppearance=
+[PACKAGEGENERATOROPTIONS]
+DuplicateFile=
+[MAKEOPTIONS]
+CCompilerDriver=False
+[PRINTOPTIONS]
+DestinationFormat=PSFile
+FirstPageNo=1
+MarginLeft=100
+MarginLower=250
+MarginRight=100
+MarginUpper=420
+PrinterFile=""
+PrintFrom=0
+PrintTo=0
+PrintToFile=False

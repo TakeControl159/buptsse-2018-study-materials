@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="sys" defaultColorsNeedFixing="FALSE" name="Sys_one_bit_sliding_window" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 1" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB4" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="242" yCenter="209" fixedDimensions="FALSE" width="352" height="330" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>
+/* 数据(包)类型 */
+syntype packet = charstring
+endsyntype;
+
+
+/* 数据帧类型 */
+newtype frame struct
+  seq   seq_nr;
+  ack   seq_nr;
+  info  packet;
+  check integer;
+endnewtype;
+
+
+/* 最大帧编号 */
+synonym MAX_SEQ integer = 1;
+
+/* 序号类型 */
+syntype seq_nr = integer constants 0..MAX_SEQ
+endsyntype;
+</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlBlk" xCenter="275" yCenter="319" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>obsw_block</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlText" xCenter="198" yCenter="187" fixedDimensions="TRUE" width="220" height="176" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>SIGNAL
+  /* 向物理层发送数据帧 */
+  to_phy(frame),
+  /* 从物理层接受数据帧 */
+  from_phy(frame),
+  /* 向网络层发送数据包 */
+  to_net(packet),
+  /* 从网络层接受数据包 */
+  from_net(packet);
+</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK1" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>phy_data</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_phy]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.175483870968" endType="midarrow">
+<Text id="1">[to_phy]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-275"/>
+
+</Link>
+
+<Link linkId="LINK0" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>data_net</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_net]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.175483870968" endType="midarrow">
+<Text id="1">[to_net]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="275"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

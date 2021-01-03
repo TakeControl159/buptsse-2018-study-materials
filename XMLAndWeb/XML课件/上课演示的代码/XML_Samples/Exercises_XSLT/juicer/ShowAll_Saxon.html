@@ -1,0 +1,16 @@
+<HTML>
+    <HEAD>
+    </HEAD>
+    <BODY onload="window.setTimeout('document.body.innerHTML = document.xslControl.getHtmlText();',250);">
+ 	   <APPLET
+		 NAME = "xslControl"
+		 CODE = "net.sf.saxon.XSLTProcessorApplet.class"
+		 ARCHIVE = "saxon7.jar"
+		 WIDTH = "0"
+		 HEIGHT = "0">
+		 <PARAM NAME = "documentURL" value = "fitnesscenter.xml" />
+		 <PARAM NAME = "styleURL" value = "showall.xsl" />
+	   </APPLET>
+    </BODY>
+</HTML>
+<IFRAME  WIDTH=0 HEIGHT=0></IFRAME>

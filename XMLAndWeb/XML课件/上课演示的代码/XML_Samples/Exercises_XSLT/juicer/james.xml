@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root> 
+  <book_start/> 
+  <alpha> 
+     <details> 
+       <author>Tolkien</author> 
+       <title>Hobbit</title> 
+       <book_end/> 
+       <book_start/> 
+       <alpha> 
+         <details> 
+           <author>Jordan</author> 
+           <title>Wheel of Time</title> 
+           <book_end/> 
+         </details> 
+       </alpha> 
+     </details> 
+  </alpha> 
+</root>

@@ -1,0 +1,17 @@
+﻿  语法分析器.cpp
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(49): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(67): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(95): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(117): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(128): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(130): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(151): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(156): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(162): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(171): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(186): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(213): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\bys\source\repos\语法分析器\语法分析器\语法分析器.cpp(240): warning C4018: “<”: 有符号/无符号不匹配
+  语法分析器.vcxproj -> C:\Users\BYS\source\repos\语法分析器\Debug\语法分析器.exe

@@ -1,0 +1,1 @@
+/usr/local/bin/mpic++   -g   CMakeFiles/Moore.dir/main.cpp.o CMakeFiles/Moore.dir/Node.cpp.o CMakeFiles/Moore.dir/AdjacencyTable.cpp.o CMakeFiles/Moore.dir/Graph.cpp.o CMakeFiles/Moore.dir/Dijkstra.cpp.o CMakeFiles/Moore.dir/MPIBase.cpp.o CMakeFiles/Moore.dir/Moore.cpp.o  -o Moore 

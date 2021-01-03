@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/CPi.dir/main.cpp.o CMakeFiles/CPi.dir/AdjacencyTable.cpp.o CMakeFiles/CPi.dir/Node.cpp.o CMakeFiles/CPi.dir/Graph.cpp.o CMakeFiles/CPi.dir/Dijkstra.cpp.o  -o CPi 

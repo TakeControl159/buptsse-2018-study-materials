@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % boolean "(true | false) 'false'">
+<!-- top-level element, the address book
+is a list of entries -->
+<!ELEMENT address-book (entry+)>
+<!-- an entry is a name followed by
+addresses, phone numbers, etc. -->
+<!ELEMENT entry (name,address*,tel*,fax*,email*)>
+<!-- name is made of string, first name
+and last name. This is a very flexible
+model to accommodate exotic name -->
+<!ELEMENT name (#PCDATA | fname | lname)*>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!-- definition of the address structure
+if several addresses, the preferred
+attribute signals the “default” one -->
+<!ELEMENT address (street,state?,zip,locality,country,city)>
+<!ATTLIST address preferred (true | false) "false">
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT locality (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!-- phone, fax and email, same preferred
+attribute as address -->
+<!ELEMENT tel (#PCDATA)>
+<!ATTLIST tel preferred (true | false) "false">
+<!ELEMENT fax (#PCDATA)>
+<!ATTLIST fax preferred (true | false) "false">
+<!ELEMENT email EMPTY>
+<!ATTLIST email href CDATA #REQUIRED
+preferred (true | false) "false">

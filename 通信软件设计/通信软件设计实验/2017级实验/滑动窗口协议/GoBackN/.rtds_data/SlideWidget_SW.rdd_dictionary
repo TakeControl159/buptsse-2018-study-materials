@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="none" diagramType="sys">
+<Signal id="SIG1" name="to_nl">
+</Signal>
+<Signal id="SIG2" name="from_nl">
+</Signal>
+<Signal id="SIG3" name="to_pl">
+</Signal>
+<Signal id="SIG4" name="from_pl">
+</Signal>
+<Item id="ITEM1" type="system" name="SlideWidget_SW" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK5" isFrom="FALSE"/>
+<Connections>
+<Connection name="dlpl"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK4" isFrom="FALSE"/>
+<Connections>
+<Connection name="nldl"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="nldl" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
+<Channel name="dlpl" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW4"/>
+</Item>
+<Item id="ITEM10" type="type" name="SeqNo" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="TRUE" syntypeBaseTypeId="ITEM5">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="6,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM11" type="type" name="Frame" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="15,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM12" type="variable" name="ack" parentId="ITEM11" scope="none" variableTypeName="AckNo" variableTypeId="ITEM2" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="15,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM13" type="variable" name="info" parentId="ITEM11" scope="none" variableTypeName="Packet" variableTypeId="ITEM7" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="15,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM14" type="variable" name="kind" parentId="ITEM11" scope="none" variableTypeName="FrameKind" variableTypeId="ITEM3" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="15,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM15" type="variable" name="seq" parentId="ITEM11" scope="none" variableTypeName="SeqNo" variableTypeId="ITEM8" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="15,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM16" type="type" name="AckNo" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="TRUE" syntypeBaseTypeId="ITEM5">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="9,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM17" type="type" name="Packet" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="TRUE" syntypeBaseTypeId="ITEM6">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="12,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM18" type="variable" name="ack" parentId="ITEM1" scope="none" variableTypeName="FrameKind" variableTypeId="ITEM3" isSynonym="TRUE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="1,14"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM19" type="variable" name="nak" parentId="ITEM1" scope="none" variableTypeName="FrameKind" variableTypeId="ITEM3" isSynonym="TRUE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="1,18"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM2" type="type" name="AckNo" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM20" type="variable" name="MAX_SEQ" parentId="ITEM1" scope="none" variableTypeName="integer" variableTypeId="ITEM5" isSynonym="TRUE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="4,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM21" type="variable" name="data" parentId="ITEM1" scope="none" variableTypeName="FrameKind" variableTypeId="ITEM3" isSynonym="TRUE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="1,9"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM22" type="block" name="sw3_block" parentId="ITEM1" scope="none" minInstances="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK4" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK5" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM3" type="type" name="FrameKind" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="MAX_SEQ" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="type" name="integer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SourceFilePosition isDefine="FALSE" lineNumber="6" columnNumber="16"/>
+<SourceFilePosition isDefine="FALSE" lineNumber="9" columnNumber="14"/>
+</Item>
+<Item id="ITEM6" type="type" name="CHARSTRING" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<SourceFilePosition isDefine="FALSE" lineNumber="12" columnNumber="17"/>
+</Item>
+<Item id="ITEM7" type="type" name="Packet" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="type" name="SeqNo" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="type" name="FrameKind" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2" positions="0,8"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

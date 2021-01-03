@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?><jsr-results><result>not(//Member[@level != 'platinum' and @level != 'gold']) FAILED
+</result></jsr-results>

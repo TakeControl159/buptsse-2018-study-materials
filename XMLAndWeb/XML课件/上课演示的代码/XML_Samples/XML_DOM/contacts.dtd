@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT contacts (contact*)>
+<!ATTLIST contacts xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ATTLIST contacts xmlns:xsi CDATA #IMPLIED>
+
+<!ELEMENT contact (firstname,lastname)>
+<!ATTLIST contact title (MR|MS|MRS) "MS">
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+

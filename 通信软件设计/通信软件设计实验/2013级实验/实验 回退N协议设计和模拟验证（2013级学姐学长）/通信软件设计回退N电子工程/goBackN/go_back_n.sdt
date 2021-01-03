@@ -1,0 +1,62 @@
+SDT-SYSTEM-4.3
+[DRIVES]
+[SOURCE-TARGET-DIRECTORY]
+[LINKS]
+Endpoints=""
+File=untitled.sli
+[DIAGRAMS]
+0 16 GoBackN GoBackN.msc 0 1420100428 - ""
+0 16 OverBuffer OverBuffer.msc 0 1420101381 - ""
+0 16 OneFrame OneFrame.msc 0 1420098554 - ""
+0 16 AckLost AckLost.msc 0 1420098749 - ""
+0 1 GO_BACK_N GO_BACK_N.ssy 0 1420096515 GO_BACK_N ""
+1 2 OSISTACK OSISTACK.sbk 0 1420096526 OSISTACK ""
+2 5 DataLinkLayer1 DataLinkLayer.spr 0 1420097263 DataLinkLayer ""
+2 5 DataLinkLayer2 DataLinkLayer2.spr 0 1420097296 DataLinkLayer2 ""
+0 23 "Analysis Model" %unconnected% 0 0 0 ""
+0 23 "Used Files" %unconnected% 0 0 0 ""
+0 23 "SDL System Structure" %unconnected% 0 0 0 ""
+0 23 "TTCN Test Specification" %unconnected% 0 0 0 ""
+0 23 "Other Documents" %unconnected% 0 0 0 ""
+[VIEWOPTIONS]
+ShowDirectories=True
+ShowLongMenus=True
+[ANALYSEROPTIONS]
+ASN1KeywordFile=False
+ASN1Parameter=False
+CoderBufferInSDL=Octet-String
+Filter=False
+InstanceFile=False
+[H2SDLOPTIONS]
+AllWarnings=False
+Preprocessor=""
+PreprocessorOptions=""
+TranslateEnum=True
+UseFullPath=True
+UsePreprocessorOptions=False
+[STATEMATRIXOPTIONS]
+[INDEXOPTIONS]
+ShowSelectedTypes=True
+ShowSelectedUses=True
+ShowSelectedDiagrams=True
+FilterTypes=
+FilterUses=
+FilterDiagrams=
+NameFirst=True
+IndexAppearance=
+[PACKAGEGENERATOROPTIONS]
+DuplicateFile=
+[MAKEOPTIONS]
+CCompilerDriver=False
+Kernel=SCTAMDEBCOM
+[PRINTOPTIONS]
+DestinationFormat=PSFile
+FirstPageNo=1
+MarginLeft=100
+MarginLower=250
+MarginRight=100
+MarginUpper=420
+PrinterFile=""
+PrintFrom=0
+PrintTo=0
+PrintToFile=False

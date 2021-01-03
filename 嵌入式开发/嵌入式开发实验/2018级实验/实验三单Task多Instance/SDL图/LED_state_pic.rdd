@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<NonStateTransition top_left_coordinates="161 153">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="244 168" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM2" type="sdlTask" text="LED_state[1]:= 0
+OS_TMR* LED_timer[1];
+LED1_OFF;" outline_color="-" background_color="-" center_coordinates="244 226" dimensions="166 62" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM132" type="sdlInitTimer" text="set(10, tMsg)" outline_color="-" background_color="-" center_coordinates="244 289" dimensions="122 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM7" type="sdlState" text="TaskTimer" outline_color="-" background_color="-" center_coordinates="244 341" dimensions="82 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock top_left_coordinates="440 126">
+<SdlFSMSymbol identifier="SYM100" type="sdlState" text="TaskTimer" outline_color="-" background_color="-" center_coordinates="583 146" dimensions="82 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM101" type="sdlInputSig" text="tMsg" outline_color="-" background_color="-" center_coordinates="583 198" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM102" type="sdlDecision" text="LED_state[1] = 0" outline_color="-" background_color="-" center_coordinates="583 250" dimensions="132 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM103" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="583 302" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM114" type="sdlTask" text="LED_timer[1]-&gt;OSTmrPeriod := 10
+LED1_TOGGLE" outline_color="-" background_color="-" center_coordinates="583 358" dimensions="236 48" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM104" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="826 302" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM105" type="sdlDecision" text="LED_state[1] = 1" outline_color="-" background_color="-" center_coordinates="826 354" dimensions="132 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM106" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="826 406" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM126" type="sdlTask" text="LED_timer[1]-&gt;OSTmrPeriod := 5
+LED1_TOGGLE" outline_color="-" background_color="-" center_coordinates="826 462" dimensions="230 48" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM107" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="1017 406" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM108" type="sdlDecision" text="LED_state[1] = 2" outline_color="-" background_color="-" center_coordinates="1017 458" dimensions="132 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM109" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="1017 510" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM128" type="sdlTask" text="LED1_ON" outline_color="-" background_color="-" center_coordinates="1017 562" dimensions="68 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM110" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="1127 510" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM111" type="sdlDecision" text="LED_state[1] = 3" outline_color="-" background_color="-" center_coordinates="1127 562" dimensions="132 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM112" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="1127 614" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM129" type="sdlTask" text="LED1_OFF" outline_color="-" background_color="-" center_coordinates="1127 666" dimensions="76 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM113" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="1205 614" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM115" type="sdlDecision" text="key1_is_press" outline_color="-" background_color="-" center_coordinates="583 766" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM116" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="583 818" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM118" type="sdlTask" text="LED_state[1] = (LED_state[1] + 1) % 4;" outline_color="-" background_color="-" center_coordinates="583 870" dimensions="286 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM117" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="805 818" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM120" type="sdlDecision" text="key4_is_press" outline_color="-" background_color="-" center_coordinates="805 870" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM121" type="sdlAnswer" text="True" outline_color="-" background_color="-" center_coordinates="805 922" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM123" type="sdlTask" text="LED_state[1] := 0" outline_color="-" background_color="-" center_coordinates="805 974" dimensions="138 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM122" type="sdlAnswer" text="False" outline_color="-" background_color="-" center_coordinates="914 922" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM131" type="sdlInitTimer" text="set(OSTmrPeriod, tMsg)" outline_color="-" background_color="-" center_coordinates="583 1050" dimensions="186 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM125" type="sdlState" text="TaskTimer" outline_color="-" background_color="-" center_coordinates="583 1102" dimensions="82 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

@@ -1,0 +1,5 @@
+testProgram.c：被扫描的C语言文件
+lex_source.l：lex源程序
+由lex源程序生成的C语言文件.cpp：lex生成的C语言文件
+文件夹analyse：项目的完整工程文件
+lex词法分析器可执行文件.exe：直接双击可执行

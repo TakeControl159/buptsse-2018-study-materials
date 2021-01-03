@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<mydogs xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<mydog xlink:type="simple"
+  xlink:href="dogbreeds.xml#xpointer(id('Rottweiler'))">
+<!--
+  <mydog xlink:type="simple"
+  xlink:href="dogbreeds.xml#Rottweiler">
+  -->
+  <description xlink:type="simple"
+  xlink:href="http://myweb.com/mydogs/anton.gif">
+  Anton is my favorite dog. He has won a lot of.....
+  </description>
+</mydog>
+
+<mydog xlink:type="simple"
+  xlink:href="dogbreeds.xml#FCRetriever">
+  <description xlink:type="simple"
+  xlink:href="http://myweb.com/mydogs/pluto.gif">
+  Pluto is the sweetest dog on earth......
+  </description>
+</mydog>
+
+</mydogs>

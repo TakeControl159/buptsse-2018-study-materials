@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Moore"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/leeshun/CLionProjects/Moore/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/leeshun/CLionProjects/Moore/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/leeshun/CLionProjects/Moore/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Moore">
+				<Option output="/home/leeshun/CLionProjects/Moore/cmake-build-debug/Moore" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/leeshun/CLionProjects/Moore/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 Moore"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Moore/fast">
+				<Option output="/home/leeshun/CLionProjects/Moore/cmake-build-debug/Moore" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/leeshun/CLionProjects/Moore/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 Moore/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/leeshun/CLionProjects/Moore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/AdjacencyTable.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/AdjacencyTable.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Dijkstra.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Dijkstra.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Graph.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Graph.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/MPIBase.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/MPIBase.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Moore.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Moore.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Node.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/Node.h">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/main.cpp">
+			<Option target="Moore"/>
+		</Unit>
+		<Unit filename="/home/leeshun/CLionProjects/Moore/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

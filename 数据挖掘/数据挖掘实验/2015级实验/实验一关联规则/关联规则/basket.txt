@@ -1,0 +1,940 @@
+freshmeat	dairy	confectionery
+freshmeat	confectionery
+cannedveg	frozenmeal	beer	fish
+dairy	wine
+freshmeat	wine	fish
+fruitveg	softdrink
+beer
+fruitveg	frozenmeal
+fruitveg	fish
+fruitveg	freshmeat	dairy	cannedveg	wine	fish
+fruitveg	fish
+dairy	cannedmeat	frozenmeal	fish
+softdrink	fish
+fruitveg	dairy	softdrink	fish
+frozenmeal	beer	softdrink
+fruitveg	cannedveg	fish
+fish
+beer	fish
+fruitveg	cannedveg	wine	fish	confectionery
+frozenmeal	fish
+wine	confectionery
+fish
+fruitveg	freshmeat	dairy	cannedveg	cannedmeat	frozenmeal	beer	wine
+beer	confectionery
+fruitveg	dairy	frozenmeal	beer
+freshmeat	wine	confectionery
+freshmeat	wine	fish	confectionery
+cannedmeat
+frozenmeal	beer	wine	fish
+frozenmeal	wine
+cannedveg	cannedmeat	beer	wine
+fruitveg
+freshmeat	softdrink
+fruitveg
+freshmeat
+fish	confectionery
+wine	confectionery
+freshmeat	beer
+softdrink
+cannedveg	cannedmeat	frozenmeal	beer	wine	fish
+fruitveg	cannedmeat
+fruitveg	freshmeat
+wine
+fish
+frozenmeal	wine	confectionery
+wine	softdrink	confectionery
+frozenmeal
+frozenmeal
+fruitveg	beer	wine	fish
+freshmeat	wine	softdrink
+cannedveg	frozenmeal	beer	softdrink
+dairy	beer
+wine
+fruitveg
+fruitveg	cannedveg	beer	wine
+wine	fish	confectionery
+confectionery
+softdrink
+cannedveg	cannedmeat	softdrink	confectionery
+dairy	cannedmeat	fish
+wine	confectionery
+fruitveg	dairy	confectionery
+dairy	cannedveg	cannedmeat	frozenmeal	beer	softdrink
+cannedmeat	softdrink	fish
+beer
+fruitveg	dairy
+fruitveg	dairy	cannedveg
+fruitveg	freshmeat	dairy	wine	confectionery
+cannedmeat
+frozenmeal
+fruitveg	beer	wine	confectionery
+frozenmeal	fish
+frozenmeal	wine	confectionery
+frozenmeal
+fruitveg	cannedveg	beer	fish
+frozenmeal	fish
+cannedveg	frozenmeal	beer
+fruitveg
+fruitveg	fish
+cannedmeat	fish
+beer
+freshmeat	frozenmeal	fish
+frozenmeal	softdrink
+wine	softdrink	confectionery
+cannedveg	frozenmeal	beer	wine	fish
+fruitveg	wine	softdrink	fish
+freshmeat	beer
+fruitveg	freshmeat
+dairy	cannedveg	frozenmeal	beer	softdrink
+dairy	softdrink	confectionery
+cannedveg	frozenmeal	beer
+freshmeat	frozenmeal	softdrink
+cannedveg	wine
+fruitveg	cannedmeat	beer	confectionery
+fruitveg	dairy	cannedveg	fish
+dairy
+dairy	cannedmeat
+frozenmeal	fish
+fruitveg	freshmeat	confectionery
+dairy	cannedveg	frozenmeal	beer
+cannedveg	cannedmeat	frozenmeal	beer	wine	fish
+cannedmeat	softdrink
+cannedmeat	frozenmeal
+cannedveg	frozenmeal	beer	softdrink	fish
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer	wine	fish
+cannedveg	cannedmeat	fish	confectionery
+freshmeat	beer	wine	softdrink
+freshmeat	softdrink	fish
+fruitveg
+dairy	beer	confectionery
+dairy	wine
+fruitveg	dairy	frozenmeal	fish
+fruitveg	beer	fish
+frozenmeal	wine	confectionery
+cannedveg	cannedmeat
+cannedveg	frozenmeal	beer	wine
+dairy	frozenmeal	beer	confectionery
+fruitveg	freshmeat	cannedveg	fish
+cannedmeat	wine	confectionery
+fruitveg	dairy	fish
+freshmeat
+fruitveg	beer	softdrink	fish
+frozenmeal	softdrink
+dairy	cannedveg
+cannedveg
+beer
+cannedveg	frozenmeal	wine	softdrink
+cannedveg	beer	softdrink	fish
+fruitveg	frozenmeal	beer	softdrink	fish
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer	softdrink	confectionery
+fruitveg
+cannedveg	cannedmeat	wine	fish	confectionery
+wine	softdrink
+cannedveg	frozenmeal	beer
+fruitveg
+cannedveg
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer	wine	confectionery
+cannedmeat	frozenmeal	beer
+fruitveg	cannedveg	frozenmeal	beer	wine
+cannedveg	frozenmeal	beer	fish
+cannedmeat
+cannedveg	fish
+freshmeat	cannedmeat
+cannedveg	cannedmeat	frozenmeal	beer	confectionery
+freshmeat	dairy	wine	confectionery
+fruitveg	freshmeat	softdrink
+cannedveg
+cannedveg	cannedmeat	frozenmeal	beer
+cannedmeat	fish
+cannedveg	frozenmeal
+fruitveg	freshmeat	cannedveg	frozenmeal	beer	fish
+dairy	beer	wine	confectionery
+cannedveg	cannedmeat	frozenmeal	beer	wine
+wine
+fruitveg	wine	confectionery
+frozenmeal
+fruitveg	frozenmeal	beer
+freshmeat	dairy	cannedveg	frozenmeal	fish	confectionery
+fruitveg	cannedveg	frozenmeal	beer	fish
+fruitveg	cannedveg	wine
+wine	softdrink
+freshmeat	beer
+beer	softdrink	fish
+cannedveg	cannedmeat	frozenmeal	beer	softdrink
+dairy	frozenmeal	wine	softdrink	confectionery
+wine	confectionery
+fruitveg	beer
+fruitveg	dairy	frozenmeal	beer
+cannedveg	frozenmeal	beer	wine	fish
+cannedveg	beer
+cannedmeat
+fruitveg	cannedmeat	fish
+cannedveg	cannedmeat	wine	confectionery
+fruitveg	beer
+fruitveg	wine	confectionery
+freshmeat	fish	confectionery
+freshmeat	cannedveg	frozenmeal	beer	wine	fish	confectionery
+cannedveg	cannedmeat	frozenmeal	beer	fish
+beer
+softdrink	fish
+dairy
+fruitveg	cannedveg	frozenmeal	beer	wine	fish
+fruitveg	dairy	frozenmeal	wine	softdrink	fish	confectionery
+frozenmeal
+fruitveg	wine	softdrink	confectionery
+cannedveg	frozenmeal	beer	wine	softdrink
+cannedveg	frozenmeal	beer	confectionery
+frozenmeal	confectionery
+cannedveg	frozenmeal	beer	fish
+cannedmeat	beer
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer
+beer	confectionery
+cannedveg	cannedmeat	frozenmeal	confectionery
+confectionery
+cannedmeat	softdrink	confectionery
+cannedveg	wine	confectionery
+fruitveg	fish	confectionery
+wine	confectionery
+cannedmeat	fish
+cannedmeat
+fruitveg	cannedmeat	fish
+freshmeat	cannedmeat	confectionery
+fruitveg	cannedveg	wine
+fruitveg	dairy
+cannedveg	wine	confectionery
+cannedveg	frozenmeal	beer	wine	softdrink
+freshmeat	cannedveg	cannedmeat	frozenmeal	softdrink
+fruitveg	wine	fish
+fruitveg	freshmeat	cannedmeat	softdrink
+freshmeat	wine	confectionery
+fruitveg	cannedveg	frozenmeal	fish
+fruitveg	wine	confectionery
+fruitveg	freshmeat	dairy	wine	confectionery
+beer
+freshmeat
+wine	confectionery
+cannedveg	frozenmeal	beer	softdrink	confectionery
+fruitveg	dairy	wine	fish	confectionery
+dairy	cannedveg	cannedmeat	wine
+dairy	cannedmeat	frozenmeal	wine
+dairy	frozenmeal
+beer
+wine	fish
+wine	confectionery
+beer
+cannedmeat
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer	wine	fish
+fruitveg	freshmeat	confectionery
+fruitveg	freshmeat	softdrink	fish
+fruitveg	dairy	cannedveg	frozenmeal	beer	fish
+fish
+confectionery
+confectionery
+confectionery
+fruitveg	dairy
+softdrink
+cannedveg
+freshmeat	frozenmeal	beer	wine
+softdrink
+frozenmeal	wine	confectionery
+cannedveg	confectionery
+dairy	wine	softdrink	confectionery
+fruitveg	dairy	cannedveg	cannedmeat	frozenmeal	softdrink	fish
+fruitveg	beer	wine	confectionery
+cannedveg
+fruitveg	freshmeat
+freshmeat	cannedveg	frozenmeal	beer
+fruitveg	frozenmeal	fish
+fruitveg	wine
+fruitveg	cannedveg	frozenmeal	beer	wine
+cannedveg	frozenmeal	wine	fish
+frozenmeal	beer	wine
+freshmeat
+frozenmeal	confectionery
+fruitveg
+cannedveg	wine	confectionery
+fruitveg	freshmeat	cannedveg	fish	confectionery
+cannedveg
+beer	wine	confectionery
+cannedmeat	frozenmeal	wine	softdrink	confectionery
+cannedveg	beer	wine	confectionery
+cannedveg	cannedmeat	frozenmeal	wine
+cannedveg	cannedmeat	wine	softdrink
+fruitveg	wine	softdrink	confectionery
+wine
+cannedveg	cannedmeat	wine
+wine	confectionery
+fruitveg	frozenmeal	softdrink	fish
+freshmeat	dairy	cannedveg	wine	confectionery
+fruitveg	dairy	cannedmeat	frozenmeal	softdrink
+freshmeat	dairy	frozenmeal	wine
+freshmeat	wine	confectionery
+fruitveg	cannedmeat	wine	softdrink	fish	confectionery
+dairy	cannedmeat	frozenmeal	beer	wine
+fruitveg	cannedveg	wine
+fruitveg	dairy
+frozenmeal	fish
+fruitveg	freshmeat	fish
+freshmeat	confectionery
+fruitveg
+fruitveg	fish
+fruitveg	cannedmeat
+cannedveg	wine	softdrink
+cannedveg	frozenmeal	beer	wine
+wine	confectionery
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer
+freshmeat	cannedmeat	wine	confectionery
+fruitveg	cannedveg	frozenmeal	beer
+beer
+beer
+fish
+cannedveg
+fruitveg	confectionery
+fruitveg	freshmeat	dairy	beer	wine	fish	confectionery
+dairy	fish
+cannedveg	frozenmeal	beer
+dairy	fish	confectionery
+freshmeat	dairy	cannedmeat
+dairy
+cannedveg	frozenmeal	beer
+fruitveg	cannedveg	cannedmeat	beer
+cannedveg	frozenmeal	beer
+cannedveg	cannedmeat	frozenmeal
+fruitveg	frozenmeal	fish	confectionery
+fruitveg	frozenmeal	fish	confectionery
+fish
+cannedmeat
+fruitveg	dairy	fish	confectionery
+dairy	frozenmeal	beer	wine	confectionery
+cannedmeat	frozenmeal
+cannedveg	cannedmeat
+fruitveg	freshmeat	dairy	cannedveg	wine	softdrink	fish
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer
+cannedmeat	softdrink
+fruitveg	freshmeat	softdrink
+cannedveg	confectionery
+fruitveg	dairy	confectionery
+cannedveg	frozenmeal	beer	fish	confectionery
+dairy
+wine
+beer	confectionery
+cannedveg	frozenmeal	beer
+fruitveg	frozenmeal	wine	fish	confectionery
+fruitveg	cannedmeat	beer
+dairy	cannedmeat	frozenmeal	wine	fish	confectionery
+wine	softdrink	fish	confectionery
+fruitveg	softdrink
+cannedveg	cannedmeat	frozenmeal	beer
+freshmeat	cannedveg	frozenmeal	beer	wine
+freshmeat	confectionery
+cannedveg	cannedmeat	frozenmeal	beer
+dairy	cannedveg	frozenmeal	beer
+cannedveg
+fruitveg	cannedmeat	beer	wine	fish	confectionery
+dairy	cannedveg	softdrink
+fruitveg	cannedveg	wine	softdrink	fish
+fruitveg	cannedmeat	frozenmeal	fish	confectionery
+fruitveg	wine	confectionery
+freshmeat	cannedveg	frozenmeal	beer	fish
+dairy	wine	softdrink
+dairy	wine	confectionery
+confectionery
+freshmeat
+fruitveg	fish
+fruitveg
+fruitveg	fish	confectionery
+fruitveg	wine	fish	confectionery
+dairy	fish	confectionery
+fish
+softdrink	fish
+fruitveg	fish
+freshmeat
+cannedveg	frozenmeal	softdrink
+fruitveg	wine	softdrink
+frozenmeal	softdrink	fish
+dairy	fish	confectionery
+fruitveg	cannedmeat	frozenmeal	wine
+fruitveg	beer	fish
+fruitveg	dairy	wine	fish	confectionery
+dairy	beer
+cannedveg	frozenmeal	beer	softdrink
+freshmeat	confectionery
+freshmeat	frozenmeal
+cannedveg	frozenmeal	beer	softdrink
+fruitveg	cannedveg	frozenmeal	beer	fish
+cannedveg	frozenmeal	beer	wine
+fish
+fish	confectionery
+fish	confectionery
+cannedveg	frozenmeal	beer	confectionery
+cannedveg	frozenmeal	beer
+dairy	softdrink
+fruitveg	fish
+cannedveg	cannedmeat	frozenmeal	beer	wine	fish
+dairy	cannedveg	frozenmeal	beer
+fruitveg	frozenmeal	fish
+cannedmeat	wine	confectionery
+freshmeat	cannedveg	wine
+frozenmeal
+wine	fish
+cannedveg	cannedmeat	wine	softdrink
+fruitveg	cannedveg	frozenmeal	beer
+dairy	cannedveg	frozenmeal	beer
+freshmeat	wine	softdrink	fish	confectionery
+wine	softdrink	confectionery
+fruitveg	freshmeat	fish
+dairy
+freshmeat	cannedveg	frozenmeal	beer	confectionery
+dairy	fish
+cannedveg	frozenmeal	beer
+frozenmeal	fish
+freshmeat	beer
+fruitveg	cannedmeat	frozenmeal
+cannedveg	cannedmeat	wine	softdrink
+dairy
+cannedmeat	wine
+cannedmeat	wine	fish	confectionery
+fruitveg	dairy
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer	fish
+fruitveg	freshmeat	dairy	beer	fish
+fruitveg	freshmeat	cannedmeat	frozenmeal
+cannedveg	confectionery
+freshmeat	dairy	beer	fish
+fruitveg	dairy	cannedmeat	fish
+cannedveg	frozenmeal	softdrink
+dairy	cannedmeat	beer	softdrink
+cannedveg	cannedmeat	frozenmeal	beer
+fruitveg	cannedveg	frozenmeal	beer	wine	fish
+cannedveg	frozenmeal
+fruitveg	wine
+fruitveg	beer	fish
+dairy	wine	confectionery
+freshmeat
+cannedveg	frozenmeal	beer
+fruitveg	cannedmeat	fish	confectionery
+cannedmeat	frozenmeal	confectionery
+wine	confectionery
+freshmeat	fish
+fruitveg	freshmeat	cannedmeat	confectionery
+fruitveg	cannedmeat
+beer
+fruitveg	cannedveg	frozenmeal	beer	fish
+softdrink	fish	confectionery
+fruitveg	softdrink	fish	confectionery
+cannedmeat	frozenmeal
+cannedmeat	wine
+fruitveg	cannedmeat	fish
+fruitveg	freshmeat	fish
+dairy	cannedveg	cannedmeat	frozenmeal	beer	softdrink
+wine	confectionery
+dairy	cannedveg	frozenmeal	beer
+cannedveg	frozenmeal	beer	softdrink
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer	wine	fish	confectionery
+freshmeat
+dairy	cannedveg	cannedmeat	wine	confectionery
+fruitveg	freshmeat	wine
+dairy	frozenmeal	beer
+fruitveg	frozenmeal	wine	confectionery
+fruitveg	beer	wine	fish	confectionery
+cannedveg	cannedmeat	fish	confectionery
+cannedveg	frozenmeal	beer	softdrink
+fruitveg	cannedmeat	beer	fish
+confectionery
+freshmeat	beer	wine
+dairy
+fish
+fruitveg	frozenmeal	fish
+cannedmeat	frozenmeal
+dairy	cannedmeat
+fruitveg	cannedmeat	fish
+beer
+softdrink	confectionery
+cannedmeat	softdrink	confectionery
+cannedveg	wine
+softdrink
+cannedveg	frozenmeal	beer	fish
+fruitveg	freshmeat	cannedmeat	wine	fish	confectionery
+beer	wine	confectionery
+fruitveg	dairy	cannedveg	frozenmeal	softdrink
+cannedveg	frozenmeal	wine
+cannedveg	frozenmeal	beer
+cannedmeat	frozenmeal	fish
+fruitveg	dairy	softdrink
+cannedveg	frozenmeal	beer
+confectionery
+wine	softdrink
+fruitveg	dairy
+fruitveg	beer	wine	confectionery
+cannedveg	confectionery
+fruitveg	freshmeat	dairy
+softdrink
+freshmeat	dairy
+freshmeat
+wine	confectionery
+freshmeat	dairy	beer	softdrink	confectionery
+cannedmeat	softdrink	fish
+fruitveg	beer	wine	confectionery
+beer
+cannedveg
+cannedveg	frozenmeal	beer	wine
+freshmeat	confectionery
+fish
+freshmeat	cannedveg	softdrink	confectionery
+fruitveg	cannedveg	wine
+freshmeat	cannedmeat
+dairy	beer
+cannedveg	frozenmeal	wine	confectionery
+fish
+wine
+fruitveg	cannedveg	fish
+fruitveg	freshmeat	cannedveg	beer
+fruitveg	freshmeat	beer	wine	fish
+fruitveg	beer	softdrink	fish
+fruitveg	freshmeat	cannedveg	wine	softdrink	fish	confectionery
+frozenmeal
+fruitveg	cannedveg	frozenmeal	beer	softdrink
+fruitveg	cannedmeat	beer	fish
+fruitveg	cannedmeat	wine	confectionery
+wine	fish
+fruitveg	dairy	cannedmeat	frozenmeal	softdrink	fish
+fruitveg	cannedveg
+freshmeat	cannedveg	frozenmeal	beer
+cannedmeat	fish
+freshmeat
+freshmeat	cannedveg	beer
+fruitveg	freshmeat	cannedveg	frozenmeal	beer	fish
+frozenmeal	wine	fish	confectionery
+cannedveg	frozenmeal	beer	wine
+fruitveg	confectionery
+wine
+cannedveg	wine	confectionery
+freshmeat	wine
+wine	confectionery
+wine	softdrink	confectionery
+freshmeat	frozenmeal
+freshmeat	cannedmeat
+fruitveg	frozenmeal	beer	wine	fish	confectionery
+dairy	cannedveg	softdrink
+cannedveg	frozenmeal	beer
+cannedveg	cannedmeat	frozenmeal	beer
+cannedveg	cannedmeat	frozenmeal	beer
+wine
+dairy	softdrink
+fruitveg	frozenmeal	wine	softdrink
+softdrink	fish	confectionery
+fruitveg	cannedmeat	confectionery
+wine
+cannedveg	frozenmeal	beer	confectionery
+fruitveg	dairy	fish
+cannedveg	wine	fish
+cannedmeat
+dairy	cannedmeat
+freshmeat
+beer	fish	confectionery
+cannedveg	frozenmeal	beer
+freshmeat	frozenmeal	softdrink
+fruitveg	freshmeat	softdrink
+fruitveg	cannedveg	cannedmeat	confectionery
+fruitveg	dairy	cannedmeat	fish
+freshmeat	softdrink
+freshmeat
+frozenmeal	fish
+fruitveg	frozenmeal
+dairy	wine	softdrink	confectionery
+wine
+dairy	beer	wine	fish	confectionery
+cannedveg	frozenmeal	beer	fish	confectionery
+cannedmeat	fish
+dairy	wine	confectionery
+fruitveg	cannedmeat	beer	wine	fish	confectionery
+freshmeat	dairy	frozenmeal
+dairy
+cannedveg	cannedmeat	frozenmeal	beer
+frozenmeal	softdrink
+cannedveg
+cannedveg	wine
+freshmeat
+frozenmeal	fish
+dairy
+cannedveg	frozenmeal	beer
+beer	wine
+beer
+frozenmeal	softdrink	confectionery
+fruitveg	beer	fish
+freshmeat	cannedveg	cannedmeat	frozenmeal	fish
+fruitveg
+fruitveg	cannedveg	frozenmeal	beer	confectionery
+softdrink
+fruitveg
+fruitveg	fish
+dairy
+fruitveg	dairy	cannedmeat
+wine	softdrink	fish	confectionery
+fruitveg	dairy	frozenmeal	beer	fish
+fruitveg	freshmeat	beer
+freshmeat	cannedveg	frozenmeal	beer	softdrink	fish	confectionery
+cannedveg
+fruitveg	beer
+fruitveg	dairy	cannedveg	frozenmeal	beer	wine	fish
+fruitveg	beer
+cannedmeat	beer	softdrink
+cannedveg	cannedmeat
+fruitveg	cannedmeat	fish	confectionery
+freshmeat	cannedmeat
+wine	fish	confectionery
+cannedmeat	wine	confectionery
+cannedveg
+dairy	cannedveg	fish	confectionery
+fruitveg	cannedveg	frozenmeal	beer
+wine	confectionery
+freshmeat	cannedveg	wine	softdrink
+fruitveg	confectionery
+cannedmeat	softdrink	fish
+wine
+dairy	beer	fish
+fruitveg	beer	wine	fish	confectionery
+dairy	wine	softdrink	confectionery
+fruitveg	freshmeat	cannedmeat	softdrink
+freshmeat	frozenmeal
+dairy	frozenmeal	wine	confectionery
+fruitveg	wine	fish	confectionery
+wine	confectionery
+fruitveg	cannedveg	frozenmeal	beer	fish
+cannedveg	cannedmeat	beer
+fruitveg	fish
+fruitveg	cannedveg	frozenmeal	fish
+freshmeat	cannedmeat
+freshmeat	cannedveg	wine
+wine
+dairy	cannedmeat	frozenmeal
+fish
+fruitveg	cannedveg	frozenmeal	beer
+fruitveg	fish
+freshmeat	wine
+fish
+freshmeat	dairy	wine
+wine
+fruitveg	freshmeat	cannedmeat	beer	fish	confectionery
+fruitveg	cannedveg	frozenmeal	beer	wine	fish
+fruitveg	freshmeat	cannedveg	frozenmeal	beer	fish
+fruitveg	dairy	fish	confectionery
+fish
+fruitveg	freshmeat	dairy	cannedmeat	softdrink
+cannedveg	frozenmeal	beer	wine
+freshmeat	wine	confectionery
+dairy	cannedveg	wine	softdrink	fish	confectionery
+fruitveg	cannedmeat	fish	confectionery
+cannedveg	cannedmeat	wine
+fruitveg
+fish
+wine	confectionery
+freshmeat	beer	fish
+dairy	fish
+wine	confectionery
+fruitveg	cannedmeat
+wine	confectionery
+fruitveg	wine	fish
+cannedmeat
+fruitveg
+fruitveg	freshmeat	dairy	cannedveg	softdrink	confectionery
+freshmeat	cannedmeat
+cannedveg	wine
+frozenmeal	softdrink
+dairy
+freshmeat	wine	softdrink
+fruitveg	frozenmeal	softdrink	fish
+fruitveg	freshmeat	frozenmeal
+frozenmeal	beer	fish	confectionery
+freshmeat	cannedmeat	frozenmeal
+freshmeat	cannedveg	frozenmeal	beer	wine
+cannedveg	wine	fish
+cannedmeat	frozenmeal	fish
+dairy	wine	confectionery
+fish
+fruitveg	dairy	beer	fish
+fruitveg	cannedveg	fish
+wine	fish	confectionery
+fish
+cannedveg	confectionery
+cannedveg	beer	wine	softdrink	confectionery
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer	softdrink
+cannedmeat
+cannedmeat	frozenmeal
+cannedmeat	beer	softdrink
+dairy
+cannedveg	cannedmeat	fish
+fruitveg	freshmeat	cannedveg	fish
+cannedveg	cannedmeat	frozenmeal	softdrink
+fruitveg	fish
+frozenmeal	fish
+cannedveg	frozenmeal	beer	wine
+dairy	fish
+cannedveg	beer
+cannedveg	frozenmeal	beer	confectionery
+dairy	cannedveg	frozenmeal	beer	softdrink
+fish
+wine	fish	confectionery
+cannedveg
+freshmeat	cannedveg
+frozenmeal	wine	softdrink
+beer	wine	fish
+cannedmeat	fish
+fruitveg	freshmeat	cannedveg	cannedmeat
+cannedveg	frozenmeal
+fruitveg	cannedveg	wine	fish
+fruitveg	cannedveg	frozenmeal	beer	fish	confectionery
+frozenmeal
+fish
+cannedveg	beer	fish
+frozenmeal	beer
+freshmeat	dairy	cannedveg	cannedmeat	frozenmeal	beer	wine	softdrink
+cannedveg
+fruitveg	freshmeat	cannedmeat	wine	softdrink	confectionery
+cannedveg	frozenmeal	beer
+freshmeat	cannedmeat	wine	confectionery
+fruitveg	frozenmeal	wine	fish
+dairy	fish	confectionery
+cannedmeat	wine	confectionery
+fruitveg	wine
+fruitveg	softdrink
+wine	fish	confectionery
+softdrink
+freshmeat	softdrink
+cannedveg	frozenmeal	softdrink	fish
+cannedveg	frozenmeal	beer	confectionery
+cannedveg	cannedmeat	frozenmeal	beer
+fruitveg	freshmeat	dairy	cannedveg	cannedmeat	softdrink
+cannedveg	frozenmeal	beer	wine	softdrink
+cannedmeat	wine	confectionery
+cannedveg	cannedmeat
+wine	fish
+fish
+beer	softdrink
+wine	confectionery
+confectionery
+fruitveg	cannedveg	beer	wine	fish
+freshmeat	dairy	frozenmeal	confectionery
+freshmeat	fish
+frozenmeal	beer
+fruitveg
+wine	softdrink
+freshmeat	dairy	wine
+fruitveg	cannedveg	softdrink	fish
+wine	softdrink	confectionery
+beer
+cannedveg
+dairy
+dairy	confectionery
+cannedveg	frozenmeal	softdrink
+cannedmeat
+fruitveg
+beer	wine	softdrink
+cannedveg	cannedmeat	wine	softdrink	confectionery
+fruitveg	beer	wine
+fruitveg	wine	softdrink
+dairy	cannedveg	beer	softdrink
+fruitveg	dairy	fish	confectionery
+beer
+freshmeat	frozenmeal
+fruitveg	dairy	fish	confectionery
+cannedmeat	fish
+beer	confectionery
+wine	softdrink
+fruitveg	dairy	cannedveg	cannedmeat	frozenmeal	beer
+fruitveg	dairy	cannedveg	wine	softdrink	fish	confectionery
+beer	confectionery
+freshmeat	dairy	confectionery
+cannedmeat	wine	confectionery
+fruitveg	freshmeat	fish	confectionery
+dairy
+wine
+dairy	fish
+beer	softdrink
+freshmeat	dairy	cannedmeat
+cannedveg	cannedmeat	frozenmeal	beer
+fruitveg	beer
+fruitveg	cannedveg	softdrink
+fruitveg	beer	wine	confectionery
+fruitveg	freshmeat	cannedmeat	fish
+fish
+beer
+fruitveg	freshmeat	cannedveg	frozenmeal	beer
+dairy	cannedveg	beer
+frozenmeal
+fruitveg	cannedveg	beer	wine	softdrink	confectionery
+fruitveg	softdrink	fish
+freshmeat	softdrink
+freshmeat	frozenmeal	wine	confectionery
+freshmeat	frozenmeal	confectionery
+fruitveg	fish
+beer
+cannedveg	frozenmeal	beer
+fruitveg	dairy	cannedmeat	frozenmeal
+wine	confectionery
+fruitveg	dairy	cannedveg	frozenmeal	beer
+cannedveg	wine	fish	confectionery
+fruitveg	cannedveg	wine	confectionery
+freshmeat	cannedveg	cannedmeat	wine	softdrink	fish	confectionery
+cannedveg	frozenmeal	beer
+freshmeat
+fruitveg	dairy	frozenmeal	fish
+frozenmeal
+fruitveg	cannedmeat	beer
+fruitveg	dairy	wine	confectionery
+fruitveg	freshmeat	cannedveg	wine	softdrink	fish	confectionery
+freshmeat
+fruitveg	cannedveg
+dairy	frozenmeal	beer	confectionery
+cannedmeat	wine	fish	confectionery
+freshmeat	dairy	cannedmeat	confectionery
+wine
+fruitveg	cannedveg	frozenmeal	beer	confectionery
+fruitveg	cannedveg	frozenmeal	beer	fish	confectionery
+dairy	confectionery
+dairy	wine	confectionery
+fruitveg	dairy	cannedveg
+cannedmeat	frozenmeal	confectionery
+cannedmeat	wine
+cannedveg	frozenmeal	beer	wine
+cannedveg	beer
+fruitveg	freshmeat	softdrink	fish
+fruitveg	dairy	fish
+cannedmeat
+freshmeat	dairy	cannedveg	frozenmeal	beer
+fruitveg	freshmeat	dairy	softdrink	fish
+cannedmeat	frozenmeal	beer
+cannedveg	frozenmeal
+softdrink
+fruitveg	confectionery
+cannedveg	frozenmeal	beer
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer	softdrink	fish
+cannedmeat	beer
+wine	confectionery
+fruitveg	softdrink	confectionery
+beer	softdrink
+softdrink	confectionery
+freshmeat	cannedveg	softdrink
+cannedmeat	wine	confectionery
+beer	fish
+cannedmeat	beer	fish
+fruitveg	beer	softdrink	fish
+beer
+dairy	softdrink
+dairy	cannedveg	beer	wine	softdrink
+fruitveg	freshmeat	softdrink	fish
+fruitveg	freshmeat	cannedveg	cannedmeat	frozenmeal	beer	fish
+fruitveg
+dairy	cannedveg
+fruitveg	dairy	cannedveg	frozenmeal	beer	fish
+fruitveg	dairy	fish
+freshmeat	dairy	cannedveg	frozenmeal	beer	fish	confectionery
+cannedveg
+fruitveg	wine
+dairy
+frozenmeal	softdrink
+fruitveg	cannedmeat	frozenmeal
+cannedveg	frozenmeal	beer	fish
+beer	confectionery
+fruitveg	cannedveg	cannedmeat	frozenmeal	beer	wine	softdrink	fish
+beer
+freshmeat	cannedveg	wine	confectionery
+wine	confectionery
+freshmeat	softdrink
+dairy	cannedmeat	frozenmeal	fish	confectionery
+freshmeat	frozenmeal	confectionery
+wine
+cannedmeat
+cannedveg	frozenmeal	beer	wine
+freshmeat	fish
+fruitveg	beer	wine	fish
+fruitveg	frozenmeal
+dairy
+cannedveg	frozenmeal	beer	confectionery
+fruitveg	cannedveg	frozenmeal
+fruitveg	freshmeat	cannedmeat	softdrink	fish
+fruitveg	freshmeat	cannedveg	frozenmeal	beer
+cannedveg	fish	confectionery
+cannedveg	cannedmeat	beer
+cannedveg	cannedmeat	wine	softdrink	fish	confectionery
+fruitveg	freshmeat	wine
+fruitveg	freshmeat	cannedveg	frozenmeal	beer
+freshmeat	fish
+fruitveg	fish
+dairy	fish
+beer	wine	confectionery
+fruitveg	frozenmeal	confectionery
+cannedveg	frozenmeal	wine
+freshmeat
+dairy	wine
+softdrink
+fruitveg	cannedveg	wine	softdrink	fish	confectionery
+fruitveg	dairy	fish
+fruitveg	freshmeat	wine	confectionery
+fruitveg	cannedmeat	frozenmeal	softdrink	fish	confectionery
+frozenmeal	beer	confectionery
+cannedveg	cannedmeat	beer	wine	confectionery
+fruitveg	cannedmeat	frozenmeal
+cannedmeat	frozenmeal	beer
+cannedveg	frozenmeal
+fruitveg	cannedveg
+fruitveg	softdrink	fish
+frozenmeal	beer	confectionery
+fruitveg	cannedveg	frozenmeal	beer	softdrink	confectionery
+cannedmeat	wine	softdrink	fish	confectionery
+softdrink	confectionery
+cannedveg	confectionery
+cannedveg	frozenmeal	beer	confectionery
+freshmeat	dairy	cannedveg	frozenmeal	beer	confectionery
+cannedveg	frozenmeal	beer	fish
+cannedmeat	wine
+fruitveg	frozenmeal	wine
+cannedmeat	softdrink
+freshmeat	cannedveg	frozenmeal	beer	wine
+freshmeat	cannedveg	cannedmeat	frozenmeal	beer	softdrink	confectionery
+freshmeat	confectionery
+fruitveg	freshmeat	frozenmeal
+dairy
+beer	softdrink
+wine	softdrink	confectionery
+freshmeat	frozenmeal
+freshmeat	cannedmeat	beer	wine
+freshmeat	cannedveg	cannedmeat	frozenmeal	confectionery
+fruitveg	cannedveg	wine	softdrink
+fish
+dairy	frozenmeal
+cannedmeat
+dairy	wine	confectionery
+cannedveg	frozenmeal	beer
+fruitveg	beer	fish
+beer
+fruitveg	cannedveg	fish	confectionery
+fruitveg	freshmeat	cannedveg	cannedmeat	frozenmeal	beer	fish
+fruitveg	frozenmeal	wine	confectionery
+wine
+frozenmeal
+dairy	cannedveg	frozenmeal	beer	wine
+fruitveg	cannedmeat	fish
+fruitveg	wine	confectionery
+freshmeat	dairy	cannedveg	wine	fish
+beer	wine
+beer
+fruitveg	dairy
+cannedveg	frozenmeal	beer
+fruitveg	dairy	cannedmeat	frozenmeal	fish
+cannedveg	frozenmeal	beer
+fruitveg	dairy	fish
+fruitveg	fish
+cannedveg	wine	fish	confectionery
+fruitveg	dairy	frozenmeal	beer	wine	fish	confectionery
+fruitveg	cannedveg	frozenmeal	beer
+fruitveg	frozenmeal
+cannedveg	frozenmeal	beer	fish
+fruitveg	freshmeat	softdrink
+fruitveg	cannedveg	cannedmeat
+cannedveg	frozenmeal	beer	fish	confectionery
+cannedveg
+cannedveg	fish
+freshmeat
+fruitveg	wine	confectionery
+dairy	softdrink	confectionery

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="from_net">
+<UsingSymbols>
+<SymbolReference symbolId="SYM11" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG2" name="to_net">
+<UsingSymbols>
+<SymbolReference symbolId="SYM117" usingKind="output"/>
+<SymbolReference symbolId="SYM145" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG3" name="from_phy">
+<UsingSymbols>
+<SymbolReference symbolId="SYM167" usingKind="output"/>
+<SymbolReference symbolId="SYM24" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG4" name="ack_timer" isTimer="TRUE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM104" usingKind="output"/>
+<SymbolReference symbolId="SYM107" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG5" name="to_phy">
+<UsingSymbols>
+<SymbolReference symbolId="SYM109" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG6" name="tMsg">
+<UsingSymbols>
+<SymbolReference symbolId="SYM82" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="GBN_process" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<Body>
+<SentSignals>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG3"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</Body>
+</Item>
+<Item id="ITEM10" type="procedure" name="remove_frame_timer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM101"/>
+<SymbolReference symbolId="SYM140"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM11" type="procedure" name="between" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM135"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM12" type="type" name="buffer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM13" type="type" name="frame" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM14" type="variable" name="MAX_SEQ" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM88"/>
+<SymbolReference symbolId="SYM118"/>
+<SymbolReference symbolId="SYM108"/>
+<SymbolReference symbolId="SYM22"/>
+<SymbolReference symbolId="SYM12"/>
+<SymbolReference symbolId="SYM141"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM15" type="type" name="packet" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM16" type="variable" name="next_frame_to_send" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM135"/>
+<SymbolReference symbolId="SYM101"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM105"/>
+<SymbolReference symbolId="SYM22"/>
+<SymbolReference symbolId="SYM83"/>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM88"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM17" type="variable" name="r" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM135"/>
+<SymbolReference symbolId="SYM62"/>
+<SymbolReference symbolId="SYM117"/>
+<SymbolReference symbolId="SYM114"/>
+<SymbolReference symbolId="SYM24"/>
+<SymbolReference symbolId="SYM25"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM18" type="variable" name="FALSE" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM116"/>
+<SymbolReference symbolId="SYM64"/>
+<SymbolReference symbolId="SYM14"/>
+<SymbolReference symbolId="SYM137"/>
+<SymbolReference symbolId="SYM91"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM19" type="variable" name="frame_expected" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM62"/>
+<SymbolReference symbolId="SYM105"/>
+<SymbolReference symbolId="SYM118"/>
+<SymbolReference symbolId="SYM108"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM2" type="variable" name="now" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM104"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM20" type="variable" name="frame_timers" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM101"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM140"/>
+<SymbolReference symbolId="SYM105"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM21" type="type" name="timing" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM22" type="variable" name="new_timer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM101"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM140"/>
+<SymbolReference symbolId="SYM105"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM23" type="variable" name="nbuffered" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM90"/>
+<SymbolReference symbolId="SYM139"/>
+<SymbolReference symbolId="SYM12"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM24" type="type" name="integer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM25" type="variable" name="data" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM26"/>
+<SymbolReference symbolId="SYM105"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM26" type="procedure" name="get_char_sum" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM114"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM27" type="variable" name="pkt" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM144"/>
+<SymbolReference symbolId="SYM145"/>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM11"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM28" type="procedure" name="send_frame" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM105"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM29" type="variable" name="ack_expected" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM135"/>
+<SymbolReference symbolId="SYM83"/>
+<SymbolReference symbolId="SYM140"/>
+<SymbolReference symbolId="SYM141"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="old_timer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM101"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM140"/>
+<SymbolReference symbolId="SYM105"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM30" type="variable" name="pkt" parentId="ITEM1" scope="none" variableTypeName="packet" variableTypeId="ITEM15" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="10,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM31" type="variable" name="times" parentId="ITEM1" scope="none" variableTypeName="integer" variableTypeId="ITEM24" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="16,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM32" type="variable" name="frame_timers" parentId="ITEM1" scope="none" variableTypeName="timing" variableTypeId="ITEM21" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="18,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM33" type="variable" name="new_timer" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="21,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM34" type="variable" name="nbuffered" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="14,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM35" type="variable" name="r" parentId="ITEM1" scope="none" variableTypeName="frame" variableTypeId="ITEM13" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="9,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM36" type="variable" name="ack_expected" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="4,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM37" type="variable" name="next_frame_to_send" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="2,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM38" type="variable" name="frame_expected" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="6,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM39" type="variable" name="buf" parentId="ITEM1" scope="none" variableTypeName="buffer" variableTypeId="ITEM12" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="12,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="ack" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM108"/>
+<SymbolReference symbolId="SYM27"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM40" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="integer" variableTypeId="ITEM24" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="15,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM41" type="variable" name="s" parentId="ITEM1" scope="none" variableTypeName="frame" variableTypeId="ITEM13" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="9,3"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM42" type="variable" name="old_timer" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM6" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="23,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM43" type="procedure" name="between" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM96"/>
+</DefiningSymbols>
+<Prototype>
+<Signature>between</Signature>
+</Prototype>
+</Item>
+<Item id="ITEM44" type="procedure" name="set_frame_timer" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM97"/>
+</DefiningSymbols>
+<Prototype>
+<Signature>set_frame_timer</Signature>
+</Prototype>
+</Item>
+<Item id="ITEM45" type="procedure" name="remove_frame_timer" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM98"/>
+</DefiningSymbols>
+<Prototype>
+<Signature>remove_frame_timer</Signature>
+</Prototype>
+</Item>
+<Item id="ITEM46" type="procedure" name="send_frame" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM99"/>
+</DefiningSymbols>
+<Prototype>
+<Signature>send_frame</Signature>
+</Prototype>
+</Item>
+<Item id="ITEM47" type="procedure" name="get_char_sum" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM143"/>
+</DefiningSymbols>
+<Prototype>
+<Signature>get_char_sum</Signature>
+</Prototype>
+</Item>
+<Item id="ITEM48" type="state" name="ready" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM81"/>
+<SymbolReference symbolId="SYM10"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM23"/>
+<SymbolReference symbolId="SYM95"/>
+<SymbolReference symbolId="SYM138"/>
+<SymbolReference symbolId="SYM110"/>
+<SymbolReference symbolId="SYM15"/>
+<SymbolReference symbolId="SYM165"/>
+<SymbolReference symbolId="SYM8"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM49" type="timer" name="ack_timer" parentId="ITEM1" scope="none" defined="FALSE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM104"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM146"/>
+<SymbolReference symbolId="SYM111"/>
+<SymbolReference symbolId="SYM106"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="buf" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM105"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM50" type="connector" name="R1" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM134"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM76"/>
+<SymbolReference symbolId="SYM142"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM51" type="connector" name="C1" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM84"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM93"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="type" name="seq_nr" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="TRUE" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM115"/>
+<SymbolReference symbolId="SYM136"/>
+<SymbolReference symbolId="SYM13"/>
+<SymbolReference symbolId="SYM63"/>
+<SymbolReference symbolId="SYM92"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="s" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM108"/>
+<SymbolReference symbolId="SYM109"/>
+<SymbolReference symbolId="SYM114"/>
+<SymbolReference symbolId="SYM167"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="i" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM89"/>
+<SymbolReference symbolId="SYM83"/>
+<SymbolReference symbolId="SYM166"/>
+<SymbolReference symbolId="SYM90"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

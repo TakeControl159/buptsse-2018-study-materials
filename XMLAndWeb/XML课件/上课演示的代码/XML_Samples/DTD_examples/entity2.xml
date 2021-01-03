@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!DOCTYPE address-book[
+<!ENTITY first "kunming dianxing"> 
+<!ENTITY jacksmith
+ "&first; THIS STRING WILL BE DISPLAYED! " 
+> 
+<!ENTITY sigma              "&#x3C3;">
+<!ENTITY omicron_with_tonos "&#x3CC;">
+<!ENTITY phi                "&#x3C6;">
+<!ENTITY omicron            "&#x3BF;">
+<!ENTITY final_sigma        "&#x3C2;">
+<!ENTITY epsilon_with_tonos "&#x3AD;">
+<!ENTITY alpha              "&#x3B1;">
+<!ENTITY lambda             "&#x3C3;">
+<!ENTITY upsilon            "&#x3C5;">
+<!ENTITY tau                "&#x3C4;">
+<!ENTITY nu                 "&#x3BD;">
+<!ENTITY gamma              "&#x3B3;">
+<!ENTITY iota               "&#x3B9;">
+<!ENTITY omega_with_tonos   "&#x3CE;">
+<!ENTITY kappa              "&#x3BA;">
+<!ENTITY epsilon            "&#x3B5;">
+
+<!ELEMENT address-book (#PCDATA)>
+]>
+<address-book>
+&jacksmith;      &alpha; &omega_with_tonos; vvVVVVVV
+</address-book>

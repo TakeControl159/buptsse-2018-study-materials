@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<WorldFactbookReferenceDeskRequest xmlns="urn:info:world-factbook"
+                                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xsi:schemaLocation=
+                                              "urn:info:world-factbook
+                                               ../web-service/ReferenceDeskRequest.xsd">
+    <CountryInfoRequest>  
+        <country>
+            <name>Aruba</name>
+            <interested-in>
+                <topic>introduction</topic>
+            </interested-in>
+        </country>
+    </CountryInfoRequest>
+
+</WorldFactbookReferenceDeskRequest>

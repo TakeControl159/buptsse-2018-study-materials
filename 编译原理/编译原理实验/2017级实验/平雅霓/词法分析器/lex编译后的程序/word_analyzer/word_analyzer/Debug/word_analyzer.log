@@ -1,0 +1,21 @@
+﻿  lex.yy.cpp
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(48): warning C4005: “INT8_MIN”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(58): note: 参见“INT8_MIN”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(49): warning C4005: “INT16_MIN”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(61): note: 参见“INT16_MIN”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(50): warning C4005: “INT32_MIN”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(64): note: 参见“INT32_MIN”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(52): warning C4005: “INT8_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(67): note: 参见“INT8_MAX”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(53): warning C4005: “INT16_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(70): note: 参见“INT16_MAX”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(54): warning C4005: “INT32_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(73): note: 参见“INT32_MAX”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(56): warning C4005: “UINT8_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(76): note: 参见“UINT8_MAX”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(57): warning C4005: “UINT16_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(79): note: 参见“UINT16_MAX”的前一个定义
+d:\vs_ide\vc\tools\msvc\14.16.27023\include\stdint.h(58): warning C4005: “UINT32_MAX”: 宏重定义
+  e:\word_analyzer\word_analyzer\word_analyzer\lex.yy.c(82): note: 参见“UINT32_MAX”的前一个定义
+c:\users\67506\desktop\test\lexical_analyzer.l(65): warning C4326: “main”的返回类型应为“int”而非“void”
+  word_analyzer.vcxproj -> E:\word_analyzer\word_analyzer\Debug\word_analyzer.exe

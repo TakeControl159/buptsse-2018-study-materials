@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE story SYSTEM "E:\BUPT_Preparing\XML_course\Presentaions\For_Teacher\Assignment\assignment1\assignment1.dtd">
+<story>
+	<title>Judge Says Microsoft Wields Monopoly Power</title>
+	<byline>
+		<author>
+			<firstname>Rajiv</firstname>
+			<lastname>Chandrasekaran</lastname>
+		</author>
+		<position>Washington Post Staff Writer</position>
+		<date>Saturday, November 6, 1999</date>
+	</byline>
+	<para lead="yes">
+		<company>Microsoft Corp.</company> 
+  has used its unparalleled dominance in the computer industry to bully rivals and squelch competition, a federal judge ruled yesterday in a stinging decision that lays the foundation for a final judgment that could fundamentally realign the multibillion-dollar technology industry. 
+  </para>
+	<para lead="no">
+  Addressing for the first time the key factual issues in the government's long-running antitrust battle with the software giant, 
+  <position>U.S. District Judge</position> 
+  Thomas Penfield Jackson cast 
+  <company>Microsoft</company> 
+  as a voracious monopolist that has hindered innovation, harmed consumers and run roughshod over its rivals. 
+  </para>
+	<para lead="no">
+		<quote>
+			<company>Microsoft</company> 
+  has demonstrated that it will use its prodigious market power and immense profits to harm any firm that insists on pursuing initiatives that could intensify competition against one of 
+  <company>Microsoft's</company> 
+  core products, 
+  </quote>
+  Jackson wrote in a 207-page ruling. 
+ <quote>
+  The ultimate result is that some innovations that would truly benefit consumers never occur for the sole reason that they do not coincide with 
+  <company>Microsoft's</company> 
+  self-interest. 
+  </quote>
+	</para>
+</story>

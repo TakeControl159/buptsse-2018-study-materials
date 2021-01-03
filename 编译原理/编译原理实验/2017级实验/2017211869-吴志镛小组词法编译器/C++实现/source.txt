@@ -1,0 +1,7 @@
+Token createToken(const char* type, char* begin, char* end) {
+	Token newToken;
+	newToken.type = type;
+	newToken.begin = begin;
+	newToken.end = end;
+	return newToken;
+}

@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
+3void Example(const char* pcsDir)
+{
+    if (!pcsDir)
+        return;
+    WIN32_FIND_DATA FindFileData = {0};
+    char sTmp[256] = {0};
+    _snprintf(sTmp, sizeof(sTmp)-1, "%s\\*.*", pcsDir);
+    HANDLE hFind = ::FindFirstFile(sTmp, &FindFileData);
+    if(INVALID_HANDLE_VALUE == hFind)
+        return;
+    while(true)
+    {
+        if (FindFileData.cFileName[0] != '.'){
+            //
+            memset(sTmp, 0, sizeof(sTmp));
+            _snprintf(sTmp, sizeof(sTmp)-1, "%s\\%s", pcsDir, FindFileData.cFileName);
+        
+            
+            printf("%s\n",FindFileData.cFileName);// wirte
+            
+        }
+        if(!FindNextFile(hFind, &FindFileData))
+            break;
+     
+    }
+    FindClose(hFind);
+   
+}
+
+main()
+{      
+    const char* pcsDir;
+    
+  pcsDir="e:\\";
+   
+    Example(pcsDir);  
+      system("pause");
+      return 0;
+      }

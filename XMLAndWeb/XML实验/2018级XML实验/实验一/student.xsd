@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 rel. 2 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+	<!--学院元素(混合元素)-->
+	<xs:element name="school">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="grade" type="gradeType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--****************************************-->
+	<!--年级类型(Element Only元素)-->
+	<xs:complexType name="gradeType">
+		<xs:sequence>
+			<xs:element name="gradeId" type="xs:string" fixed="2020级"/>
+			<xs:element name="class" type="classType" minOccurs="2" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--****************************************-->
+	<!--班级类型-->
+	<xs:complexType name="classType">
+		<xs:sequence>
+			<xs:element name="classId" type="xs:string"/>
+			<xs:element name="student" type="studentType" minOccurs="0" maxOccurs="3"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--****************************************-->
+	<!--学生类型(Element Only元素)-->
+	<xs:complexType name="studentType">
+		<xs:sequence>
+			<xs:element name="studentId" type="xs:integer"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="Email">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[a-zA-Z0-9_-]+@[a-zA-Z0-9_.]+(.[a-zA-Z0-9]+)"/>
+						<!--邮箱正则匹配-->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="phoneNumber" type="xs:integer"/>
+			<xs:element name="homeAddress" type="addressType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--****************************************-->
+	<!--地址类型-->
+	<xs:complexType name="addressType">
+		<xs:sequence>
+			<!--省份(空元素)-->
+			<xs:element name="province">
+				<xs:complexType>
+					<xs:attribute name="provinceName" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<!--城市(空元素)-->
+			<xs:element name="city">
+				<xs:complexType>
+					<xs:attribute name="cityName" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<!--详细地址-->
+			<xs:element name="exactAddress" type="xs:string"/>
+			<!--****************************************-->
+			<!--邮编(TEXT Only元素)-->
+			<xs:element name="postcode">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="postcodeType">
+							<xs:attribute name="codingSystem" type="xs:string" fixed="CN"/>
+						</xs:extension>
+						<!--我国采用四级六位编码制-->
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--****************************************-->
+	<!--邮编类型-->
+	<xs:simpleType name="postcodeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

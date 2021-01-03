@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Orders" sql:relation="Orders" sql:key-fields="OrderID">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OrderID" sql:relation="Orders" sql:field="OrderID" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CustomerID" nillable="true" sql:relation="Orders" sql:field="CustomerID" sql:datatype="nchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EmployeeID" nillable="true" sql:relation="Orders" sql:field="EmployeeID" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="OrderDate" nillable="true" sql:relation="Orders" sql:field="OrderDate" sql:datatype="datetime">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RequiredDate" nillable="true" sql:relation="Orders" sql:field="RequiredDate" sql:datatype="datetime">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShippedDate" nillable="true" sql:relation="Orders" sql:field="ShippedDate" sql:datatype="datetime">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipVia" nillable="true" sql:relation="Orders" sql:field="ShipVia" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Freight" nillable="true" sql:relation="Orders" sql:field="Freight" sql:datatype="money">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="19"/>
+							<xs:fractionDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipName" nillable="true" sql:relation="Orders" sql:field="ShipName" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipAddress" nillable="true" sql:relation="Orders" sql:field="ShipAddress" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipCity" nillable="true" sql:relation="Orders" sql:field="ShipCity" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipRegion" nillable="true" sql:relation="Orders" sql:field="ShipRegion" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipPostalCode" nillable="true" sql:relation="Orders" sql:field="ShipPostalCode" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipCountry" nillable="true" sql:relation="Orders" sql:field="ShipCountry" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Orders_PrimaryKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="OrderID"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>

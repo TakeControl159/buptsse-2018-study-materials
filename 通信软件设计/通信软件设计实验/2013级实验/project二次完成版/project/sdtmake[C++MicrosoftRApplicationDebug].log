@@ -1,0 +1,169 @@
+
++ Make started
+Conversion of SDL to PR started
+Conversion to PR completed
+Syntactic analysis started
+Syntactic analysis completed
+Semantic analysis started
+
+#SDTREF(SDL,D:\project\project\goback.ssy(1),158(125,30),2,11)
+1: ERROR 77 Undefined sort
+Frame
+
+#SDTREF(SDL,D:\project\project\goback.ssy(1),158(125,30),5,10)
+2: ERROR 77 Undefined sort
+Frame
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),2)
+3: ERROR 77 Undefined sort
+Interger
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3)
+4: ERROR 77 Undefined sort
+Frame
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),131(85,30),1,1)
+5: ERROR 346 No visible variable or formal parameter with this name
+? ack_expected := 0
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),131(85,30),2,1)
+6: ERROR 108 Type mismatch for variable or formal parameter
+? next_frame_to_send := 0
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),2,1)
+7: INFO 352 next_frame_to_send is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),131(85,30),3,1)
+8: ERROR 346 No visible variable or formal parameter with this name
+? next_frame_expected := 0
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),131(85,30),4,1)
+9: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := 0
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),131(85,30),5,1)
+10: ERROR 346 No visible variable or formal parameter with this name
+? ack_expected := 0
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),143(20,85),1,16)
+11: ERROR 371 Type mismatch for variable, formal parameter, synonym or literal
+input FromNW1( buffer( ? next_frame_to_send))
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),2,1)
+12: INFO 352 next_frame_to_send is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),158(20,145),1,1)
+13: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Info := buffer( frame_to_dl2)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+14: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),158(20,145),2,1)
+15: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Seq := frame_to_dl2
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+16: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),167(20,165),1,1)
+17: ERROR 104 Undefined signal, timer, signallist, remote procedure or remote variable
+output ? ToDL2( s)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),173(20,180),1,14)
+18: ERROR 372 No visible variable, formal parameter, synonym, literal or operator with this name
+set( now + 50, T( ? frame_to_dl2))
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),179(20,195),1,1)
+19: ERROR 108 Type mismatch for variable or formal parameter
+? next_frame_to_send := next_frame_to_send + 1
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),2,1)
+20: INFO 352 next_frame_to_send is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),179(20,195),2,1)
+21: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := frame_to_dl2 + 1
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),197(75,85),1)
+22: ERROR 81 Unexpected parameter
+input AckToDL1( ? r)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),200(75,105),1,1)
+23: ERROR 371 Type mismatch for variable, formal parameter, synonym or literal
+decision ? r!Ack = ack_expected( false):( true): enddecision
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,1)
+24: INFO 352 R is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),227(105,100),1,1)
+25: ERROR 346 No visible variable or formal parameter with this name
+? a := frame_to_dl2
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),230(105,125),1,1)
+26: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := ack_expected
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),233(105,140),1,1)
+27: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Info := buffer( frame_to_dl2)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+28: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),233(105,140),2,1)
+29: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Seq := frame_to_dl2
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+30: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),236(105,155),1,1)
+31: ERROR 104 Undefined signal, timer, signallist, remote procedure or remote variable
+output ? ToDL2( s)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),242(105,200),1,1)
+32: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := a
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),206(75,145),1,1)
+33: ERROR 346 No visible variable or formal parameter with this name
+? ack_expected := ack_expected + 1
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),269(155,130),1,1)
+34: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Info := buffer( frame_to_dl2)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+35: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),269(155,130),2,1)
+36: ERROR 347 Type mismatch in component selection of variable or formal parameter
+? s!Seq := frame_to_dl2
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),119(135,10),3,3)
+37: INFO 352 s is one of the visible definitions
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),275(155,155),1,1)
+38: ERROR 104 Undefined signal, timer, signallist, remote procedure or remote variable
+output ? ToDL2( s)
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),284(155,215),1,1)
+39: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := frame_to_dl2 + 1
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),266(155,110),1,1)
+40: ERROR 346 No visible variable or formal parameter with this name
+? frame_to_dl2 := ack_expected
+
+#SDTREF(SDL,D:\project\project\p1.spr(1),266(155,110),1,1)
+41: INFO 297 Error limit reached, terminating
+Semantic analysis completed
+
+
+--------------------------------------------------
+
+Number of errors: 30
+
+42: INFO 278 Analyzer command could not be fully performed
++ Make completed with errors

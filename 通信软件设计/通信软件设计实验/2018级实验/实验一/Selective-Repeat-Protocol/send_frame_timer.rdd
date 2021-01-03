@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<NonStateTransition top_left_coordinates="158 136">
+<SdlFSMSymbol identifier="SYM1" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="188 151" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

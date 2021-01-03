@@ -1,0 +1,54 @@
+<HTML>
+    <HEAD>
+        <SCRIPT language="JScript" defer="true">
+
+            function ShowMembers()
+            {
+                document.xslControl.setStyleURL("ShowMembers.xsl");
+		parent.bodyFrame.document.body.innerHTML = document.xslControl.getHTMLText();
+            }
+
+            function ShowPlatinumMembers()
+            {
+		    document.xslControl.setStyleURL("ShowPlatinumMembers.xsl");
+		    parent.bodyFrame.document.body.innerHTML = document.xslControl.getHTMLText();
+             }
+
+            function ShowGoldMembers()
+            {
+                document.xslControl.setStyleURL("ShowGoldMembers.xsl");
+		parent.bodyFrame.document.body.innerHTML = document.xslControl.getHTMLText();
+             }
+
+            function ShowAll()
+            {
+                document.xslControl.setStyleURL("ShowAll.xsl");
+		parent.bodyFrame.document.body.innerHTML = document.xslControl.getHTMLText();
+             }
+
+            function RawXML()
+            {
+                parent.bodyFrame.location = 'FitnessCenter.xml';
+            }
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+         <FORM name="controlForm">
+             <p><INPUT type="button" value="Show Members" onclick="ShowMembers();"></p>
+             <p><INPUT type="button" value="Show Platinum Members" onclick="ShowPlatinumMembers();"></p>
+             <p><INPUT type="button" value="Show Gold Members" onclick="ShowGoldMembers();"></p>
+             <p><INPUT type="button" value="Show All" onclick="ShowAll();"></p>
+             <p><INPUT type="button" value="Raw XML" onclick="RawXML();"></p>
+         </FORM>
+	 <APPLET
+             NAME = "xslControl"
+             CODE = "net.sf.saxon.XSLTProcessorApplet.class"
+             ARCHIVE = "saxon7.jar"
+             WIDTH = "0"
+             HEIGHT = "0">
+             <PARAM NAME = "documentURL" VALUE = "FitnessCenter.xml">
+             <PARAM NAME = "styleURL"/>
+	 </APPLET>
+     </BODY>
+</HTML>
+<IFRAME  WIDTH=0 HEIGHT=0></IFRAME>

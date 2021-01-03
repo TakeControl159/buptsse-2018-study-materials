@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Persons SYSTEM "C:\temp\person.dtd">
+<Persons>
+	<Person>
+		<first>X</first>
+		<last>W</last>
+		<Item>VVV</Item>
+	</Person>
+	<Item>
+		<Item>
+			<first>vvvv</first>
+		</Item>
+	</Item>
+</Persons>

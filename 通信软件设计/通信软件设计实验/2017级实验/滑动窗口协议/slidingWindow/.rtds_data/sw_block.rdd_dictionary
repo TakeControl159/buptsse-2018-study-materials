@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9159" language="none" diagramType="blk">
+<Signal id="SIG1" name="to_pl">
+</Signal>
+<Signal id="SIG2" name="from_pl">
+</Signal>
+<Signal id="SIG3" name="to_nl">
+</Signal>
+<Signal id="SIG4" name="from_nl">
+</Signal>
+<Item id="ITEM1" type="block" name="sw_block" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK1" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK2" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="dl2pl" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW1"/>
+<Channel name="nl2dl" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW2"/>
+</Item>
+<Item id="ITEM2" type="process" name="sw_process2" parentId="ITEM1" scope="none" minInstances="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK2" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK1" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>

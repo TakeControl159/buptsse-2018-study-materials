@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<ext-error>
+<message>Cannot connect to MySQL server on localhost:3306. Is there a MySQL server running on the machine/port you are trying to connect to? (java.net.ConnectException)</message>
+<sql-error>
+<code>0</code>
+<message>Cannot connect to MySQL server on localhost:3306. Is there a MySQL server running on the machine/port you are trying to connect to? (java.net.ConnectException)</message>
+</sql-error>
+</ext-error>
+</data>

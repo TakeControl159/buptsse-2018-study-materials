@@ -1,0 +1,5 @@
+<root>
+    <item name='org.w3c.dom.Node org.w3c.dom.Node appendChild(org.w3c.dom.Node)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

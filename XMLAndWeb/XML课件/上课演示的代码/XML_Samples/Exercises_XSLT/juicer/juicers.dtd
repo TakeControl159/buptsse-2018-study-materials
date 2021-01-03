@@ -1,0 +1,14 @@
+<!ELEMENT juicers (juicer)*>
+<!ELEMENT juicer (name, image, description, warranty, weight, cost+, retailer)>
+<!ATTLIST juicer id ID #REQUIRED
+          electric (true|false) #REQUIRED
+          type (press | gear | centrifugal) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT warranty (#PCDATA)>
+<!ELEMENT weight (#PCDATA)>
+<!ATTLIST weight units CDATA #FIXED "pounds">
+<!ELEMENT cost (#PCDATA)>
+<!ATTLIST cost currency (USD | CND) #REQUIRED>
+<!ELEMENT retailer (#PCDATA)>

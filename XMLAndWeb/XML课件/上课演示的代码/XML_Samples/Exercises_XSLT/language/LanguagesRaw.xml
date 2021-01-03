@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!-- <?xml-stylesheet type="text/xsl" href="Languages.xsl"?> -->
+<MyData>
+ <Msg id="100">
+  <Text xml:lang="en">Message 100 in English.</Text>
+ </Msg>
+ <Msg id="200">
+  <Text xml:lang="en-us">Message 200 <span xml:lang="fr">(insertion in French)</span> in American English.</Text>
+  <Text xml:lang="fr-CA">Message 200 en Québecquois.</Text>
+ </Msg>
+ <Msg id="300">
+  <Text xml:lang="fr">Message 300 en français.</Text>
+ </Msg>
+ <Msg id="400">
+  <Text xml:lang="EN-GB">Message 400 in British English.</Text>
+ </Msg>
+</MyData>

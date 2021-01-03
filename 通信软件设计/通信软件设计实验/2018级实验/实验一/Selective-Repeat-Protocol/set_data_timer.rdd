@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="FPAR 
+  IN/OUT fk frame_kind,
+  IN/OUT frame_nr seq_nr,
+  IN/OUT frame_expected seq_nr,
+  IN/OUT buf buffer,
+
+  /* 是否已经重发标志位 */
+  IN/OUT no_nak boolean,
+  /* 放入的定时数组 */
+  IN/OUT send_timing timing,
+  /* 应该是上界+1 */
+  IN/OUT new_timer seq_nr,
+  /*队列头指针*/
+  IN/OUT old_timer seq_nr;
+
+DCL
+  s frame;" outline_color="-" background_color="-" center_coordinates="863 191" dimensions="236 258" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM12" type="sdlComment" text="设置超时定时器" outline_color="-" background_color="-" center_coordinates="610 778" dimensions="68 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM14" type="sdlComment" text="取消搭便车定时器" outline_color="-" background_color="-" center_coordinates="487 842" dimensions="76 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="168 348">
+<SdlFSMSymbol identifier="SYM3" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="367 363" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM4" type="sdlTask" text="s!kind:=fk;" outline_color="-" background_color="-" center_coordinates="367 410" dimensions="96 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM5" type="sdlTask" text="if(fk = data){
+  s!info :=buf(frame_nr mod NR_BUFS);
+}
+s!seq := frame_nr;
+s!ack := (frame_expected + MAX_SEQ) mod (MAX_SEQ+1);
+s!check := (call get_char_sum(s!info));
+if(fk=nak){
+  no_nak := false;
+}" outline_color="-" background_color="-" center_coordinates="367 516" dimensions="386 148" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM6" type="sdlSendSig" text="to_phy(s)" outline_color="-" background_color="-" center_coordinates="367 622" dimensions="82 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM8" type="sdlDecision" text="fk=data" outline_color="-" background_color="-" center_coordinates="367 674" dimensions="68 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM9" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="367 726" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM11" type="sdlPrcdCall" text="set_frame_timer(send_timing,s!seq,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="367 778" dimensions="398 40" attached_symbol_id="SYM12"/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM10" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="684 726" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM13" type="sdlResetTimer" text="reset(ack_timer)" outline_color="-" background_color="-" center_coordinates="367 842" dimensions="144 40" attached_symbol_id="SYM14"/>
+<SdlFSMSymbol identifier="SYM16" type="sdlPrcdReturn" outline_color="-" background_color="-" center_coordinates="367 888" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--dtd: Document Type Definition-->
+
+<!--ELEMENT-->
+<!--元素      节点      子元素  多个空格都不行-->
+<!ELEMENT note (to,from,heading*,body,name)*>
+	
+<!--fullname 和 括号里的标签二选一-->
+<!ELEMENT name (fullname | (first, middle, last))> 
+
+<!--          字符数据-->
+<!--PCDATA 的意思是被解析的字符数据（parsed character data）-->
+<!ELEMENT fullname (#PCDATA)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT middle (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!--关键词 ANY 可包含任何可解析数据的组合-->
+<!ELEMENT to ANY>
+<!ELEMENT from (#PCDATA)> 
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT other ANY>
+	
+<!--混合元素模型: 字符串\标签 出现0到无数次-->
+<!ELEMENT p (#PCDATA | b | i)*>	
+<!ELEMENT i (b+, k)?> <!--可以出现0~1次-->
+<!ELEMENT b EMPTY>  <!--空标签-->
+
+<!--实体 类似于C的宏-->
+<!--实体是用于定义引用普通文本或特殊字符的快捷方式的变量。-->
+<!ENTITY parody "<genre>parody</genre>"> 
+<!ENTITY writer "Donald Duck.">
+<!ENTITY copyright "Copyright runoob.com">
+
+<!--ATTLIST-->
+<!ATTLIST from mark ID #REQUIRED>
+<!ATTLIST from ref IDREFS #IMPLIED>
+<!ATTLIST from gender (男|女) #IMPLIED>
+
+<!--属性可以是无序的-->
+<!--声明student标签有属性number 类型为ID 值唯一 #REQUIRED为必须出现number ID的组成和NMTOKEN一样并且一定要以字母开头-->
+<!--                           类型为CDATA(字符数据) #IMPLIED表示选填-->	
+<!--	                       类型为NMTOKEN值为合法的 XML 名称 只能包含字母、数字、“.”、“：”、“-”、“_”-->
+<!--                           类型为IDREF	值为另外一个元素的 id-->
+<!--                           类型#FIXED 属性值是固定的-->
+<!ATTLIST name 
+	number ID #REQUIRED
+	lang CDATA #IMPLIED
+	years NMTOKEN #REQUIRED  
+	ref IDREFS #IMPLIED
+	company CDATA #FIXED "Microsoft">
+	
+
+
+
+
+	
+
+
+

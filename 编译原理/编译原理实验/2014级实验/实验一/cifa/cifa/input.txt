@@ -1,0 +1,25 @@
+else if (ch == 'x' || ch == 'X')//为十六进制数
+{
+word[i++] = ch;
+ch = output.get();
+characterNum++;
+while (((ch >= '0') && (ch <= '9')) || ((ch <= 'f') && (ch >= 'a')) || ((ch <= 'F') && (ch >= 'A')))
+{
+word[i++] = ch;
+characterNum++;
+ch = output.get();
+}
+if ((ch >= 'h'&&ch <= 'z') || (ch >= 'H'&&ch <= 'Z'))//未成功，后面有h-z
+{
+while ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z') || (ch >= '0'&&ch <= '9'))
+{
+word[i++] = ch;
+ch = output.get();
+characterNum++;
+}
+cout << "错误行，行号是：" << lineNum << endl;
+errorLine[errorNum] = lineNum;
+errorNum++;
+state = 8;
+break;
+}$

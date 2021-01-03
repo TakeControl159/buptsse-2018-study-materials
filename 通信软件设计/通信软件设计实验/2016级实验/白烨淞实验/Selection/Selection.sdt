@@ -1,0 +1,67 @@
+SDT-SYSTEM-4.4
+[DRIVES]
+[SOURCE-TARGET-DIRECTORY]
+[LINKS]
+Endpoints=""
+File=untitled.sli
+[DIAGRAMS]
+0 16 NAKLoss NAKLoss.msc 8 1546444939 - ""
+0 16 ACKLoss ACKLoss1.msc 0 1546233964 - ""
+0 16 SendFrameLoss SendFrameLoss.msc 0 1546234021 - ""
+0 16 NAK NAK.msc 0 1546234047 - ""
+0 16 SelectiveRepeat SelectiveRepeat.msc 0 1546234399 - ""
+0 16 NoAbnormal NoAbnormal.msc 2 1546234446 - ""
+0 1 SelectiveARQ SelectiveARQ.ssy 0 1545133892 SelectiveARQ ""
+1 2 DataLink_1 DataLink_1.sbk 0 1544673609 DataLink_1 ""
+2 5 P_1 P_1 0 1546446068 P_1 ""
+3 6 between between.spd 0 1545910705 between ""
+1 2 DataLink_2 DataLink_2.sbk 0 1262127061 DataLink_2 ""
+2 5 P_2 P_2 0 1546446051 P_2 ""
+3 6 between1 between1.spd 0 1201619350 between1 ""
+0 23 "Analysis Model" %unconnected% 0 0 0 ""
+0 23 "Used Files" %unconnected% 0 0 0 ""
+0 23 "SDL System Structure" %unconnected% 0 0 0 ""
+0 23 "TTCN Test Specification" %unconnected% 0 0 0 ""
+0 23 "Other Documents" %unconnected% 0 0 0 ""
+[VIEWOPTIONS]
+ShowDirectories=True
+ShowLongMenus=True
+[ANALYSEROPTIONS]
+ASN1KeywordFile=False
+ASN1Parameter=False
+CoderBufferInSDL=Octet-String
+Filter=False
+InstanceFile=False
+[H2SDLOPTIONS]
+AllWarnings=False
+Preprocessor=""
+PreprocessorOptions=""
+TranslateEnum=True
+UseFullPath=True
+UsePreprocessorOptions=False
+[STATEMATRIXOPTIONS]
+[INDEXOPTIONS]
+ShowSelectedTypes=True
+ShowSelectedUses=True
+ShowSelectedDiagrams=True
+FilterTypes=
+FilterUses=
+FilterDiagrams=
+NameFirst=True
+IndexAppearance=
+[PACKAGEGENERATOROPTIONS]
+DuplicateFile=
+[MAKEOPTIONS]
+CCompilerDriver=False
+Kernel=SCTAMVALIDATOR
+[PRINTOPTIONS]
+DestinationFormat=PSFile
+FirstPageNo=1
+MarginLeft=100
+MarginLower=250
+MarginRight=100
+MarginUpper=420
+PrinterFile=""
+PrintFrom=0
+PrintTo=0
+PrintToFile=False

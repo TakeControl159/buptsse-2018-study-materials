@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcd">
+<Signal id="SIG1" name="tMsg" isTimer="TRUE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM17" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Item id="ITEM1" type="procedure" name="set_frame_timer" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="timing seq_nr seq_nr seq_nr">
+<Prototype>
+<Signature>set_frame_timer</Signature>
+</Prototype>
+<ParameterType typeId="ITEM2"/>
+<ParameterType typeId="ITEM3"/>
+<ParameterType typeId="ITEM3"/>
+<ParameterType typeId="ITEM3"/>
+<Body>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+</Body>
+</Item>
+<Item id="ITEM10" type="variable" name="new_timer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+<SymbolReference symbolId="SYM10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM11" type="type" name="time_slice" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM12" type="variable" name="frame_seq" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="5,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM13" type="variable" name="new_timer" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="10,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM14" type="variable" name="tmp_timing" parentId="ITEM1" scope="none" variableTypeName="time_slice" variableTypeId="ITEM11" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="17,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM15" type="variable" name="old_timer" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="13,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM16" type="variable" name="send_timing" parentId="ITEM1" scope="none" variableTypeName="timing" variableTypeId="ITEM2" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="3,8"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM17" type="timer" name="tMsg" scope="process" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM17"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM2" type="type" name="timing" scope="global" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="type" name="seq_nr" scope="global" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="now" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM7"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="old_timer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM17"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="send_timing" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="MAX_SEQ" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="tmp_timing" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+<SymbolReference symbolId="SYM7"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="frame_seq" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM7"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

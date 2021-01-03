@@ -1,0 +1,49 @@
+<?xml version="1.0"?> 
+<!--文档类型声明 note 根目录-->
+<!DOCTYPE note SYSTEM "Lecture3DTD.dtd"> 
+	
+<!--或者是:     系统内部dtd
+<!DOCTYPE name SYSTEM "http://sernaferna.com/hr/name.dtd" [...]>
+-->
+
+<!--           共用dtd
+<!DOCTYPE name PUBLIC "-//BUPT//DTD Name example//EN" "name.dtd"> 
+-->
+
+<!--
+因为HTML是SGML的子集，SGML允许标签没有结束标签，而换行符元素正好不需要内嵌元素，
+也就不需要结束标签。所以在HTML中，应该写成<br>。
+因为XHTML是XML的子集，在XML中，标签必须要有结束标签。所以在XHTML中只写<br>是不符合语法的，
+必须写成<br></br>或简写成<br/>。
+-->
+
+<note>
+	<to>shanghai ANY 任何解析数据的组合
+		<p>dfs1</p>
+		&copyright; 实体的引用方法: <!--&实体名称;-->
+	</to>
+	<from mark="hell">beijing</from>
+	<heading>yes</heading>
+	<heading>wel</heading>
+	<body>yes</body>
+	<name number="kk" years="2020" company="Microsoft" lang="CH">
+		<first>fdsf1</first>
+		<middle>kkk</middle>
+		<last>mik</last>
+	</name>
+	
+	<to>Tove</to>
+ 	<from mark="jel">Jani</from> 
+	<heading>Reminder</heading> 
+	<heading/>
+	<body>Don't forget me this weekend</body> 
+	
+	<name number="soo1" lang="en" years="37.95" ref="jel">
+		<fullname>
+		Jayce Trump
+		</fullname>
+	</name>
+
+</note> 
+
+<!-- 	-->

@@ -1,0 +1,6 @@
+SDT-TIME-STAMP-1.0
+1231037280 C:\GoBackN\GoBackN.ssy
+1231037280 C:\GoBackN\DataLink1.sbk
+1231037280 C:\GoBackN\P1.spr
+1231037280 C:\GoBackN\DataLink2.sbk
+1231037280 C:\GoBackN\P2.spr

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<dogbreeds>
+
+<dog breed="Rottweiler" id="Rottweiler">
+  <picture url="http://dog.com/rottweiler.gif" />
+  <history>
+  The Rottweiler's ancestors were probably Roman
+  drover dogs.....
+  </history>
+  <temperament>
+  Confident, bold, alert and imposing, the Rottweiler
+  is a popular choice for its ability to protect....
+  </temperament>
+</dog>
+
+<dog breed="FCRetriever" id="FCRetriever">
+  <picture url="http://dog.com/fcretriever.gif" />
+  <history>
+  One of the earliest uses of retrieving dogs was to
+  help fishermen retrieve fish from the water....
+  </history>
+  <temperament>
+  The flat-coated retriever is a sweet, exuberant,
+  lively dog that loves to play and retrieve....
+  </temperament>
+</dog>
+
+</dogbreeds>

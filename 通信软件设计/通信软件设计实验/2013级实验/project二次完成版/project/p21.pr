@@ -1,0 +1,141 @@
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy,4)*/
+system GoBackN;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),155(55,25))*/
+NEWTYPE Packet STRUCT
+Data charstring;
+ENDNEWTYPE;
+
+NEWTYPE DataFrame STRUCT
+Info Packet;
+seq Integer;
+Flag integer;
+ENDNEWTYPE;
+
+NEWTYPE AckFrame STRUCT
+Ack Integer;
+seq Integer;
+ENDNEWTYPE;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),158(125,30))*/
+Signal
+DataToDL2(DataFrame),
+FromNW1(Packet),
+ToNW2(Packet),
+AckToDL1(AckFrame);
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),146(30,90))*/
+channel /*#E*/ 
+N1 from env to DataLink1 with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),147(22,100))*/
+FromNW1;
+endchannel N1;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),134(100,90))*/
+channel /*#E*/ 
+R from DataLink2 to DataLink1 with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),135(74,100))*/
+DataToDL2;
+from DataLink1 to DataLink2 with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),136(110,100))*/
+AckToDL1;
+endchannel R;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),137(165,90))*/
+channel /*#E*/ 
+N2 from DataLink2 to env with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),138(170,100))*/
+ToNW2;
+endchannel N2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),119(40,90))*/
+block DataLink1 referenced;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy(1),122(120,90))*/
+block DataLink2 referenced;
+/*#SDTREF(SDL,D:\GoBackN\project\project\goback.ssy,4)*/
+endsystem GoBackN;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk,4)*/
+block DataLink2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),167(42,82))*/
+signalroute /*#E*/ 
+R2 from p2 to env with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),168(12,92))*/
+AckToDL1;
+from env to p2 with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),169(67,92))*/
+DataToDL2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),140(139,82))*/
+signalroute /*#E*/ 
+N21 from p2 to env with 
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),141(159,92))*/
+ToNW2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),116(75,80))*/
+process p2 referenced;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),173(2,87))*/
+connect R and R2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk(1),152(172,87))*/
+connect N2 and N21;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.sbk,4)*/
+endblock DataLink2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr,4)*/
+process p2;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),218(35,15))*/
+DCL
+frame_expected Integer,
+r DataFrame,
+s AckFrame;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),119(85,5))*/
+start /*#E*/ 
+;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),122(85,20))*/
+task /*#E*/ 
+frame_expected:=0;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),128(85,35))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),128(85,35))*/
+state /*#E*/ 
+Wait;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),131(85,50))*/
+input /*#E*/ 
+DataToDL2(r);
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),170(85,65))*/
+decision /*#E*/ 
+r!seq=frame_expected;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),224(42,72))*/
+(false):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),221(35,75))*/
+decision /*#E*/ 
+r!seq<frame_expected;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),236(47,87))*/
+(true):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),233(35,95))*/
+output /*#E*/ 
+AckToDL1(s);
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),242(27,155))*/
+(false):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),221(35,75))*/
+enddecision;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),182(97,77))*/
+(true):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),134(85,85))*/
+decision /*#E*/ 
+r!flag=1;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),185(97,97))*/
+(false):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),158(85,105))*/
+output /*#E*/ 
+AckToDL1(s);
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),188(85,120))*/
+output /*#E*/ 
+ToNW2(r!info);
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),194(85,135))*/
+task /*#E*/ 
+frame_expected:=frame_expected+1;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),230(137,155))*/
+(true):
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),134(85,85))*/
+enddecision;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),170(85,65))*/
+enddecision;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),197(85,155))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr(1),128(85,35))*/
+endstate;
+/*#SDTREF(SDL,D:\GoBackN\project\project\p2.spr,4)*/
+endprocess p2;

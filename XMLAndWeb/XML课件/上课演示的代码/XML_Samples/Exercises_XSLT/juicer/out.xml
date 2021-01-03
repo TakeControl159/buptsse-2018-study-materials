@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorldFactbookReferenceDeskRequestResults>
+    <CountryInfoRequest>  
+        <country>
+            <name>Aruba</name>
+            <interested-in>
+                <topic>introduction</topic>
+            </interested-in>
+        </country>
+    </CountryInfoRequest>
+
+</WorldFactbookReferenceDeskRequestResults>

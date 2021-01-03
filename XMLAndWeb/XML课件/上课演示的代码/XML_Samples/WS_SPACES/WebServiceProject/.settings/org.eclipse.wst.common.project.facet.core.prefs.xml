@@ -1,0 +1,10 @@
+<root>
+  <facet id="jst.jaxws">
+    <node name="libprov">
+      <attribute name="config-id" value="jst.jaxws_2.1"/>
+      <attribute name="copy-tlds" value="true"/>
+      <attribute name="provider-id" value="me-jaxws-library-provider"/>
+      <attribute name="version-id" value="jst.jaxws_2.1"/>
+    </node>
+  </facet>
+</root>

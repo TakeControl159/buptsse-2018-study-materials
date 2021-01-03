@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="LIFELINEID_1 LIFELINEID_2"/>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="PROCESS_START" color="#000000" text="RTDS_Env
+(-1)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="PROCESS_START" color="#000000" text="obsw_process
+(1)" text_size="0 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=123|})" identifier="MSG1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM7" identifier="COND1" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND1" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM10" identifier="MSG1" text="from_net(|{param1|=123|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG2" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})" identifier="MSG2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND2" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND2" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="send_timer" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM55"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="5"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG3" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="5"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})" identifier="MSG3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="5"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="5"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND3" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="5"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND3" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="send_timer" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM55"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="10"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG4" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="10"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})" identifier="MSG4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="10"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="10"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND4" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="10"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND4" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="send_timer" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM55"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="15"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG5" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="15"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=0|,ack|=1|,info|=123|,check|=150|}|})" identifier="MSG5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="15"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="15"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND5" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="15"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND5" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{seq|=0|,ack|=0|,info|=|,check|=0|}|})" identifier="MSG6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM16" identifier="MSG6" text="from_phy(|{param1|=|{seq|=0|,ack|=0|,info|=|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM66" identifier="MSG7" text="to_net(|{param1|=|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_net(|{param1|=|})" identifier="MSG7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_CANCEL" color="#ffffff" text="send_timer" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM51"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM53" identifier="COND6" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND6" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM53"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=123|})" identifier="MSG8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM10" identifier="MSG8" text="from_net(|{param1|=123|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG9" text="to_phy(|{param1|=|{seq|=1|,ack|=0|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=1|,ack|=0|,info|=123|,check|=150|}|})" identifier="MSG9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND7" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND7" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{seq|=0|,ack|=0|,info|=|,check|=0|}|})" identifier="MSG10"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM16" identifier="MSG10" text="from_phy(|{param1|=|{seq|=0|,ack|=0|,info|=|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM12" identifier="MSG11" text="to_phy(|{param1|=|{seq|=1|,ack|=0|,info|=123|,check|=150|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{seq|=1|,ack|=0|,info|=123|,check|=150|}|})" identifier="MSG11"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="send_timer(5)" type="-" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14" identifier="COND8" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND8" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=123|})" identifier="MSG12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM57" identifier="MSG12" text="from_net(|{param1|=123|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM60" identifier="MSG13" text="to_net(|{param1|=ERROR! PLEASE WAIT!|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_net(|{param1|=ERROR! PLEASE WAIT!|})" identifier="MSG13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM59" identifier="COND9" background="-" text="loop"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="16"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="loop" identifier="COND9" model_id="PragmaDevStudio:symbol*g:\study\通信协议设计\实验\实验一\one-bit-sliding-window\obsw_process.rdd*SYM59"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+</MscDiagram>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="D:\BUPT_Preparing\XML_course\Presentaions\PPT_bupt\Ch4_XSLT\Exercises\BookCatalogue.xsl"?>
+<BookCatalogue>
+	<Book>
+		<Title>My Life and Times Guoshi Wu </Title>
+		<Author>Paul McCartney</Author>
+		<Date>July, 1998</Date>
+		<ISBN>94303-12021-43892</ISBN>
+		<Publisher>McMillin Publishing</Publisher>
+	</Book>
+	<Book>
+		<Title>Illusions The Adventures of a Reluctant Messiah</Title>
+		<Author>Richard Bach</Author>
+		<Date>1977</Date>
+		<ISBN>0-440-34319-4</ISBN>
+		<Publisher>Dell Publishing Co.</Publisher>
+	</Book>
+	<Book>
+		<Title>The First and Last Freedom</Title>
+		<Author>J. Krishnamurti</Author>
+		<Date>1954</Date>
+		<ISBN>0-06-064831-7</ISBN>
+		<Publisher>Harper &amp; Row</Publisher>
+	</Book>
+</BookCatalogue>

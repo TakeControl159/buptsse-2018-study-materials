@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE People SYSTEM "people.dtd">
+
+<People>
+	<Person></Person>
+	<Person>
+		<Name>Jayce</Name>
+		<Address>Piltover</Address>
+		<Tel>10086</Tel>
+		<Fax>None</Fax>
+		<Email>10010@gmail.com</Email>
+	</Person>
+	<Person></Person>
+</People>
+
+<!--people.xml文件-->

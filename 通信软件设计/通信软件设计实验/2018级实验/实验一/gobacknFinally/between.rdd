@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="FPAR IN
+ /* 上界 */
+ a seq_nr,
+ /* 检测值 */
+ b seq_nr,
+ /* 下界 */
+ c seq_nr;
+DCL
+ /* 是否落在范围内 */
+ is_in boolean;
+
+RETURNS boolean;" outline_color="-" background_color="-" center_coordinates="669 241" dimensions="150 190" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="656 363">
+<SdlFSMSymbol identifier="SYM2" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="876 378" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM3" type="sdlTask" text="is_in := ((a&lt;=b)and(b&lt;c))or((c&lt;a)and(a&lt;=b))or((b&lt;c)and(c&lt;a))" outline_color="-" background_color="-" center_coordinates="876 425" dimensions="440 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM4" type="sdlPrcdReturn" text="is_in" outline_color="-" background_color="-" center_coordinates="876 471" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" defaultColorsNeedFixing="FALSE" name="obsw_block" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="308" yCenter="286" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>obsw_process
+</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK21" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>phy_data
+</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.26064516129" endType="midarrow">
+<Text id="1">[to_phy]
+</Text>
+<Text id="2">phy_data
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_phy]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="308"/>
+
+</Link>
+
+<Link linkId="LINK20" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>data_net
+</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="-0.26064516129" endType="midarrow">
+<Text id="1">[to_net]
+</Text>
+<Text id="2">data_net
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_net]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-242"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

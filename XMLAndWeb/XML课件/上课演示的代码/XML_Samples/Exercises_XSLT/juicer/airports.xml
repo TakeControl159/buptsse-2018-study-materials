@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<airports>
+    <location>ICAO: bos</location>
+    <location>LatLon: 74.31w, 106.5n</location>
+    <location>ICAO: slt</location>
+    <location>ICAO: mol</location>
+    <location>Bogus</location>
+    <location>LatLon: 43.01w, 116.8n</location>
+</airports>

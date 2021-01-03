@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>xalan</fullname>
+  <class>
+    <path>[lib/xalan.jar]</path>
+    <path>[lib/bsf.jar]</path>
+    <path>[lib/xercesImpl.jar]</path>
+    <path>[lib/xml-apis.jar]</path>
+  </class>
+  <lastmodsaved>1069051852937</lastmodsaved>
+</library>

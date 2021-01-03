@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="sys" defaultColorsNeedFixing="FALSE" name="slidingWindowSystem" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB3" type="sdlBlk" xCenter="275" yCenter="220" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>sw_block</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="110" yCenter="77" fixedDimensions="FALSE" width="154" height="110" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>SIGNAL
+  from_nl(Packet),
+  to_nl(Packet),
+  frome_pl(Frame),
+  to_pl(Frame);
+</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK5" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>nl2dl
+</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.430967741935" endType="midarrow">
+<Text id="1">[to_nl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_nl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="275"/>
+
+</Link>
+
+<Link linkId="LINK4" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>dl2pl
+</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_pl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.430967741935" endType="midarrow">
+<Text id="1">[to_pl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="275"/>
+
+</Link>
+</DiagramPartition>
+
+<DiagramPartition name="Datas" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB12" type="sdlText" xCenter="198" yCenter="187" fixedDimensions="FALSE" width="352" height="264" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>synonym MAX_SEQ integer =7;
+
+syntype SeqNo = integer constants 0..MAX_SEQ
+endsyntype;
+
+syntype AckNo = integer constants 0..MAX_SEQ
+endsyntype;
+
+syntype Packet = CHARSTRING
+endsyntype;
+
+newtype Frame STRUCT
+  seq     SeqNo;
+  ack     AckNo;
+  info    Packet;
+endnewtype;
+</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+</Diagram>

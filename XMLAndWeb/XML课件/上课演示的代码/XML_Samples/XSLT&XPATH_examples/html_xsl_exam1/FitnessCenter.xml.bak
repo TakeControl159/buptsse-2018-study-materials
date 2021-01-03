@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="FitnessCenter.xsl"?>
+<FitnessCenter>
+	<Member level="platinum">
+		<Name>Jeff</Name>
+		<Phone type="home">555-1234</Phone>
+		<Phone type="work">555-4321</Phone>
+		<FavoriteColor>lightgrey</FavoriteColor>
+	</Member>
+</FitnessCenter>

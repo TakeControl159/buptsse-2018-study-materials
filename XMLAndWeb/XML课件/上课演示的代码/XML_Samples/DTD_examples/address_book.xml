@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address-book SYSTEM "D:\BUPT_Preparing\XML_course\Presentaions\For_Teacher\Others\DTD_examples\address_book.dtd">
+<address-book>
+	<entry>
+		<name>
+			<fname>John</fname>
+			<lname>Doe</lname>
+		</name>
+		<address>
+			<street>34 Fountain Square Plaza</street>
+			<state>OH</state>
+			<zip>45202</zip>
+			<locality>Cincinnati</locality>
+			<country>US</country>
+			<city>fff</city>
+		</address>
+		<tel>513-555-8889</tel>
+		<email href="mailto:jdoe@emailaholic.com"/>
+	</entry>
+	<entry>
+		<name>
+			<fname>Jean</fname>
+			<lname>Dupont</lname>
+		</name>
+		<address>
+			<street>Rue du Lombard 345</street>
+			<zip>5000</zip>
+			<locality>Namur</locality>
+			<country>Belgium</country>
+			<city>ddd</city>
+		</address>
+		<email href="mailto:jdupont@emailaholic.com"/>
+	</entry>
+	<entry>
+		<name>
+			<fname>Olivier</fname>
+			<lname>Rame</lname>
+		</name>
+		<email href="mailto:orame@emailaholic.com"/>
+	</entry>
+</address-book>

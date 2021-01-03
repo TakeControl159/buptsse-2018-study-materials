@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" defaultColorsNeedFixing="FALSE" name="sw3_block" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="264" yCenter="550" fixedDimensions="TRUE" width="154" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>sw3_process
+</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlText" xCenter="198" yCenter="264" fixedDimensions="FALSE" width="176" height="110" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>SIGNAL
+  from_nl(Packet),
+  to_nl(Packet),
+  from_pl(Frame),
+  to_pl(Frame);
+</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK4" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>nldl</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.193548387097" endType="midarrow">
+<Text id="1">[to_nl]
+</Text>
+<Text id="2">nldl
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_nl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="121"/>
+<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="h" length="143"/>
+
+</Link>
+
+<Link linkId="LINK5" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>dlpl</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.278709677419" endType="midarrow">
+<Text id="1">[to_pl]
+</Text>
+<Text id="2">dlpl
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_pl]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-154"/>
+<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="h" length="-132"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="LIFELINEID_1 LIFELINEID_2"/>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="PROCESS_START" color="#000000" text="sr_process
+(1)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="PROCESS_START" color="#000000" text="RTDS_Env
+(-1)" text_size="0 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM7" identifier="COND1" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND1" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=info0|})" identifier="MSG1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM9" identifier="MSG1" text="from_net(|{param1|=info0|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_data_timer.rdd*SYM6" identifier="MSG2" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=info0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=info0|}|})" identifier="MSG2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209" identifier="COND2" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND2" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=info1|})" identifier="MSG3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM9" identifier="MSG3" text="from_net(|{param1|=info1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_data_timer.rdd*SYM6" identifier="MSG4" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=info1|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=info1|}|})" identifier="MSG4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209" identifier="COND3" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND3" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=info2|})" identifier="MSG5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM9" identifier="MSG5" text="from_net(|{param1|=info2|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_data_timer.rdd*SYM6" identifier="MSG6" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=info2|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=info2|}|})" identifier="MSG6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209" identifier="COND4" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND4" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=info3|})" identifier="MSG7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM9" identifier="MSG7" text="from_net(|{param1|=info3|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_data_timer.rdd*SYM6" identifier="MSG8" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=info3|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=info3|}|})" identifier="MSG8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM210" identifier="COND5" background="-" text="not_net"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="not_net" identifier="COND5" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM210"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=info4|})" identifier="MSG9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="from_net(|{param1|=info4|})" identifier="MSG9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=3|,info|=|}|})" identifier="MSG10"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM193" identifier="MSG10" text="from_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=3|,info|=|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="#ffffff" text="data_timer(10)" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_CANCEL" color="#ffffff" text="data_timer" type="-" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\remove_frame_timer.rdd*SYM22"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209" identifier="COND6" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND6" model_id="PragmaDevStudio:symbol*c:\users\nero\documents\tencent files\860040069\filerecv\selective-repeat-protocol (3)\selective-repeat-protocol\sr_process.rdd*SYM209"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+</MscDiagram>

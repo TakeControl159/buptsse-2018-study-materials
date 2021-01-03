@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                version="1.0">
+ 
+    <xsl:output method="html"/>
+
+    <xsl:template match="/">
+        <HTML>
+            <HEAD>
+                <TITLE>Juicers List</TITLE>
+            </HEAD>
+            <BODY>
+                <UL>
+                    <xsl:for-each select="/juicers/juicer">
+                       <LI><xsl:value-of select="name"/></LI>
+                    </xsl:for-each>
+                </UL>
+            </BODY>
+        </HTML>
+    </xsl:template>
+
+</xsl:stylesheet>

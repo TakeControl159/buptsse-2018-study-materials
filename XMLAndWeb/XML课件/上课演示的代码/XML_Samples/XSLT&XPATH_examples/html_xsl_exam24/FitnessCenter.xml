@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<FitnessCenter>
+        <Member level="platinum">
+                <Name>Jeff</Name>
+                <Phone type="home">555-1234</Phone>
+                <Phone type="work">555-4321</Phone>
+                <FavoriteColor>lightgrey</FavoriteColor>
+        </Member>
+        <Member level="gold">
+                <Name>David</Name>
+                <Phone type="home">383-1234</Phone>
+                <Phone type="work">383-4321</Phone>
+                <FavoriteColor>lightblue</FavoriteColor>
+        </Member>
+        <Member level="platinum">
+                <Name>Roger</Name>
+                <Phone type="home">888-1234</Phone>
+                <Phone type="work">888-4321</Phone>
+                <FavoriteColor>lightyellow</FavoriteColor>
+        </Member>
+        <Member level="platinum">
+                <Name>Stacey</Name>
+                <Phone type="home">419-1234</Phone>
+                <Phone type="work">419-4321</Phone>
+                <FavoriteColor>red</FavoriteColor>
+        </Member>
+        <Member level="platinum">
+                <Name>Angela</Name>
+                <Phone type="home">980-1234</Phone>
+                <Phone type="work">980-4321</Phone>
+                <FavoriteColor>green</FavoriteColor>
+        </Member>
+</FitnessCenter>

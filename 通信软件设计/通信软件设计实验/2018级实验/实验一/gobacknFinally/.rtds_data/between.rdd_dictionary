@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="between" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="seq_nr seq_nr seq_nr" procedureReturnType="boolean" procedureReturnTypeId="ITEM2">
+<Prototype>
+<Signature>between</Signature>
+</Prototype>
+<ParameterType typeId="ITEM3"/>
+<ParameterType typeId="ITEM3"/>
+<ParameterType typeId="ITEM3"/>
+</Item>
+<Item id="ITEM10" type="variable" name="is_in" parentId="ITEM1" scope="none" variableTypeName="boolean" variableTypeId="ITEM2" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="9,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM11" type="variable" name="b" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="4,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM2" type="type" name="boolean" scope="global" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="type" name="seq_nr" scope="global" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="b" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="a" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="is_in" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="c" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="a" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="2,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="c" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM3" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="6,0"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

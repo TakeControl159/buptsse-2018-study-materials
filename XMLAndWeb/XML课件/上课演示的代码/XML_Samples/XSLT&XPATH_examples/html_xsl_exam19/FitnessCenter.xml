@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="FitnessCenter.xsl"?>
+<FitnessCenter>
+        <Member id="1" level="platinum">
+                <Name>Jeff</Name>
+                <Phone type="home">555-1234</Phone>
+                <Phone type="work">555-4321</Phone>
+                <FavoriteColor>lightgrey</FavoriteColor>
+                <MembershipFee>340</MembershipFee>
+        </Member>
+        <Member id="2" level="gold">
+                <Name>David</Name>
+                <Phone type="home">383-1234</Phone>
+                <Phone type="work">383-4321</Phone>
+                <FavoriteColor>lightblue</FavoriteColor>
+                <MembershipFee>500</MembershipFee>
+        </Member>
+        <Member id="3" level="platinum">
+                <Name>Roger</Name>
+                <Phone type="home">888-1234</Phone>
+                <Phone type="work">888-4321</Phone>
+                <FavoriteColor>lightyellow</FavoriteColor>
+                <MembershipFee>340</MembershipFee>
+        </Member>
+        <Member id="4" level="platinum">
+                <Name>Stacey</Name>
+                <Phone type="home">419-1234</Phone>
+                <Phone type="work">419-4321</Phone>
+                <FavoriteColor>red</FavoriteColor>
+                <MembershipFee>340</MembershipFee>
+        </Member>
+        <Member id="5" level="platinum">
+                <Name>Angela</Name>
+                <Phone type="home">980-1234</Phone>
+                <Phone type="work">980-4321</Phone>
+                <FavoriteColor>green</FavoriteColor>
+                <MembershipFee>340</MembershipFee>
+        </Member>
+</FitnessCenter>

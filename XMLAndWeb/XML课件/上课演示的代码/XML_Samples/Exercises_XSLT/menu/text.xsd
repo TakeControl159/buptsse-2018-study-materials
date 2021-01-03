@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.library.org"
+xmlns:lib="http://www.library.org"
+elementFormDefault="qualified">
+<include schemaLocation="BookCatalogue.xsd"/>
+<element name="Library">
+<complexType>
+<sequence>
+<element name="BookCatalogue">
+<complexType>
+<sequence>
+<element ref="lib:Book"
+maxOccurs="unbounded"/>
+</sequence>
+</complexType>
+</element>
+</sequence>
+</complexType>
+</element>
+</schema>

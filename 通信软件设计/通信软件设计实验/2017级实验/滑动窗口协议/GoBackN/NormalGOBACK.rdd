@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="_SYMBOL_4:left _SYMBOL_3:left _LIFELINE_2 _LIFELINE_4 _LIFELINE_5 _LIFELINE_6 _SYMBOL_4:right _SYMBOL_3:right"/>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_2" event_type="PROCESS_START" color="-" text="NetWorklayer1
+" text_size="99 -" background="-"/>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="PROCESS_START" color="-" text="DataLayer1
+" text_size="78 -" background="-"/>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="PROCESS_START" color="-" text="DataLayer2
+" text_size="78 -" background="-"/>
+<MscEvent lifeline_ids="_LIFELINE_6" event_type="PROCESS_START" color="-" text="NewWorkLayer2
+" text_size="99 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_2 _LIFELINE_4 _LIFELINE_5 _LIFELINE_6" event_type="INLINE_EXPRESSION_START" color="-" text_size="29 14" type="loop" identifier="_SYMBOL_4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_2" event_type="MESSAGE_SEND" color="#000000" text="Packet_From_NL1
+" identifier="_LINK_2"/>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="MESSAGE_RECEIVE" color="#000000" text="Packet_From_NL1
+" identifier="_LINK_2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4 _LIFELINE_5" event_type="CONDITION_START" color="-" text="Wait
+" identifier="_SYMBOL_1" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="Wait
+" identifier="_SYMBOL_1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_START" color="-" text="包装成帧
+" identifier="_LIFELINE_4/0"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_END" color="-" identifier="_LIFELINE_4/0"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5 _LIFELINE_4" event_type="OPERATION_CALL" color="#000000" text="Frame_To_DLL2
+" identifier="_LINK_6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="INLINE_EXPRESSION_END" color="-" identifier="_SYMBOL_4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_2 _LIFELINE_4 _LIFELINE_5 _LIFELINE_6" event_type="INLINE_EXPRESSION_START" color="-" text_size="22 14" type="alt" identifier="_SYMBOL_3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="TIMER_START" color="-" text="T2
+" type="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="TIMER_TIMEOUT" color="-" text="T1
+" type="-"/>
+<MscEvent lifeline_ids="_LIFELINE_6 _LIFELINE_5" event_type="OPERATION_CALL" color="#000000" text="Packet_TO_NL2
+" identifier="_LINK_41"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="TIMER_TIMEOUT" color="-" text="T2
+" type="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4 _LIFELINE_5" event_type="OPERATION_CALL" color="#000000" text="Ack_ToDLL1
+" identifier="_LINK_37"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_START" color="-" text="移动发送窗口
+" identifier="_LIFELINE_4/2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_END" color="-" identifier="_LIFELINE_4/2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="INLINE_EXPRESSION_SEP" color="-" identifier="_SYMBOL_3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="TIMER_START" color="-" text="T1
+" type="-"/>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="TIMER_START" color="-" text="T2
+" type="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_6 _LIFELINE_5" event_type="OPERATION_CALL" color="#000000" text="Packet_TO_NL2
+" identifier="_LINK_48"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5 _LIFELINE_6" event_type="OPERATION_CALL" color="#000000" text="Packet_FROM_NL2
+" identifier="_LINK_52"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="TIMER_CANCEL" color="-" text="T2
+" type="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="ACTION_SYMBOL_START" color="-" text="包装成帧并带ACK
+" identifier="_LIFELINE_5/4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5" event_type="ACTION_SYMBOL_END" color="-" identifier="_LIFELINE_5/4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="TIMER_CANCEL" color="-" text="T1
+" type="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4 _LIFELINE_5" event_type="OPERATION_CALL" color="#000000" text="Frame/ACK_to_DLL1
+" identifier="_LINK_59"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_5 _LIFELINE_4" event_type="OPERATION_CALL" color="#000000" text="Frame_TO_DLL2
+" identifier="_LINK_15"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_2 _LIFELINE_4" event_type="OPERATION_CALL" color="#000000" text="Packet_To_NL1
+" identifier="_LINK_62"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_START" color="-" text="移动发送窗口
+" identifier="_LIFELINE_4/5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="_LIFELINE_4" event_type="ACTION_SYMBOL_END" color="-" identifier="_LIFELINE_4/5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="INLINE_EXPRESSION_END" color="-" identifier="_SYMBOL_3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+</MscDiagram>

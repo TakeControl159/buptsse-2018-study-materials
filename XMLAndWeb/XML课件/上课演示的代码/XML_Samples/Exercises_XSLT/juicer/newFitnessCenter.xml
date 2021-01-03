@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><gym:FitnessCenter xmlns:gym="http://www.gym.com">
+        <gym:Member level="platinum">
+                <gym:Name>Jeff</gym:Name>
+                <gym:Phone type="home">555-1234</gym:Phone>
+                <gym:Phone type="work">555-4321</gym:Phone>
+                <gym:FavoriteColor>lightgrey</gym:FavoriteColor>
+        </gym:Member>
+</gym:FitnessCenter>

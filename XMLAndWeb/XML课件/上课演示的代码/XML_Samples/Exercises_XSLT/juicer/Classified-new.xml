@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company_data>
+    <data classification="unclassified">item1</data>
+    <data classification="unclassified">item3</data>
+    <data classification="secret">item4</data>
+    <data classification="classified">item5</data>
+    <data classification="classified">item7</data>
+</company_data>

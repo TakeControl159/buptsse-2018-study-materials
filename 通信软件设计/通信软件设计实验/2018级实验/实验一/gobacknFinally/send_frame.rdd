@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="FPAR 
+  /* 帧类型 */
+IN/OUT  fk frame_kind,
+  /* 帧序号 */
+IN/OUT  frame_nr seq_nr,
+  /* 回应消息的帧序号 */
+IN/OUT  frame_expected seq_nr,
+  /* 存储帧的buffer */
+IN/OUT  buf buffer,
+ 
+  /* 放入的定时数组 */
+IN/OUT  send_timing timing,
+  /* 应该是上界+1 */
+IN/OUT  new_timer seq_nr,
+  /*队列头指针*/
+IN/OUT  old_timer seq_nr;
+
+DCL
+  s frame;" outline_color="-" background_color="-" center_coordinates="861 205" dimensions="249 295" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM20" type="sdlComment" text="构建发送帧" outline_color="-" background_color="-" center_coordinates="643 433" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM21" type="sdlComment" text="设置定时器" outline_color="-" background_color="-" center_coordinates="643 563" dimensions="60 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="169 346">
+<SdlFSMSymbol identifier="SYM3" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="386 361" dimensions="60 29" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM17" type="sdlTask" text="s!info := buf(frame_nr),
+s!seq := frame_nr,
+s!ack := (frame_expected + MAX_SEQ) MOD (MAX_SEQ + 1),
+s!check := (call get_char_sum(s!info)),
+s!kind := fk;" outline_color="-" background_color="-" center_coordinates="386 433" dimensions="434 91" attached_symbol_id="SYM20"/>
+<SdlFSMSymbol identifier="SYM6" type="sdlSendSig" text="to_phy(s)" outline_color="-" background_color="-" center_coordinates="386 511" dimensions="88 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM18" type="sdlPrcdCall" text="set_frame_timer(send_timing,s!seq,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="386 563" dimensions="434 40" attached_symbol_id="SYM21"/>
+<SdlFSMSymbol identifier="SYM16" type="sdlPrcdReturn" outline_color="-" background_color="-" center_coordinates="386 609" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

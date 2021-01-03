@@ -1,0 +1,26 @@
+﻿生成启动时间为 2012/12/6 GRE 下午16:13:29。
+     1>项目“D:\programming\junior 1\算法设计\实验3\lab3_algorithm\lab3_algorithm\lab3_algorithm.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\lab3_algorithm.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         d:\programming\Software\2\visualstudio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 01_fzjx.cpp
+         01_fzjx.cpp
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         d:\programming\Software\2\visualstudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\programming\junior 1\算法设计\实验3\lab3_algorithm\Debug\lab3_algorithm.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\lab3_algorithm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\programming\junior 1\算法设计\实验3\lab3_algorithm\Debug\lab3_algorithm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\programming\junior 1\算法设计\实验3\lab3_algorithm\Debug\lab3_algorithm.lib" /MACHINE:X86 Debug\lab3_algorithm.exe.embed.manifest.res
+         Debug\01_fzjx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\lab3_algorithm.exe.embed.manifest" /manifest Debug\lab3_algorithm.exe.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         lab3_algorithm.vcxproj -> D:\programming\junior 1\算法设计\实验3\lab3_algorithm\Debug\lab3_algorithm.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\lab3_algorithm.unsuccessfulbuild”。
+         正在对“Debug\lab3_algorithm.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\programming\junior 1\算法设计\实验3\lab3_algorithm\lab3_algorithm\lab3_algorithm.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.28

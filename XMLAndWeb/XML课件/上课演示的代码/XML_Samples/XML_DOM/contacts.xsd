@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="contacts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="contact"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="contact">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="firstname" type="xs:NCName"/>
+				<xs:element name="lastname" type="xs:NCName"/>
+			</xs:sequence>
+			<xs:attribute name="title" type="xs:string"/>
+ 		</xs:complexType>
+	</xs:element>
+</xs:schema>

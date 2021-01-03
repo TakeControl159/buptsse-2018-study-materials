@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--显示 schema 中用到的元素和数据类型来自命名空间 "http://www.w3.org/2001/XMLSchema"。-->
+<!--targetNamespace的作用：为这个xsd文件中定义的元素指定一个名称空间。-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+	<!--1.简单的元素类型,z只包含文本，不能包含任何其他元素和属性。但是文本可以包含很多类型-->
+	<!--数据类型分别为：string，integer，date-->
+	<!--	default 默认值，fixed固定值-->
+	<xs:element name="color" type="xs:string" fixed="blue"/>
+	<xs:element name="num" type="xs:integer" fixed="17"/>
+	<xs:element name="dateborn" type="xs:date"/>
+	<xs:element name="start" type="xs:time"/>
+	
+	<!--	1.1j简单属性 元素当中的属性（只有复杂元素类型才有属性）-->
+	<!--默认值为EN-->
+	<xs:attribute name="lang" type="xs:string" default="EN"/>
+	<!--固定值为EN-->
+	<xs:attribute name="color" type="xs:string" fixed="red"/>
+	<!--1.2简单数据类型-->
+	<xs:element name="age">
+		<!--限制关键字restriction age 的值不能低于 0 或者高于 120-->
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="120"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="car" type="carType"/>
+	<!--自定义数据类型，给数据类型取个名字-->
+	<xs:simpleType name="carType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Audi"/>
+			<xs:enumeration value="Golf"/>
+			<xs:enumeration value="BMW"/>
+		</xs:restriction>
+		<!--限制 此元素的值只能为以下三个-->
+		<!--数据类型约束-->
+	</xs:simpleType>
+	<!--1.3数据值范围约束-->
+	<xs:element name="letter">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([a-z][A-Z]|hello)+"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!--字符长度固定 8个-->
+	<xs:element name="password1">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9]{8}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!--字符串长度约束5~8-->
+	<xs:element name="password2">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="5"/>
+				<xs:maxLength value="8"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!--2.1复合元素（包含其他元素或属性的XML元素）-->
+	<!--复合空元素中间没有文本值， 类型为prodtype-->
+	<xs:element name="product" type="prodtype"/>
+	<xs:complexType name="prodtype">
+		<xs:attribute name="hight" type="xs:string" use="required"/>
+		<xs:attribute name="prodid" type="xs:positiveInteger"/>
+		<!--required 在该元素下，该属性必选-->
+	</xs:complexType>
+	<!--类型为personinfo， 包含两个元素-->
+	<xs:element name="student" type="personinfo"/>
+	<xs:element name="employee" type="fullpersoninfo"/>
+	<xs:complexType name="personinfo">
+		<xs:sequence>
+			<xs:element name="firstname" type="xs:string"/>
+			<xs:element name="lastname" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--2.2声明外部元素，继承复杂元素使用complexContent关键字 复杂元素,复杂内容-->
+	<xs:complexType name="fullpersoninfo">
+		<xs:complexContent>
+			<xs:extension base="personinfo">
+				<xs:sequence>
+					<xs:element name="address" type="xs:string"/>
+					<xs:element name="city" type="xs:string"/>
+					<xs:element name="country" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--2.3继承外部简单元素使用simpleContent关键字 复杂元素,简单内容-->
+	<xs:element name="shoesize">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="country" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!--2.4带有混合内容的复合类型-->
+	<xs:element name="Letter" type="lettertype"/>
+	<!--使字符数据可以出现在 "letter" 的子元素之间 mixed 属性必须被设置为 "true"-->
+	<xs:complexType name="lettertype" mixed="true">
+		<xs:sequence minOccurs="3" maxOccurs="5"> <!--最少出现3~5次-->
+			<xs:element name="car" type="carType"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="orderid" type="xs:positiveInteger"/>
+			<xs:element name="shipdate" type="xs:date"/>
+			<xs:element name="start" type="xs:time"/>
+			<xs:element name="prize" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

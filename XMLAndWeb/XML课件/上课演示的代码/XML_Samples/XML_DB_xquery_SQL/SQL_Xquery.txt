@@ -1,0 +1,36 @@
+
+1. CREATE TABLE orders (orderid INT, orderinfo XML)
+
+2.CREATE TABLE o2 (oid INT, otype CHAR(2), ocust XML, oinfo XML)
+
+3.INSERT INTO orders (orderid, orderinfo) VALUES (5,
+'<order>
+<orderdate>2006-07-07</orderdate>
+<customer id="8">
+<name>XYZ</name>
+<zip>12345</zip>
+</customer>
+<shipnote>Fragile Contents</shipnote>
+</order>'
+);
+
+4.SELECT * FROM orders WHERE orderid=5
+
+5.SELECT orderinfo FROM orders
+
+6.XQUERY db2-fn:xmlcolumn('ORDERS.ORDERINFO');
+
+
+7.XQUERY for $d in db2-fn:xmlcolumn('ORDERS.ORDERINFO')/order/orderdate
+  return $d;
+
+8. SELECT orderid FROM orders
+WHERE xmlexists('$o[order/customer/name="XYZ"]'
+PASSING orderinfo AS "o");
+
+9.XQUERY db2-fn:sqlquery(
+"SELECT orderinfo FROM orders WHERE orderid > 3"
+)/order/customer[zip = "12345"];
+
+10.CREATE INDEX odindex ON orders(orderinfo) GENERATE
+KEY USING XMLPATTERN '/order/orderdate' as SQL DATE;

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM3" type="sdlText" text="DCL
+/* 变量声明 */
+  /* 期望收到回复的帧序号 */
+  /* 同时是发送窗口下边界*/
+  ack_expected  seq_nr,
+  /* 下一个发送帧序号 */
+  /* 同时是发送窗口上边界+1 */
+  next_frame_to_send  seq_nr,
+
+  /* 期望收到下一个帧的序号 */
+  /* 同时是接收窗口下边界 */
+  frame_expected seq_nr,
+  /* 接收窗口上边界 */
+  too_far seq_nr,
+
+  /* 临时数据帧 */
+  tmp_frame frame,
+  /* 临时数据包 */
+  tmp_packet packet,
+
+  /* 是否已经重发标志位 */
+  no_nak boolean,
+
+  /* 发送缓存区 */
+  out_buf buffer,
+  /* 接受缓存区 */
+  in_buf buffer,
+  
+  /* 接受标志位 */
+  arrived flags,
+  /* 发送缓存计数 */
+  send_used_n_buf seq_nr,
+
+  /* 发送帧的定时信息 */
+  send_timing timing,
+
+  /* 最新定时信息在数组中的下标 */
+  /* 应该是上界+1 */
+  new_timer seq_nr,
+  /* 最老的定时信息在数组中的下标*/
+  /* 应该是下界 */
+  old_timer seq_nr,
+
+  /* 临时定时节点 */
+  tmp_timing time_slice,
+
+  /* 临时seq值 */
+  tmp_seq seq_nr,
+  /*临时变量，用于计算
+   *between函数的结果*/
+  between_bool boolean;
+
+
+TIMER
+/* 定时器 */
+  /* 等待回应超时定时器 */
+  data_timer,
+  /* 等待便车超时定时器 */
+  ack_timer;" outline_color="-" background_color="-" center_coordinates="233 854" dimensions="234 848" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM40" type="sdlPrcdDecl" text="send_frame" outline_color="-" background_color="-" center_coordinates="1009 127" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM41" type="sdlPrcdDecl" text="set_frame_timer" outline_color="-" background_color="-" center_coordinates="1234 226" dimensions="124 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM42" type="sdlPrcdDecl" text="remove_frame_timer" outline_color="-" background_color="-" center_coordinates="1031 226" dimensions="146 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM133" type="sdlPrcdDecl" text="between" outline_color="-" background_color="-" center_coordinates="1201 127" dimensions="68 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM218" type="sdlPrcdDecl" text="inc" outline_color="-" background_color="-" center_coordinates="805 150" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM226" type="sdlPrcdDecl" text="get_char_sum" outline_color="-" background_color="-" center_coordinates="3103 2188" dimensions="104 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM54" type="sdlComment" text="初始化" outline_color="-" background_color="-" center_coordinates="580 259" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM53" type="sdlComment" text="从网络层接受数据" outline_color="-" background_color="-" center_coordinates="1262 441" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM44" type="sdlComment" text="发送缓存区占用计数+1" outline_color="-" background_color="-" center_coordinates="1220 493" dimensions="96 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM50" type="sdlComment" text="发送数据帧" outline_color="-" background_color="-" center_coordinates="1422 545" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM220" type="sdlComment" text="更新期望位" outline_color="-" background_color="-" center_coordinates="1163 597" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM16" type="sdlComment" text="等待定时器到时了" outline_color="-" background_color="-" center_coordinates="1914 388" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM134" type="sdlComment" text="必然是等最久的超时了,
+把序号取出来重发对应帧
+这里面重新设定了计时器" outline_color="-" background_color="-" center_coordinates="2190 607" dimensions="96 62" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM58" type="sdlComment" text="搭便车计时器到了" outline_color="-" background_color="-" center_coordinates="2901 313" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM63" type="sdlComment" text="从物理层接收到一个帧" outline_color="-" background_color="-" center_coordinates="4267 163" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM71" type="sdlComment" text="判断这个帧的类型" outline_color="-" background_color="-" center_coordinates="4243 603" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM69" type="sdlComment" text="数据帧" outline_color="-" background_color="-" center_coordinates="4206 655" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM75" type="sdlComment" text="这个帧不是刚好
+想收到的帧，并且
+还没有发送过nak,
+就发一个nak" outline_color="-" background_color="-" center_coordinates="4341 725" dimensions="90 76" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM82" type="sdlComment" text="该seq在接受窗口内
+且还没有被接收" outline_color="-" background_color="-" center_coordinates="4540 915" dimensions="90 48" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM93" type="sdlComment" text="接收这个frame" outline_color="-" background_color="-" center_coordinates="4368 1027" dimensions="82 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM131" type="sdlComment" text="这个循环查找经过接收包后，
+可以按顺序提交给网络层的包" outline_color="-" background_color="-" center_coordinates="4333 1139" dimensions="110 48" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM107" type="sdlComment" text="给网络层提交包" outline_color="-" background_color="-" center_coordinates="4337 1247" dimensions="68 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM108" type="sdlComment" text="处理nak(?)
+把其缓存标志位置为false
+把刚刚提交的包的缓存清除
+把窗口上限提高一个" outline_color="-" background_color="-" center_coordinates="4365 1317" dimensions="118 76" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM70" type="sdlComment" text="nak帧" outline_color="-" background_color="-" center_coordinates="5100 655" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM117" type="sdlComment" text="如果确实在发送窗口里，重发一个这个包" outline_color="-" background_color="-" center_coordinates="5444 707" dimensions="234 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM232" type="sdlComment" text="不管如何都会执行的while循环
+用于把收到确认帧，" outline_color="-" background_color="-" center_coordinates="4455 1584" dimensions="184 50" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM211" type="sdlComment" text="无法从网络层接收包的状态" outline_color="-" background_color="-" center_coordinates="4306 2025" dimensions="104 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="360 151">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="450 166" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM4" type="sdlTask" text="ack_expected :=0,
+next_frame_to_send :=0,
+frame_expected := 0,
+too_far := NR_BUFS,
+send_used_n_buf :=0,
+
+new_timer:=0,
+old_timer:=0;" outline_color="-" background_color="-" center_coordinates="450 259" dimensions="180 132" attached_symbol_id="SYM54"/>
+<SdlFSMSymbol identifier="SYM7" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="450 357" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock top_left_coordinates="684 369">
+<SdlFSMSymbol identifier="SYM8" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="1033 389" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM9" type="sdlInputSig" text="from_net(out_buf(next_frame_to_send mod NR_BUFS))" outline_color="-" background_color="-" center_coordinates="1033 441" dimensions="362 40" attached_symbol_id="SYM53"/>
+<Transition>
+<SdlFSMSymbol identifier="SYM43" type="sdlTask" text="send_used_n_buf:=send_used_n_buf+1" outline_color="-" background_color="-" center_coordinates="1033 493" dimensions="258 40" attached_symbol_id="SYM44"/>
+<SdlFSMSymbol identifier="SYM47" type="sdlPrcdCall" text="send_frame(data,next_frame_to_send,frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="1033 545" dimensions="698 40" attached_symbol_id="SYM50"/>
+<SdlFSMSymbol identifier="SYM219" type="sdlPrcdCall" text="inc(next_frame_to_send)" outline_color="-" background_color="-" center_coordinates="1033 597" dimensions="180 40" attached_symbol_id="SYM220"/>
+<SdlFSMSymbol identifier="SYM213" type="sdlCnctrOut" text="check" outline_color="-" background_color="-" center_coordinates="1033 649" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="1510 316">
+<SdlFSMSymbol identifier="SYM13" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="1821 336" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM14" type="sdlInputSig" text="data_timer" outline_color="-" background_color="-" center_coordinates="1821 388" dimensions="90 40" attached_symbol_id="SYM16"/>
+<Transition>
+<SdlFSMSymbol identifier="SYM162" type="sdlCnctrIn" text="dt" outline_color="-" background_color="-" center_coordinates="1821 440" dimensions="110 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM217" type="sdlTask" text="tmp_seq:=send_timing(old_timer)!seq" outline_color="-" background_color="-" center_coordinates="1821 492" dimensions="264 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM152" type="sdlPrcdCall" text="remove_frame_timer(send_timing,tmp_seq,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="1821 544" dimensions="432 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM132" type="sdlPrcdCall" text="send_frame(data,tmp_seq,frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="1821 607" dimensions="622 62" attached_symbol_id="SYM134"/>
+<SdlFSMSymbol identifier="SYM164" type="sdlCnctrOut" text="check" outline_color="-" background_color="-" center_coordinates="1821 670" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="2526 241">
+<SdlFSMSymbol identifier="SYM56" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="2812 261" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM57" type="sdlInputSig" text="ack_timer" outline_color="-" background_color="-" center_coordinates="2812 313" dimensions="82 40" attached_symbol_id="SYM58"/>
+<Transition>
+<SdlFSMSymbol identifier="SYM168" type="sdlCnctrIn" text="at" outline_color="-" background_color="-" center_coordinates="2812 365" dimensions="110 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM214" type="sdlPrcdCall" text="send_frame(ack,0,frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="2812 417" dimensions="572 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM176" type="sdlCnctrOut" text="check" outline_color="-" background_color="-" center_coordinates="2812 469" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="3787 91">
+<SdlFSMSymbol identifier="SYM60" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="4136 111" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM61" type="sdlInputSig" text="from_phy(tmp_frame)" outline_color="-" background_color="-" center_coordinates="4136 163" dimensions="152 40" attached_symbol_id="SYM63"/>
+<Transition>
+<SdlFSMSymbol identifier="SYM182" type="sdlCnctrIn" text="fp" outline_color="-" background_color="-" center_coordinates="4136 215" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM223" type="sdlDecision" text="tmp_frame!check = (call get_char_sum(tmp_frame!info))" outline_color="-" background_color="-" center_coordinates="4136 267" dimensions="390 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM224" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 319" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM225" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4462 319" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM227" type="sdlDecision" text="no_nak" outline_color="-" background_color="-" center_coordinates="4462 371" dimensions="62 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM228" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4462 423" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM230" type="sdlPrcdCall" text="send_frame(nak,0,frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="4462 475" dimensions="572 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM229" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4788 423" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM231" type="sdlCnctrOut" text="check" outline_color="-" background_color="-" center_coordinates="4462 539" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM64" type="sdlDecision" text="tmp_frame!kind" outline_color="-" background_color="-" center_coordinates="4136 603" dimensions="118 40" attached_symbol_id="SYM71"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM65" type="sdlAnswer" text="data" outline_color="-" background_color="-" center_coordinates="4136 655" dimensions="60 40" attached_symbol_id="SYM69"/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM72" type="sdlDecision" text="tmp_frame!seq/=frame_expected AND no_nak" outline_color="-" background_color="-" center_coordinates="4136 725" dimensions="300 76" attached_symbol_id="SYM75"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM73" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 795" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM77" type="sdlPrcdCall" text="send_frame(nak,0,frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="4136 847" dimensions="572 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM74" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4525 795" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM78" type="sdlInitTimer" text="set(NOW+100,ack_timer)" outline_color="-" background_color="-" center_coordinates="4525 847" dimensions="186 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM79" type="sdlDecision" text="(call between(frame_expected,tmp_frame!seq,too_far)) AND arrived(tmp_frame!seq mod NR_BUFS)=false" outline_color="-" background_color="-" center_coordinates="4136 911" dimensions="698 40" attached_symbol_id="SYM82"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM80" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 971" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM84" type="sdlTask" text="arrived(tmp_frame!seq mod NR_BUFS):=TRUE,
+in_buf(tmp_frame!seq mod NR_BUFS):=tmp_frame!info" outline_color="-" background_color="-" center_coordinates="4136 1027" dimensions="362 48" attached_symbol_id="SYM93"/>
+<SdlFSMSymbol identifier="SYM106" type="sdlCnctrIn" text="loop" outline_color="-" background_color="-" center_coordinates="4136 1083" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM98" type="sdlDecision" text="arrived(frame_expected mod NR_BUFS)" outline_color="-" background_color="-" center_coordinates="4136 1139" dimensions="264 48" attached_symbol_id="SYM131"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM99" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 1195" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM102" type="sdlSendSig" text="to_net(in_buf(frame_expected mod NR_BUFS))" outline_color="-" background_color="-" center_coordinates="4136 1247" dimensions="314 40" attached_symbol_id="SYM107"/>
+<SdlFSMSymbol identifier="SYM101" type="sdlTask" text="no_nak:=TRUE,
+arrived(frame_expected mod NR_BUFS):=FALSE,
+call inc(frame_expected),
+call inc(too_far);" outline_color="-" background_color="-" center_coordinates="4136 1317" dimensions="320 76" attached_symbol_id="SYM108"/>
+<SdlFSMSymbol identifier="SYM103" type="sdlInitTimer" text="set(NOW+100,ack_timer)" outline_color="-" background_color="-" center_coordinates="4136 1387" dimensions="186 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM104" type="sdlCnctrOut" text="loop" outline_color="-" background_color="-" center_coordinates="4136 1439" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM100" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4464 1195" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM81" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4534 971" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM66" type="sdlAnswer" text="nak" outline_color="-" background_color="-" center_coordinates="5030 655" dimensions="60 40" attached_symbol_id="SYM70"/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM109" type="sdlDecision" text="call between(ack_expected,(tmp_frame!ack+1) mod (MAX_SEQ+1),next_frame_to_send)" outline_color="-" background_color="-" center_coordinates="5030 707" dimensions="574 40" attached_symbol_id="SYM117"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM110" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="5030 759" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM216" type="sdlPrcdCall" text="remove_frame_timer(send_timing,(tmp_frame!ack+1) mod (MAX_SEQ+1),new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="5030 811" dimensions="614 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM115" type="sdlPrcdCall" text="send_frame(data,(tmp_frame!ack+1) mod (MAX_SEQ+1),frame_expected,out_buf,no_nak,send_timing,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="5030 863" dimensions="804 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM111" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="5472 759" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM215" type="sdlAnswer" text="ack" outline_color="-" background_color="-" center_coordinates="5601 655" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM185" type="sdlCnctrIn" text="ack" outline_color="-" background_color="-" center_coordinates="4136 1527" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM144" type="sdlDecision" text="call between(ack_expected,tmp_frame!ack,next_frame_to_send)" outline_color="-" background_color="-" center_coordinates="4136 1584" dimensions="434 50" attached_symbol_id="SYM232"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM145" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 1649" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM178" type="sdlTask" text="send_used_n_buf:=send_used_n_buf-1" outline_color="-" background_color="-" center_coordinates="4136 1701" dimensions="258 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM147" type="sdlPrcdCall" text="remove_frame_timer(send_timing,ack_expected mod NR_BUFS,new_timer,old_timer)" outline_color="-" background_color="-" center_coordinates="4136 1753" dimensions="552 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM222" type="sdlPrcdCall" text="inc(ack_expected)" outline_color="-" background_color="-" center_coordinates="4136 1805" dimensions="138 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM184" type="sdlCnctrOut" text="ack" outline_color="-" background_color="-" center_coordinates="4136 1857" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM146" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4477 1649" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM205" type="sdlCnctrIn" text="check" outline_color="-" background_color="-" center_coordinates="4477 1701" dimensions="110 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM206" type="sdlDecision" text="send_used_n_buf&lt;NR_BUFS" outline_color="-" background_color="-" center_coordinates="4136 1921" dimensions="180 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM207" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="4136 1973" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM209" type="sdlState" text="ready" outline_color="-" background_color="-" center_coordinates="4136 2025" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM208" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="4210 1973" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM210" type="sdlState" text="not_net" outline_color="-" background_color="-" center_coordinates="4210 2025" dimensions="68 40" attached_symbol_id="SYM211"/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="1903 830">
+<SdlFSMSymbol identifier="SYM159" type="sdlState" text="not_net" outline_color="-" background_color="-" center_coordinates="1948 850" dimensions="68 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM160" type="sdlInputSig" text="data_timer" outline_color="-" background_color="-" center_coordinates="1948 902" dimensions="90 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM161" type="sdlCnctrOut" text="dt" outline_color="-" background_color="-" center_coordinates="1948 954" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM191" type="sdlInputSig" text="ack_timer" outline_color="-" background_color="-" center_coordinates="2044 902" dimensions="82 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM192" type="sdlCnctrOut" text="at" outline_color="-" background_color="-" center_coordinates="2044 954" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM193" type="sdlInputSig" text="from_phy(tmp_frame)" outline_color="-" background_color="-" center_coordinates="2171 902" dimensions="152 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM194" type="sdlCnctrOut" text="fp" outline_color="-" background_color="-" center_coordinates="2171 954" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

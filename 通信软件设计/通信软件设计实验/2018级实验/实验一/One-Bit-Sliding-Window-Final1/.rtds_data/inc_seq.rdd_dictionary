@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="inc_seq" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="seq_nr">
+<Prototype>
+<Signature>inc_seq</Signature>
+</Prototype>
+<ParameterType typeId="ITEM2"/>
+</Item>
+<Item id="ITEM2" type="type" name="seq_nr" scope="global" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="MAX_SEQ" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="seq" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="seq" parentId="ITEM1" scope="none" variableTypeName="seq_nr" variableTypeId="ITEM2" formalParameterOrder="-1" isFormalParam="TRUE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="1,0"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="none" diagramType="msc">
+<Item id="ITEM1" type="package" name="" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM2" type="process" name="RTDS_Env" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="LIFELINEID_1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="process" name="GBN_process" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="LIFELINEID_2"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

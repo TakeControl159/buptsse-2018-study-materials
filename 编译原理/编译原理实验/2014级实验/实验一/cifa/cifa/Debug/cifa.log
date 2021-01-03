@@ -1,0 +1,13 @@
+﻿生成启动时间为 2016/11/17 10:12:32。
+     1>项目“F:\学习\大三上学习\大三上作业\编译\1\cifa\cifa\cifa.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\vs-2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cifa.cpp
+         cifa.cpp
+       Link:
+         E:\vs-2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\学习\大三上学习\大三上作业\编译\1\cifa\Debug\cifa.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\学习\大三上学习\大三上作业\编译\1\cifa\Debug\cifa.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\学习\大三上学习\大三上作业\编译\1\cifa\Debug\cifa.lib" /MACHINE:X86 Debug\cifa.obj
+         cifa.vcxproj -> F:\学习\大三上学习\大三上作业\编译\1\cifa\Debug\cifa.exe
+     1>已完成生成项目“F:\学习\大三上学习\大三上作业\编译\1\cifa\cifa\cifa.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:17.70

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<FitnessCenter>
+        <Member id="1" level="gold">
+                <Name>Sharon</Name>
+                <Phone type="home">412-0000</Phone>
+                <Phone type="work">412-1010</Phone>
+                <FavoriteColor>purple</FavoriteColor>
+                <MembershipFee>500</MembershipFee>
+        </Member>
+        <Member id="2" level="gold">
+                <Name>John</Name>
+                <Phone type="home">440-0000</Phone>
+                <Phone type="work">440-1010</Phone>
+                <FavoriteColor>brown</FavoriteColor>
+                <MembershipFee>500</MembershipFee>
+        </Member>
+</FitnessCenter>

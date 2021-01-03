@@ -1,0 +1,11 @@
+<?xml version = "1.0"?>
+<endpoints version="2.0"
+	xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+	<endpoint name="CalculatorPort"
+		implementation="buptsse.CalculatorDelegate"
+		url-pattern="/CalculatorPort">
+	</endpoint>
+	<endpoint name="StringOperationPort"
+		implementation="buptsse.StringOperationDelegate"
+		url-pattern="/StringOperationPort">
+	</endpoint></endpoints>

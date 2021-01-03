@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" defaultColorsNeedFixing="FALSE" name="GBN_block" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="264" yCenter="242" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>GBN_process</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK16" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>nldl</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.374193548387" endType="midarrow">
+<Text id="1">[to_net]
+</Text>
+<Text id="2">nldl
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_net]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="264"/>
+
+</Link>
+
+<Link linkId="LINK15" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>dlpl</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[from_phy]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="-0.374193548387" endType="midarrow">
+<Text id="1">[to_phy]
+</Text>
+<Text id="2">dlpl
+</Text>
+</Connector>
+<LinkSegment orientation="h" length="286"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

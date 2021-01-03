@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="mimetype">
+		<xs:complexType>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="subtype" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="envelope">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Form" type="xs:string"/>
+				<xs:element name="To" type="xs:string"/>
+				<xs:element name="Date" type="xs:string"/>
+				<xs:element name="Subject" type="xs:string"/>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="name" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="From" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="attachment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="mimetype"/>
+				<xs:element name="content" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="mail">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="envelope"/>
+				<xs:element name="body" type="xs:string"/>
+				<xs:element ref="attachment"  minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="mails">
+		<xs:annotation>
+			<xs:documentation>关于mails的文档类型定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="mail" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

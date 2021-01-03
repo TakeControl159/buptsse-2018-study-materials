@@ -1,0 +1,259 @@
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy,4)*/
+system GoBackN;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),155(55,25))*/
+NEWTYPE Packet STRUCT
+Data charstring;
+Flag integer;
+ENDNEWTYPE;
+
+NEWTYPE DataFrame STRUCT
+seq Integer;
+Info Packet;
+ENDNEWTYPE;
+
+NEWTYPE AckFrame STRUCT
+Ack Integer;
+seq Integer;
+ackflag Integer;
+ENDNEWTYPE;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),158(125,30))*/
+Signal
+DataToDL2(DataFrame),
+FromNW1(Packet),
+ToNW2(Packet),
+AckToDL1(AckFrame);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),146(30,90))*/
+channel /*#E*/ 
+N1 from env to DataLink1 with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),147(22,100))*/
+FromNW1;
+endchannel N1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),134(100,90))*/
+channel /*#E*/ 
+R from DataLink2 to DataLink1 with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),135(74,100))*/
+AckToDL1;
+from DataLink1 to DataLink2 with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),136(110,100))*/
+DataToDL2;
+endchannel R;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),137(165,90))*/
+channel /*#E*/ 
+N2 from DataLink2 to env with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),138(170,100))*/
+ToNW2;
+endchannel N2;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),119(40,90))*/
+block DataLink1 referenced;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy(1),122(120,90))*/
+block DataLink2 referenced;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\goback.ssy,4)*/
+endsystem GoBackN;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1,4)*/
+block DataLink1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),119(47,72))*/
+signalroute /*#E*/ 
+N11 from env to p1 with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),120(57,82))*/
+FromNW1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),140(142,72))*/
+signalroute /*#E*/ 
+R1 from p1 to env with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),141(167,82))*/
+DataToDL2;
+from env to p1 with 
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),142(107,82))*/
+AckToDL1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),116(75,70))*/
+process p1 referenced;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),125(7,77))*/
+connect N1 and N11;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1(1),146(177,77))*/
+connect R and R1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1,4)*/
+endblock DataLink1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr,4)*/
+process p1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),122(35,10))*/
+newtype bufferType
+array(integer,Packet);
+endnewtype;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),119(135,10))*/
+DCL
+next_frame_to_send Integer,
+ack_expected Integer,
+next_frame_expected Integer,
+frame_to_dl2 Integer,
+nbuffered Integer,
+r AckFrame,
+s DataFrame,
+a  Integer,
+X Integer,
+i Integer;
+dcl buffer bufferType;
+timer T(Integer);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),125(85,15))*/
+start /*#E*/ 
+;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),131(85,30))*/
+task /*#E*/ 
+ack_expected:=0,
+next_frame_to_send:=0,
+next_frame_expected:=0,
+frame_to_dl2:=0,
+ack_expected:=0,
+nbuffered:=0;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),137(85,60))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),137(85,60))*/
+state /*#E*/ 
+Wait;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),263(155,80))*/
+input /*#E*/ 
+T(X);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),380(155,95))*/
+task /*#E*/ 
+frame_to_dl2:=ack_expected,
+i:=1;
+grst0:
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),365(155,115))*/
+decision /*#E*/ 
+i<=nbuffered;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),368(167,127))*/
+(true):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),269(155,130))*/
+task /*#E*/ 
+s!Info:=buffer(frame_to_dl2),
+s!seq:=frame_to_dl2;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),275(155,150))*/
+output /*#E*/ 
+DataToDL2(s);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),278(155,165))*/
+/*#E*/ 
+SET(NOW+50,T(frame_to_dl2));
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),284(155,180))*/
+task /*#E*/ 
+frame_to_dl2:=frame_to_dl2+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),392(155,195))*/
+task /*#E*/ 
+i:=i+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),377(137,122))*/
+(false):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),287(130,190))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),365(155,115))*/
+enddecision;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),365(155,115))*/
+join /*#E*/ 
+grst0;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),143(20,85))*/
+input /*#E*/ 
+FromNW1(buffer(next_frame_to_send));
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),146(20,105))*/
+provided /*#E*/ 
+nbuffered<4;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),155(20,125))*/
+task /*#E*/ 
+nbuffered:=nbuffered+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),158(20,145))*/
+task /*#E*/ 
+s!Info:=buffer(frame_to_dl2),
+s!seq:=frame_to_dl2;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),167(20,165))*/
+output /*#E*/ 
+DataToDL2(s);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),173(20,180))*/
+/*#E*/ 
+SET(NOW+50,T(frame_to_dl2));
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),179(20,195))*/
+task /*#E*/ 
+next_frame_to_send:=next_frame_to_send+1,
+frame_to_dl2:=frame_to_dl2+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),188(20,215))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),197(75,85))*/
+input /*#E*/ 
+AckToDL1(r);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),401(75,100))*/
+decision /*#E*/ 
+r!ackflag=0;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),428(87,112))*/
+(true):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),425(75,120))*/
+decision /*#E*/ 
+r!ack=ack_expected;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),539(100,125))*/
+(false):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),533(105,125))*/
+task /*#E*/ 
+nbuffered:=nbuffered-1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),494(105,140))*/
+decision /*#E*/ 
+r!ack>ack_expected;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),497(117,152))*/
+(true):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),227(105,160))*/
+task /*#E*/ 
+a:=frame_to_dl2;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),230(105,175))*/
+task /*#E*/ 
+frame_to_dl2:=ack_expected;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),233(105,195))*/
+task /*#E*/ 
+s!Info:=buffer(frame_to_dl2),
+s!seq:=frame_to_dl2;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),236(105,210))*/
+output /*#E*/ 
+DataToDL2(s);
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),239(105,225))*/
+/*#E*/ 
+RESET(T(s!seq));
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),242(105,240))*/
+task /*#E*/ 
+frame_to_dl2:=a,
+i:=1,
+ack_expected:=r!ack+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),365(155,115))*/
+join /*#E*/ 
+grst0;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),563(95,145))*/
+(false):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),560(80,205))*/
+/*#E*/ 
+RESET(T(r!ack));
+grst1:
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),209(75,230))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),494(105,140))*/
+enddecision;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),431(87,132))*/
+(true):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),203(75,150))*/
+task /*#E*/ 
+nbuffered:=nbuffered-1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),323(75,165))*/
+/*#E*/ 
+RESET(T(ack_expected));
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),329(75,180))*/
+task /*#E*/ 
+ack_expected:=ack_expected+1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),209(75,230))*/
+join /*#E*/ 
+grst1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),425(75,120))*/
+enddecision;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),449(65,230))*/
+(false):
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),209(75,230))*/
+join /*#E*/ 
+grst1;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),401(75,100))*/
+enddecision;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr(1),137(85,60))*/
+endstate;
+/*#SDTREF(SDL,F:\project周二晚十点修改版\project\p1.spr,4)*/
+endprocess p1;

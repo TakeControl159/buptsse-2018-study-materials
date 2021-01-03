@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<juicers>
+      <juicer id="mighty-oj"><Name>OJ Home Juicer</Name></juicer>
+      <juicer id="champion"><Name>Champion Juicer</Name></juicer>
+      <juicer id="green-power"><Name>Green Power Gold Juice Extractor</Name></juicer>
+      <juicer id="juiceman-jr"><Name>Juiceman Jr.</Name></juicer>
+      <juicer id="omega"><Name>Omega Juicer</Name></juicer>
+      <juicer id="wheateena"><Name>Wheateena Wheatgrass Juicer</Name></juicer>
+      <footnote>
+         <item>OJ Home Juicer/41.95</item>
+         <item>Champion Juicer/239.00</item>
+         <item>Green Power Gold Juice Extractor/459.99</item>
+         <item>Juiceman Jr./82.00</item>
+         <item>Omega Juicer/234.00</item>
+         <item>Wheateena Wheatgrass Juicer/639.99</item>
+      </footnote>
+</juicers>

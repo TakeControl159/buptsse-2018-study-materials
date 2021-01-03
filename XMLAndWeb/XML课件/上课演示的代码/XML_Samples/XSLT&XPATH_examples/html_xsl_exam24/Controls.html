@@ -1,0 +1,65 @@
+<HTML>
+    <HEAD>
+        <SCRIPT language="JScript" defer="true">
+            var xml = new ActiveXObject("Msxml2.DOMDocument.3.0");
+            xml.async = false;
+            xml.load("FitnessCenter.xml");
+
+            function ShowMembers()
+            {
+
+                var xsl = new ActiveXObject("Msxml2.DOMDocument.3.0");
+                xsl.async = false;
+                xsl.load("ShowMembers.xsl");
+ 
+                parent.bodyFrame.document.body.innerHTML = xml.transformNode(xsl);
+            }
+
+            function ShowPlatinumMembers()
+            {
+
+                var xsl = new ActiveXObject("Msxml2.DOMDocument.3.0");
+                xsl.async = false;
+                xsl.load("ShowPlatinumMembers.xsl");
+ 
+                parent.bodyFrame.document.body.innerHTML = xml.transformNode(xsl);
+            }
+
+            function ShowGoldMembers()
+            {
+
+                var xsl = new ActiveXObject("Msxml2.DOMDocument.3.0");
+                xsl.async = false;
+                xsl.load("ShowGoldMembers.xsl");
+ 
+                parent.bodyFrame.document.body.innerHTML = xml.transformNode(xsl);
+            }
+
+            function ShowAll()
+            {
+
+                var xsl = new ActiveXObject("Msxml2.DOMDocument.3.0");
+                xsl.async = false;
+                xsl.load("ShowAll.xsl");
+ 
+                parent.bodyFrame.document.body.innerHTML = xml.transformNode(xsl);
+            }
+
+            function RawXML()
+            {
+
+                parent.bodyFrame.location = 'FitnessCenter.xml';
+            }
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+         <FORM name="controlForm">
+             <p><INPUT type="button" value="Show Members" onclick="ShowMembers();"></p>
+             <p><INPUT type="button" value="Show Platinum Members" onclick="ShowPlatinumMembers();"></p>
+             <p><INPUT type="button" value="Show Gold Members" onclick="ShowGoldMembers();"></p>
+             <p><INPUT type="button" value="Show All" onclick="ShowAll();"></p>
+             <p><INPUT type="button" value="Raw XML" onclick="RawXML();"></p>
+         </FORM>
+     </BODY>
+</HTML>
+<IFRAME  WIDTH=0 HEIGHT=0></IFRAME>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<table>
+    <tableName>userInfo</tableName>
+
+    <users>
+        <user id="1">
+            <name>孙悟空</name>
+            <pass>123456</pass>
+            <gender>男</gender>
+            <height>153cm</height>
+        </user>
+
+        <user id="2">
+            <name>猪八戒</name>
+            <pass>234567</pass>
+            <gender>男</gender>
+            <height>183cm</height>
+        </user>
+
+        <user id="3">
+            <name>唐僧</name>
+            <pass>345678</pass>
+            <gender>男</gender>
+            <height>176cm</height>
+        </user>
+
+        <user id="4">
+            <name>牛魔王</name>
+            <pass>567897</pass>
+            <gender>男</gender>
+            <height>190cm</height>
+        </user>
+    </users>
+
+</table>

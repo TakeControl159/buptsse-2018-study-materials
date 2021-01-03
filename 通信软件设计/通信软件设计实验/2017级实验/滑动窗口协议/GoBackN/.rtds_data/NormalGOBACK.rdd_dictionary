@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="none" diagramType="msc">
+<Item id="ITEM1" type="package" name="" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM2" type="process" name="NetWorklayer1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="_LIFELINE_2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="process" name="DataLayer1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="_LIFELINE_4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="process" name="DataLayer2" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="_LIFELINE_5"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="process" name="NewWorkLayer2" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<AlternateType type="system"/>
+<AlternateType type="block"/>
+<UsingSymbols>
+<SymbolReference symbolId="_LIFELINE_6"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

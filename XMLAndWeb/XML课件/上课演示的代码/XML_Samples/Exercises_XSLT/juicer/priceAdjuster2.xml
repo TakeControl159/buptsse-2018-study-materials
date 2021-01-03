@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<priceAdjustment>
+    <adjustment action="increase">
+       <sizeIncrease units="percentage">10</sizeIncrease>
+    </adjustment>
+</priceAdjustment>

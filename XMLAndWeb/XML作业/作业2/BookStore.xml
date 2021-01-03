@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<BookStore xmlns="http://www.books.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Magazine>
+		<Title>Natural Health</Title>
+		<Date>1999</Date>
+	</Magazine>
+	<Book>
+		<Title>Illusions The Adventures of a Reluctant Messiah</Title>
+		<Author>Richard Bach</Author>
+		<Date>1977</Date>
+		<ISBN>0-440-34319-4</ISBN>
+		<Publisher>Dell Publishing Co.</Publisher>
+	</Book>
+	<Book>
+		<Title>The First and Last Freedom</Title>
+		<Author>J. Krishnamurti</Author>
+		<Date>1954</Date>
+		<ISBN>0-06-064831-7</ISBN>
+		<Publisher>Harper &amp; Row</Publisher>
+	</Book>
+</BookStore>

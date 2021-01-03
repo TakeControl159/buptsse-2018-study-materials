@@ -1,0 +1,14 @@
+﻿生成启动时间为 2016/12/18 12:50:36。
+     1>项目“D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Dynamic_petro\Dynamic_petro.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\VS2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze /analyze:pluginD:\VS2015\VC\\bin\localespc.dll /errorReport:prompt   /analyze:quiet main.cpp
+         main.cpp
+       Link:
+         D:\VS2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Debug\Dynamic_petro.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Debug\Dynamic_petro.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Debug\Dynamic_petro.lib" /MACHINE:X86 Debug\main.obj
+         Dynamic_petro.vcxproj -> D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Debug\Dynamic_petro.exe
+     1>d:\personal\documents\visual studio 2015\projects\dynamic_petro\dynamic_petro\main.cpp(91): warning C6262: 函数使用了堆栈的“122432”个字节: 超过了 /analyze:stacksize '16384'。 请考虑将某些数据移到堆中。
+     1>已完成生成项目“D:\Personal\Documents\Visual Studio 2015\Projects\Dynamic_petro\Dynamic_petro\Dynamic_petro.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:04.66

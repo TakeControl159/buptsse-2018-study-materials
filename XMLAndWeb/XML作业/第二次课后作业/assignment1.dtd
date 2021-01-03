@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***************标签******************-->
+<!--根节点标签-->
+<!ELEMENT story (title,byline,para*)>
+
+<!--第二层标签-->
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT byline (author,position,date)>
+<!ELEMENT para (#PCDATA | position | company | quote)*>
+
+<!--第三层标签-->
+<!ELEMENT author (firstname, lastname)+>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT quote (#PCDATA | company)*>
+
+<!--第四层标签-->
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+
+<!--***************标签属性******************-->
+<!ATTLIST para lead (yes | no) #REQUIRED>

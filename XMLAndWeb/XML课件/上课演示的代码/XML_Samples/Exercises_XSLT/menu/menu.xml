@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml stylesheet type="text/xsl" href="menu.xsl"?>
+<MENU>
+  <SECTION name="Coffee">
+    <ITEM>
+      <NAME>Columbian</NAME>
+      <PRICE>1.50</PRICE>
+    </ITEM>
+    <ITEM>
+      <NAME>Cafe Latte</NAME>
+      <PRICE>3.00</PRICE>
+    </ITEM>
+    <ITEM>
+      <NAME>Americano</NAME>
+      <PRICE>2.50</PRICE>
+    </ITEM>
+  </SECTION>
+<SECTION name="Dessert">
+    <ITEM>
+      <NAME>Cheesecake with Fresh Fruit</NAME>
+<PRICE>4.00</PRICE>
+    </ITEM>
+    <ITEM>
+      <NAME>Double Fudge Brownies</NAME>
+      <PRICE>2.25</PRICE>
+    </ITEM>
+  </SECTION>
+  <SECTION name="Beans">
+    <ITEM>
+      <NAME>Columbian</NAME>
+      <PRICE>8.99</PRICE>
+    </ITEM>
+    <ITEM>
+      <NAME>Mexican Dark Roast</NAME>
+      <PRICE>8.99</PRICE>
+    </ITEM>
+  </SECTION>
+</MENU>

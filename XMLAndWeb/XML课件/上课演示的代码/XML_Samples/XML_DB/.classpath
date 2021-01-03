@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/BUPT_Preparing/Courses/XML_course/XML_courses_sample/XML_DB/DB_driver/msutil.jar"/>
+	<classpathentry kind="lib" path="E:/BUPT_Preparing/Courses/XML_course/XML_courses_sample/XML_DB/DB_driver/msbase.jar"/>
+	<classpathentry kind="lib" path="E:/BUPT_Preparing/Courses/XML_course/XML_courses_sample/XML_DB/DB_driver/mssqlserver.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

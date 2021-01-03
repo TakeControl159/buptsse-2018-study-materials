@@ -1,0 +1,80 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<school xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com student.xsd">
+北京邮电大学 计算机学院(国家示范性软件学院) 按照“面向国家需求，瞄准学科前沿，汇聚优秀人才，争创国际一流”的发展战略，坚持育人为本、教学与科研并重的发展理念，薪火相承，为把我院建设成为世界一流学院而努力奋斗。
+	<grade>
+		<gradeId>2020级</gradeId>
+		<!--班级1-->
+		<class>
+			<classId>2020211501</classId>
+			<!--学生1.1-->
+			<student>
+				<studentId>2020522108</studentId>
+				<name>Jayce</name>
+				<Email>1276953157@qq.com</Email>
+				<phoneNumber>10086</phoneNumber>
+				<homeAddress>
+					<province provinceName="北京市"/>
+					<city cityName="北京市"/>
+					<exactAddress>海淀区-西土城路10号-北京邮电大学</exactAddress>
+					<postcode codingSystem="CN">100876</postcode>
+				</homeAddress>
+			</student>
+			<!--学生1.2-->
+			<student>
+				<studentId>202099999</studentId>
+				<name>C</name>
+				<Email>153157@163.com</Email>
+				<phoneNumber>10086</phoneNumber>
+				<homeAddress>
+					<province provinceName="北京市"/>
+					<city cityName="北京市"/>
+					<exactAddress>海淀区-西土城路10号-北京邮电大学</exactAddress>
+					<postcode codingSystem="CN">100876</postcode>
+				</homeAddress>
+			</student>
+			<!--学生1.3-->
+			<student>
+				<studentId>202066666</studentId>
+				<name>C++</name>
+				<Email>HelloWorld@bupt.edu.cn</Email>
+				<phoneNumber>10086</phoneNumber>
+				<homeAddress>
+					<province provinceName="山东省"/>
+					<city cityName="济南市"/>
+					<exactAddress>天桥区-无影山东路-43号</exactAddress>
+					<postcode codingSystem="CN">100696</postcode>
+				</homeAddress>
+			</student>
+		</class>
+		<!--班级2-->
+		<class>
+			<classId>2020211502</classId>
+			<!--学生2.1-->
+			<student>
+				<studentId>2020119002</studentId>
+				<name>Jayce</name>
+				<Email>1276953157@qq.com</Email>
+				<phoneNumber>10086</phoneNumber>
+				<homeAddress>
+					<province provinceName="北京市"/>
+					<city cityName="北京市"/>
+					<exactAddress>海淀区-西土城路10号-北京邮电大学</exactAddress>
+					<postcode codingSystem="CN">100876</postcode>
+				</homeAddress>
+			</student>
+			<!--学生2.2-->
+			<student>
+				<studentId>2020119003</studentId>
+				<name>C</name>
+				<Email>153157@163.com</Email>
+				<phoneNumber>10086</phoneNumber>
+				<homeAddress>
+					<province provinceName="北京市"/>
+					<city cityName="北京市"/>
+					<exactAddress>海淀区-西土城路10号-北京邮电大学</exactAddress>
+					<postcode codingSystem="CN">100876</postcode>
+				</homeAddress>
+			</student>
+		</class>
+	</grade>
+</school>

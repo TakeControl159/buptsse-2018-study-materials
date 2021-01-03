@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FitnessCenter>
+        <Member level="platinum">
+                <Name>Jeff</Name>
+                <Phone>555-1234</Phone>
+                <Phone>555-4321</Phone>
+                <FavoriteColor>lightgrey</FavoriteColor>
+        </Member>
+        <Member level="gold">
+                <Name>David</Name>
+                <Phone>383-1234</Phone>
+                <Phone>383-4321</Phone>
+                <FavoriteColor>lightblue</FavoriteColor>
+        </Member>
+        <Member level="platinum">
+                <Name>Roger</Name>
+                <Phone>888-1234</Phone>
+                <Phone>888-4321</Phone>
+                <FavoriteColor>lightyellow</FavoriteColor>
+        </Member>
+        <GoldMembers>
+            <Name>***David***</Name>
+        </GoldMembers>
+</FitnessCenter>

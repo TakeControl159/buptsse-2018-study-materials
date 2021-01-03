@@ -1,0 +1,2 @@
+本实验使用eclipse软件java语言编程
+可在cmd的当前jar文件所在目录中输入命令 java -jar lab2.jar 即可直接运行

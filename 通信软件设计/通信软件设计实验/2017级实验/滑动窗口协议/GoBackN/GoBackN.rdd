@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="none" type="msc" defaultColorsNeedFixing="FALSE" name="GoBackN" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB109" type="mscLifeline" xCenter="297" yCenter="682" fixedDimensions="TRUE" width="132" height="1276" color="#000000" fillColor="#C4EFED" dies="FALSE">
+<Description></Description>
+<Text>DataLinkLayer1</Text>
+<LifelineComponent type="norm" height="1276" color="#000000"/>
+<TimeInterval type="start" startpos="55" endpos="-1" offset="22" color="#000000"><Text>T1
+</Text></TimeInterval>
+<TimeInterval type="start" startpos="187" endpos="-1" offset="54" color="#000000"><Text>T1(2)
+</Text></TimeInterval>
+<TimeInterval type="end" startpos="1034" endpos="-1" offset="54" color="#000000"><Text>T1(2)
+</Text></TimeInterval>
+<TimeInterval type="start" startpos="363" endpos="-1" offset="86" color="#000000"><Text>T1(3)
+</Text></TimeInterval>
+<TimeInterval type="end" startpos="1111" endpos="-1" offset="108" color="#000000"><Text>T1(3)
+</Text></TimeInterval>
+</Symbol>
+
+<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="77" yCenter="682" fixedDimensions="TRUE" width="110" height="1276" color="#000000" fillColor="#C4EFED" dies="FALSE">
+<Description></Description>
+<Text>NEWWorkLayer1</Text>
+<LifelineComponent type="norm" height="1276" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="517" yCenter="682" fixedDimensions="TRUE" width="154" height="1298" color="#000000" fillColor="#C4EFED" dies="FALSE">
+<Description></Description>
+<Text>DataLinkLayer2</Text>
+<LifelineComponent type="norm" height="1298" color="#000000"/>
+<TimeInterval type="start" startpos="303" endpos="-1" offset="22" color="#000000"><Text>T2
+</Text></TimeInterval>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="770" yCenter="682" fixedDimensions="TRUE" width="132" height="1276" color="#000000" fillColor="#C4EFED" dies="FALSE">
+<Description></Description>
+<Text>NetWorkLayer2</Text>
+<LifelineComponent type="norm" height="1276" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB51" type="mscLostMsg" xCenter="451" yCenter="198" fixedDimensions="TRUE" width="22" height="22" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>
+</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK323" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.51724137931" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK334" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.327586206897" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK335" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.327586206897" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK218" type="msg" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>(message)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.362068965517" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="0.551724137931" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="25"/>
+<LinkSegment orientation="v" length="583"/>
+<LinkSegment orientation="h" length="-25"/>
+
+</Link>
+
+<Link linkId="LINK318" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="0.637931034483" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK256" type="msg" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.913793103448" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.396551724138" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="25"/>
+<LinkSegment orientation="v" length="330"/>
+<LinkSegment orientation="h" length="-25"/>
+
+</Link>
+
+<Link linkId="LINK321" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.51724137931" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK319" type="ssvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.706896551724" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.51724137931" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK408" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="0.137931034483" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.135593220339" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK410" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.293103448276" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.28813559322" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK409" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>(T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.051724137931" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.0508474576271" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK413" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.465517241379" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.457627118644" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK414" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="0.344827586207" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.338983050847" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK415" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.637931034483" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.627118644068" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK393" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DaLay2(Frame)</Text>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.758620689655" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB51" type="mscvoid" isOutside="TRUE" side="y" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK405" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>From_NWlay1（packet）</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.327586206897" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.327586206897" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK406" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>From_NWlay1（packet）</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.568965517241" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.568965517241" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK407" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>From_NWlay1（packet）</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.793103448276" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="-0.793103448276" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK412" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>ACK(T_DaLay1(Frame))</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.653312788906" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB109" type="mscvoid" isOutside="TRUE" side="y" position="0.672413793103" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK383" type="msg" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DataLayer2(Frame)</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.261941448382" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.195685670262" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="25"/>
+<LinkSegment orientation="v" length="297"/>
+<LinkSegment orientation="h" length="-25"/>
+
+</Link>
+
+<Link linkId="LINK411" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DataLayer2(Frame)</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.00770416024653" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK416" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DataLayer2(Frame)</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.24499229584" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.241379310345" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK417" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>T_DataLayer2(Frame)</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.161787365177" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.172413793103" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

@@ -1,0 +1,347 @@
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy,4)*/
+system GO_BACK_N;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),176(100,30))*/
+Signal
+To_DataLinkLayer1(Frame),
+To_DataLinkLayer2(Frame),
+From_NetWorkLayer1(Packet),
+To_NetWorkLayer1(Packet),
+From_NetWorkLayer2(Packet),
+To_NetWorkLayer2(Packet),
+Lost(integer);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),191(40,35))*/
+NEWTYPE Packet STRUCT
+  info Integer;
+  data IA5String;
+ENDNEWTYPE;
+
+NEWTYPE Frame STRUCT
+  info Packet;
+  seq Integer;
+  ack Integer;
+ENDNEWTYPE;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),230(20,90))*/
+channel /*#E*/ 
+C1 from OSISTACK to env with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),231(17,102))*/
+To_NetWorkLayer1;
+from env to OSISTACK with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),232(42,92))*/
+From_NetWorkLayer1;
+endchannel C1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),248(165,92))*/
+channel /*#E*/ 
+C2 from OSISTACK to env with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),249(143,102))*/
+To_NetWorkLayer2;
+from env to OSISTACK with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),250(117,92))*/
+From_NetWorkLayer2,Lost;
+endchannel C2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy(1),119(75,90))*/
+block OSISTACK
+ referenced;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\GO_BACK_N.ssy,4)*/
+endsystem GO_BACK_N;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk,4)*/
+block OSISTACK;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),245(35,57))*/
+signalroute /*#E*/ 
+C1 from env to DataLinkLayer1 with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),246(37,65))*/
+From_NetworkLayer1;
+from DataLinkLayer1 to env with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),247(17,72))*/
+To_NetWorkLayer1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),263(82,88))*/
+signalroute /*#E*/ 
+C3 from DataLinkLayer1 to DataLinkLayer2 with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),264(82,102))*/
+To_DataLinkLayer2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),275(120,87))*/
+signalroute /*#E*/ 
+C4 from DataLinkLayer2 to DataLinkLayer1 with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),276(120,102))*/
+To_DataLinkLayer1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),284(162,127))*/
+signalroute /*#E*/ 
+C2 from DataLinkLayer2 to env with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),285(145,120))*/
+To_NetWorkLayer2;
+from env to DataLinkLayer2 with 
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),286(137,112))*/
+From_NetWorkLayer2,Lost;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),116(70,55))*/
+process DataLinkLayer1 referenced;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),242(70,110))*/
+process DataLinkLayer2 referenced;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),299(7,67))*/
+connect C1 and C1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk(1),290(177,115))*/
+connect C2 and C2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\OSISTACK.sbk,4)*/
+endblock OSISTACK;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr,4)*/
+process DataLinkLayer2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),692(25,10))*/
+newtype bufferType
+array(integer,Packet)
+endnewtype;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),695(145,15))*/
+DCL
+ next_frame_to_send Integer,
+next_frame_expected Integer,
+ ack_expected Integer,
+ frame_expected Integer,
+ r,s Frame,
+ nbuffered,i Integer,
+X integer,
+flag integer;
+
+dcl buffer bufferType;
+
+timer T1(integer);
+
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),701(90,5))*/
+start /*#E*/ 
+;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),698(80,20))*/
+task /*#E*/ 
+ack_expected:=0,
+next_frame_to_send:=0,
+next_frame_expected:=0,
+frame_expected:=0,
+nbuffered:=0,
+i:=1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),713(80,50))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),713(80,50))*/
+state /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),722(15,40))*/
+input /*#E*/ 
+From_NetWorkLayer2(buffer(next_frame_to_send));
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),1163(20,60))*/
+provided /*#E*/ 
+nbuffered<3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),749(10,80))*/
+task /*#E*/ 
+nbuffered:=nbuffered+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),746(5,95))*/
+task /*#E*/ 
+s!info:=buffer(next_frame_to_send),
+s!seq:=next_frame_to_send;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),743(15,110))*/
+decision /*#E*/ 
+frame_expected>0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),758(32,122))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),740(10,130))*/
+task /*#E*/ 
+s!ack:=frame_expected-1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),770(67,122))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),767(55,130))*/
+task /*#E*/ 
+s!ack:=3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),743(15,110))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),737(15,145))*/
+output /*#E*/ 
+To_DataLinkLayer1(s);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),848(15,160))*/
+/*#E*/ 
+SET(now+30,T1(next_frame_to_send));
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),845(5,175))*/
+decision /*#E*/ 
+next_frame_to_send<2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),866(52,182))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),863(40,185))*/
+task /*#E*/ 
+next_frame_to_send:=0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),854(22,185))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),842(10,190))*/
+task /*#E*/ 
+next_frame_to_send:=next_frame_to_send+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),845(5,175))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),839(12,210))*/
+join /*#E*/ 
+no.3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),719(85,65))*/
+input /*#E*/ 
+To_DataLinkLayer2(r);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),881(90,80))*/
+decision /*#E*/ 
+r!seq=frame_expected;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),884(117,90))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),878(90,95))*/
+output /*#E*/ 
+To_NetWorkLayer2(r!info);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),875(95,110))*/
+decision /*#E*/ 
+frame_expected<2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),890(112,122))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),872(90,125))*/
+task /*#E*/ 
+frame_expected:=frame_expected+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),899(152,117))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),896(140,125))*/
+task /*#E*/ 
+frame_expected:=0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),875(95,110))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),911(85,95))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),881(90,80))*/
+enddecision;
+grst0:
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),902(65,145))*/
+decision /*#E*/ 
+(ack_expected<=r!ack and r!ack<next_frame_to_send) or
+(next_frame_to_send<ack_expected and ack_expected<=r!ack) or
+(r!ack<next_frame_to_send and next_frame_to_send<ack_expected);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),965(112,167))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),956(90,170))*/
+task /*#E*/ 
+nbuffered:=nbuffered-1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),953(100,185))*/
+/*#E*/ 
+RESET(T1(ack_expected));
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),950(95,200))*/
+decision /*#E*/ 
+ack_expected<2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),977(130,195))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),974(140,195))*/
+task /*#E*/ 
+ack_expected:=0;
+grst1:
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),980(145,215))*/
+join /*#E*/ 
+no.3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),971(112,212))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),968(90,215))*/
+task /*#E*/ 
+ack_expected:=ack_expected+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),902(65,145))*/
+join /*#E*/ 
+grst0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),950(95,200))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),1151(177,212))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),980(145,215))*/
+join /*#E*/ 
+grst1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),902(65,145))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),725(150,70))*/
+input /*#E*/ 
+T1(X);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),989(155,90))*/
+join /*#E*/ 
+no.2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(1),713(80,50))*/
+endstate;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1049(57,20))*/
+connection /*#E*/ 
+no.2:
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1046(40,40))*/
+task {/*#E*/ 
+next_frame_to_send:=ack_expected;
+i:=1;};
+grst2:
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1043(60,55))*/
+decision /*#E*/ 
+i<=nbuffered;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1058(97,55))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1040(150,55))*/
+join /*#E*/ 
+no.3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1061(72,65))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1037(45,70))*/
+task /*#E*/ 
+s!info:=buffer(next_frame_to_send),
+s!seq:=next_frame_to_send;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1034(50,85))*/
+decision /*#E*/ 
+frame_expected>0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1067(85,87))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1031(90,95))*/
+task /*#E*/ 
+s!ack:=3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1094(67,97))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1007(45,100))*/
+task /*#E*/ 
+s!ack:=frame_expected-1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1034(50,85))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1028(50,115))*/
+output /*#E*/ 
+To_DataLinkLayer1(s);
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1025(35,130))*/
+/*#E*/ 
+SET(30+NOW,T1(next_frame_to_send));
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1022(65,150))*/
+decision /*#E*/ 
+next_frame_to_send<2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1079(152,160))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1019(130,165))*/
+task /*#E*/ 
+next_frame_to_send:=0;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1016(140,190))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1085(87,167))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1013(65,170))*/
+task /*#E*/ 
+next_frame_to_send:=next_frame_to_send+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1010(75,185))*/
+task /*#E*/ 
+i:=i+1;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1022(65,150))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1043(60,55))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1043(60,55))*/
+join /*#E*/ 
+grst2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(2),1049(57,20))*/
+endconnection no.2;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1133(70,30))*/
+connection /*#E*/ 
+no.3:
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1130(70,50))*/
+decision /*#E*/ 
+nbuffered<3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1139(57,57))*/
+(true):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1127(50,75))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1142(107,57))*/
+(false):
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1124(95,75))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1130(70,50))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr(3),1133(70,30))*/
+endconnection no.3;
+/*#SDTREF(SDL,C:\Users\Administrator\Desktop\example\DataLinkLayer2.spr,4)*/
+endprocess DataLinkLayer2;

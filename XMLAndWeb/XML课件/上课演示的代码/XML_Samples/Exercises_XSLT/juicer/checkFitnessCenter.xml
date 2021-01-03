@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<FitnessCenter-tests>
+    <xpath>not(//Member[@level != 'platinum' and @level != 'gold'])</xpath>
+</FitnessCenter-tests>

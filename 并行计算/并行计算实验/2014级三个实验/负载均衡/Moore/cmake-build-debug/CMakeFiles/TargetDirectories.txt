@@ -1,0 +1,3 @@
+/home/leeshun/CLionProjects/Moore/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/leeshun/CLionProjects/Moore/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/leeshun/CLionProjects/Moore/cmake-build-debug/CMakeFiles/Moore.dir

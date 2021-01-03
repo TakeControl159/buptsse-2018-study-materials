@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM3" type="sdlText" text="FPAR 
+  /* 放入的定时数组 */
+IN/OUT  send_timing timing,
+
+  /* 需要移除的定时帧的序号 */
+IN/OUT  frame_seq seq_nr,
+  
+  /* 应该是上界+1 */
+IN/OUT  new_timer seq_nr,
+  
+  /* 应该是下界 */
+IN/OUT  old_timer seq_nr;
+
+DCL
+  /* 临时定时节点 */
+  tmp_timing time_slice,
+  /* 计数变量 */
+  i,j seq_nr;" outline_color="-" background_color="-" center_coordinates="794 174" dimensions="208 272" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM12" type="sdlComment" text="如果要取消的帧刚好等于下边界" outline_color="-" background_color="-" center_coordinates="1101 446" dimensions="118 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM9" type="sdlComment" text="下界+1" outline_color="-" background_color="-" center_coordinates="1072 550" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM19" type="sdlComment" text="看一下队列里还有没有计时器" outline_color="-" background_color="-" center_coordinates="1034 602" dimensions="110 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM21" type="sdlComment" text="如果有就重新设定计时器" outline_color="-" background_color="-" center_coordinates="1082 706" dimensions="96 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM14" type="sdlComment" text="定位需要取消的帧，然后之后的帧都向前提一位（覆盖删除）" outline_color="-" background_color="-" center_coordinates="1971 632" dimensions="342 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="746 384">
+<SdlFSMSymbol identifier="SYM1" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="889 399" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM5" type="sdlDecision" text="frame_seq = send_timing(old_timer)!seq" outline_color="-" background_color="-" center_coordinates="889 446" dimensions="286 40" attached_symbol_id="SYM12"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="889 498" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM8" type="sdlTask" text="old_timer:=(old_timer+1)mod(MAX_SEQ+1)" outline_color="-" background_color="-" center_coordinates="889 550" dimensions="286 40" attached_symbol_id="SYM9"/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM16" type="sdlDecision" text="old_timer/=new_timer" outline_color="-" background_color="-" center_coordinates="889 602" dimensions="160 40" attached_symbol_id="SYM19"/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM17" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="889 654" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM20" type="sdlInitTimer" text="set(send_timing(old_timer)!t,tMsg)" outline_color="-" background_color="-" center_coordinates="889 706" dimensions="270 40" attached_symbol_id="SYM21"/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM18" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="1194 654" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM22" type="sdlResetTimer" text="reset(tMsg)" outline_color="-" background_color="-" center_coordinates="1194 706" dimensions="108 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM7" type="sdlAnswer" text="FALSE" outline_color="-" background_color="-" center_coordinates="1524 498" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM13" type="sdlTask" text="for(i:=(old_timer+1)mod(MAX_SEQ+1),i /= new_timer,(i+1) mod (MAX_SEQ+1)){
+  if(frame_seq = send_timing(i)!seq){
+    for(j:=i,j/=new_timer,(j+1) mod (MAX_SEQ+1)){
+      send_timing(j) := send_timing((j+1) mod (MAX_SEQ+1));
+    }
+    if(new_timer=0){
+      new_timer:= MAX_SEQ;
+    }else{
+      new_timer:= new_timer-1;
+    }
+    break;
+  }
+}" outline_color="-" background_color="-" center_coordinates="1524 632" dimensions="532 204" attached_symbol_id="SYM14"/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM15" type="sdlPrcdReturn" outline_color="-" background_color="-" center_coordinates="889 776" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="FPAR 
+
+  /* 放入的定时数组 */
+IN/OUT  send_timing timing,
+  /* 需要定时帧的序号 */
+IN/OUT  frame_seq seq_nr,
+
+  /* 应该是上界+1，表示这个下标的
+   * send_timing数组是可以填入一个
+   * 时间节点的*/
+IN/OUT  new_timer seq_nr,
+  
+  /* 应该是下界 */
+IN/OUT  old_timer seq_nr;
+
+DCL
+  /* 临时定时节点 */
+  tmp_timing time_slice;" outline_color="-" background_color="-" center_coordinates="306 204" dimensions="226 282" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM8" type="sdlComment" text="构建定时信息节点" outline_color="-" background_color="-" center_coordinates="951 395" dimensions="80 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM4" type="sdlComment" text="设置最新的定时信息为上界+1处" outline_color="-" background_color="-" center_coordinates="1008 451" dimensions="134 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM13" type="sdlComment" text="将上界+1" outline_color="-" background_color="-" center_coordinates="1002 503" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM22" type="sdlComment" text="重新设置定时器" outline_color="-" background_color="-" center_coordinates="982 555" dimensions="72 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="621 329">
+<SdlFSMSymbol identifier="SYM2" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="792 344" dimensions="60 29" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM7" type="sdlTask" text="tmp_timing!seq:=frame_seq,
+tmp_timing!t := now+20" outline_color="-" background_color="-" center_coordinates="792 395" dimensions="218 48" attached_symbol_id="SYM8"/>
+<SdlFSMSymbol identifier="SYM3" type="sdlTask" text="send_timing(new_timer):=tmp_timing" outline_color="-" background_color="-" center_coordinates="792 451" dimensions="280 40" attached_symbol_id="SYM4"/>
+<SdlFSMSymbol identifier="SYM10" type="sdlTask" text="new_timer:=(new_timer + 1) mod (MAX_SEQ+1)" outline_color="-" background_color="-" center_coordinates="792 503" dimensions="342 40" attached_symbol_id="SYM13"/>
+<SdlFSMSymbol identifier="SYM17" type="sdlInitTimer" text="set(send_timing(old_timer)!t,tMsg)" outline_color="-" background_color="-" center_coordinates="792 555" dimensions="289 40" attached_symbol_id="SYM22"/>
+<SdlFSMSymbol identifier="SYM12" type="sdlPrcdReturn" outline_color="-" background_color="-" center_coordinates="792 602" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

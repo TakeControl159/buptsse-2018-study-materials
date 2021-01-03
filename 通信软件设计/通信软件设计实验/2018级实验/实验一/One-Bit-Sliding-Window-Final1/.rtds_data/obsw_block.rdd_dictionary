@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="none" diagramType="blk">
+<Signal id="SIG1" name="to_phy">
+</Signal>
+<Signal id="SIG2" name="from_phy">
+</Signal>
+<Signal id="SIG3" name="to_net">
+</Signal>
+<Signal id="SIG4" name="from_net">
+</Signal>
+<Item id="ITEM1" type="block" name="obsw_block" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK20" isFrom="TRUE"/>
+<Connections>
+<Connection name="data_net"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
+<Connections>
+<Connection name="phy_data"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="phy_data" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW1"/>
+<Channel name="data_net" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW2"/>
+</Item>
+<Item id="ITEM2" type="process" name="obsw_process" parentId="ITEM1" scope="none" minInstances="1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB3"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB3"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK20" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>

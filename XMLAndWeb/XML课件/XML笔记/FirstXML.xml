@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+
+<users>
+    <user id="1">
+        <name>卡西奥佩娅</name>
+        <age>23</age>
+        <gender>female</gender>
+    </user>
+
+    <user id="2">
+        <name>卡特琳娜</name>
+        <age>23</age>
+        <gender>female</gender>
+
+        <code>
+            <![CDATA[if (a < b && a > c){}]]>
+        </code>
+        
+        <data>
+			<![CDATA[if (a == b && a > c){}]]>
+        </data>
+        
+        <!--小于号 大于号-->
+        <compare>6 &lt; 7 9 &gt; 8</compare>
+
+    </user>
+
+</users>

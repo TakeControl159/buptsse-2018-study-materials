@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<juicers>
+      <juicer id="mighty-oj" electric="false" type="press">
+          <name>OJ Home Juicer</name>
+          <image>mighty_oj.gif</image>
+          <description>There&apos;s just no substitute for a properly squeezed orange in the morning. So delicate and refreshing. The finest hotels use mechanical juicers of this type for their most discriminating guests. This is the largest selling juicer of its kind. It&apos;s a beautiful little all-metal piece in baked enamel and polished chrome; it even won the Frankfurt Fair Award for its design. Uses no electricity and produces no non-recyclable waste as do frozen juices.</description>
+          <warranty>lifetime warranty</warranty>
+          <weight></weight>
+          <cost currency="USD">41.95</cost>
+          <retailer>http://www.thewhitewhale.com/oj.htm</retailer>
+      </juicer>
+      <juicer id="champion" electric="true" type="gear">
+          <name>Champion Juicer</name>
+          <image>champion.gif</image>
+          <description>The Champion Juicer is the answer to every juicing problem. Because it operates on the mastication process principle, the Champion chews the fibers and breaks up the cells of vegetables and fruits. 
+This give you more fiber, enzymes, vitamins and trace minerals. The juice will be a darker, richer color, with a sweeter, richer more full-bodied flavor.
+</description>
+          <warranty></warranty>
+          <weight></weight>
+          <cost currency="USD">239.00</cost>
+          <retailer>http://www.grainsandgreens.com/juicerparts.html</retailer>
+      </juicer>
+      <juicer id="green-power" electric="true" type="gear">
+          <name>Green Power Gold Juice Extractor</name>
+          <image>greenPower.jpg</image>
+          <description>You are not What You Eat, But What you Absorb.  The rate of absorption of juice has never been considered a factor in comparing juicers. With the introduction of Green Power&apos;s magnetic Twin Gear press, this has now changed. Experiments conducted by the Green Power Co. Research and Development Dept. show the rate of absorption of green juice using dual gear extraction is up to five times greater than using centrifugal extraction.</description>
+          <warranty></warranty>
+          <weight></weight>
+          <cost currency="USD">459.99</cost>
+          <retailer>http://www.discountjuicers.com/greencomplete.html</retailer>
+      </juicer>
+      <juicer id="juiceman-jr" electric="true" type="centrifugal">
+          <name>Juiceman Jr.</name>
+          <image>juiceman.jpg</image>
+          <description>The Juiceman Jr. juicer is the little brother to the Juiceman II juicer that is seen on television. The Juiceman Jr. is a pulp ejection juicer that allows you to juice continuously without having to stop and clean the machine.
+Made popular by Jay Kordich, the Juiceman series of juicers have been a popular addition to millions of households all across this nation. This machine comes ready to use out of the box</description>
+          <warranty>1 yr. Limited Warranty </warranty>
+          <weight>10</weight>
+          <cost currency="USD">82.00</cost>
+          <retailer>http://www.juicebars.com/juicers/jm1.htm</retailer>
+      </juicer>
+      <juicer id="omega" electric="true" type="centrifugal">
+          <name>Omega Juicer</name>
+          <image>omega.jpg</image>
+          <description>This heavy-duty, American-made juicer has a powerful GE motor that spins at 3,600 rpm to extract 20% - 30% more juice than pulp ejector models (according to independent laboratory tests). Large capaciy bowl hold a ful 1-2 quarts of fruits or vegetables - compared to just one pint for many brands. Easy-cleaning design with lift out disposable filter.</description>
+          <warranty></warranty>
+          <weight></weight>
+          <cost currency="USD">234.00</cost>
+          <cost currency="CND">359.50</cost>
+          <retailer>http://www.boschcanada.com/omega.htm</retailer>
+      </juicer>
+      <juicer id="wheateena" electric="true" type="gear">
+          <name>Wheateena Wheatgrass Juicer</name>
+          <image>wheateena.jpg</image>
+          <description>Wheatgrass juice contains 70% "crude" chlorophyll. Chlorophyll by definition being the green pigment in plants. It is considered the "blood" of plants, due to the similarity to our blood in molecular structure. This juicer extracts the juice out of the blades of wheatgrass. Normal fruit and vegetable juicers will not juice wheatgrass</description>
+          <warranty>Motor Guarantee: For Home Use: one (1) year. For Commercial Use: six (6) months.</warranty>
+          <weight>46</weight>
+          <cost currency="USD">639.99</cost>
+          <retailer>http://www.rawfoods.com/marketplace/heavyduty.html</retailer>
+      </juicer>
+</juicers>

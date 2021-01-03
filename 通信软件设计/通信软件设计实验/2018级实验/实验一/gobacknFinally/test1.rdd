@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="LIFELINEID_1 LIFELINEID_2"/>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="PROCESS_START" color="#000000" text="RTDS_Env
+(-1)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="PROCESS_START" color="#000000" text="GBN_process
+(1)" text_size="0 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第0号数据包|})" identifier="MSG1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM8" identifier="COND1" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND1" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG1" text="from_net(|{param1|=第0号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG2" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})" identifier="MSG2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND2" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND2" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="20"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG3" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="20"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})" identifier="MSG3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="20"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="20"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND3" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="20"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND3" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="60"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG4" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="60"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})" identifier="MSG4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="60"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="60"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND4" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="60"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND4" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第1号数据包|})" identifier="MSG5"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG5" text="from_net(|{param1|=第1号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG6" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})" identifier="MSG6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(17)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND5" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="63"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND5" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第2号数据包|})" identifier="MSG7"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG7" text="from_net(|{param1|=第2号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG8" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(12)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND6" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="68"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND6" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第3号数据包|})" identifier="MSG9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG9" text="from_net(|{param1|=第3号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG10" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG10"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(7)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND7" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="73"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND7" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第4号数据包|})" identifier="MSG11"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG11" text="from_net(|{param1|=第4号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG12" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(2)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND8" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="78"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND8" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(3)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG13" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})" identifier="MSG13"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(3)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(8)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG14" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})" identifier="MSG14"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(8)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(13)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG15" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG15"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(13)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(18)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG16" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG16"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(18)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG17" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND9" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="80"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND9" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第5号数据包|})" identifier="MSG18"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG18" text="from_net(|{param1|=第5号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG19" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG19"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(16)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND10" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="84"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND10" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第6号数据包|})" identifier="MSG20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG20" text="from_net(|{param1|=第6号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG21" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG21"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(11)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND11" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="89"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND11" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第7号数据包|})" identifier="MSG22"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="93"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG22" text="from_net(|{param1|=第7号数据包|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="93"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM145" identifier="MSG23" text="to_net(|{param1|=ERROR OCCORED!|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="93"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_net(|{param1|=ERROR OCCORED!|})" identifier="MSG23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="93"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM15" identifier="COND12" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="93"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND12" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM15"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG24" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=第0号数据包|,check|=2780|}|})" identifier="MSG24"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG25" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})" identifier="MSG25"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG26" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG26"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG27" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG27"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(4)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG28" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG28"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(4)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(9)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG29" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG29"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(9)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG30" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG30"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND13" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND13" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=0|,info|=确认帧0号|,check|=0|}|})" identifier="MSG31"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="976"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM24" identifier="MSG31" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=0|,info|=确认帧0号|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="976"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="ack_timer(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM104"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="976"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(4)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="976"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138" identifier="COND14" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="976"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND14" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG32" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})" identifier="MSG32"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG33" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG33"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG34" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG34"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG35" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG35"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG36" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG36"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG37" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG37"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND15" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1040"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND15" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG38" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=第1号数据包|,check|=2781|}|})" identifier="MSG38"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG39" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG39"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG40" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG40"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG41" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG41"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG42" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG42"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG43" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG43"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND16" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1060"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND16" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=1|,info|=第1号确认帧|,check|=0|}|})" identifier="MSG44"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1749"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM24" identifier="MSG44" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=1|,info|=第1号确认帧|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1749"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="ack_timer(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM104"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1749"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(11)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1749"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138" identifier="COND17" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1749"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND17" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=第7号数据包（搭便车）|})" identifier="MSG45"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG45" text="from_net(|{param1|=第7号数据包（搭便车）|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG46" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG46"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(9)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND18" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1791"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND18" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG47" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=2|,ack|=7|,info|=第2号数据包|,check|=2782|}|})" identifier="MSG47"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG48" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG48"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG49" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG49"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG50" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG50"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG51" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG51"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG52" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG52"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND19" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1900"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND19" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=2|,info|=第2号确认帧|,check|=0|}|})" identifier="MSG53"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1901"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM24" identifier="MSG53" text="from_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=2|,info|=第2号确认帧|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1901"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="ack_timer(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM104"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1901"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(19)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1901"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138" identifier="COND20" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1901"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND20" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="ack_timer" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM107"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1911"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM109" identifier="MSG54" text="to_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=0|,info|=|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1911"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=0|,info|=|,check|=0|}|})" identifier="MSG54"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1911"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM110" identifier="COND21" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1911"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND21" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM110"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=（搭便车）|})" identifier="MSG55"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG55" text="from_net(|{param1|=（搭便车）|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG56" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG56"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(3)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND22" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1917"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND22" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG57" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=3|,ack|=7|,info|=第3号数据包|,check|=2783|}|})" identifier="MSG57"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG58" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG58"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG59" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG59"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG60" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG60"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(17)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG61" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG61"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(17)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG62" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG62"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND23" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="1920"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND23" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG63" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG63"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG64" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG64"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG65" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG65"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG66" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG66"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND24" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2080"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND24" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=3|,info|=第3号确认帧|,check|=0|}|})" identifier="MSG67"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2083"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM24" identifier="MSG67" text="from_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=3|,info|=第3号确认帧|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2083"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="ack_timer(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM104"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2083"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(17)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2083"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138" identifier="COND25" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2083"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND25" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="ack_timer" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM107"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2093"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM109" identifier="MSG68" text="to_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=0|,info|=|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2093"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=ack|,seq|=0|,ack|=0|,info|=|,check|=0|}|})" identifier="MSG68"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2093"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM110" identifier="COND26" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2093"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND26" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM110"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG69" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG69"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG70" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG70"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG71" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG71"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG72" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG72"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG73" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG73"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND27" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2100"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND27" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG74" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=4|,ack|=7|,info|=第4号数据包|,check|=2784|}|})" identifier="MSG74"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG75" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG75"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG76" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG76"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG77" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG77"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG78" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG78"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND28" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2120"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND28" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=4|,info|=第4号确认帧|,check|=0|}|})" identifier="MSG79"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2123"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM24" identifier="MSG79" text="from_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=4|,info|=第4号确认帧|,check|=0|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2123"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="ack_timer(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM104"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2123"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(17)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2123"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138" identifier="COND29" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2123"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND29" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM138"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="#000000" text="from_net(|{param1|=搭便车|})" identifier="MSG80"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM11" identifier="MSG80" text="from_net(|{param1|=搭便车|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG81" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=搭便车|,check|=1743|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=搭便车|,check|=1743|}|})" identifier="MSG81"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_CANCEL" color="#ffffff" text="ack_timer" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM106"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23" identifier="COND30" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2130"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND30" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM23"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_TIMEOUT" color="#ffffff" text="tMsg" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG82" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=5|,ack|=7|,info|=第5号数据包|,check|=2785|}|})" identifier="MSG82"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG83" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=6|,ack|=7|,info|=第6号数据包|,check|=2786|}|})" identifier="MSG83"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG84" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=7|,ack|=7|,info|=第7号数据包（搭便车）|,check|=5657|}|})" identifier="MSG84"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(0)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG85" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=0|,ack|=7|,info|=（搭便车）|,check|=2870|}|})" identifier="MSG85"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(10)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\remove_frame_timer.rdd*SYM20"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\send_frame.rdd*SYM6" identifier="MSG86" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=搭便车|,check|=1743|}|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="#000000" text="to_phy(|{param1|=|{kind|=data|,seq|=1|,ack|=7|,info|=搭便车|,check|=1743|}|})" identifier="MSG86"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="#ffffff" text="tMsg(20)" type="-" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\set_frame_timer.rdd*SYM17"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="#000000" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95" identifier="COND31" background="-" text="ready"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="2140"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="#000000" text="ready" identifier="COND31" model_id="PragmaDevStudio:symbol*d:\桌面\通信协议\gobackn\gbn_process.rdd*SYM95"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+</MscDiagram>

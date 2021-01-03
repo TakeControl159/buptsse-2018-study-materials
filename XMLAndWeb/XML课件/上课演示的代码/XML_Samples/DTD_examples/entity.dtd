@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT myFirst (w1,w2)>
+<!ELEMENT w1 (#PCDATA)>
+<!ELEMENT w2 (#PCDATA)>
+<!ENTITY test "this is a test string for XML DTD"> 

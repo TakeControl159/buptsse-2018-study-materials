@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog> 
+    <cd country="UK"> 
+      <title>Dark Side of the Moon</title> 
+      <artist>Pink Floyd</artist>
+      <price>10.90</price> 
+    </cd> 
+    <cd country="UK"> 
+        <title>Space Oddity</title> 
+        <artist>David Bowie</artist>
+        <price>9.90</price>
+    </cd> 
+    <cd country="USA"> 
+        <title>Aretha: Lady Soul</title> 
+        <artist>Aretha Franklin</artist>
+        <price>9.90</price> 
+   </cd> 
+</catalog>

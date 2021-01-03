@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--根标签-->
+<!ELEMENT People (Person+)>
+
+<!--第一层标签-->
+<!ELEMENT Person (Name,Address,Tel,Fax,Email)*>
+
+<!--第二层标签-->
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Tel (#PCDATA)>
+<!ELEMENT Fax (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>

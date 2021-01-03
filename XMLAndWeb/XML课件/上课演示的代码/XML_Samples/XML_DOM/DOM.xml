@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///d:/XML_Beijing/Ch5_DOM_SAX/java_DOM/DOM.xsd">
+   <committee type="monetary">
+       <title>Finance</title>
+       <number>17</number>
+       <subject>Donut Costs</subject>
+       <date>7/15/2005</date>
+       <attendees>
+           <senator status="present">
+               <firstName>Thomas</firstName>
+               <lastName>Smith</lastName>
+           </senator>
+           <senator status="absent">
+               <firstName>Frank</firstName>
+               <lastName>McCoy</lastName>
+           </senator>
+           <senator status="present">
+               <firstName>Jay</firstName>
+               <lastName>Jones</lastName>
+           </senator>
+       </attendees>
+   </committee>
+</session>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><PlatinumMembers><Member level="platinum">
+                <Name>Jeff</Name>
+                <Phone type="home">555-1234</Phone>
+                <Phone type="work">555-4321</Phone>
+                <FavoriteColor>lightgrey</FavoriteColor>
+        </Member><Member level="platinum">
+                <Name>Roger</Name>
+                <Phone type="home">888-1234</Phone>
+                <Phone type="work">888-4321</Phone>
+                <FavoriteColor>lightyellow</FavoriteColor>
+        </Member></PlatinumMembers>

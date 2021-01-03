@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<ext-error>
+<message>Communication failure during handshake. Is there a server running on localhost:3306?</message>
+<sql-error>
+<code>0</code>
+<message>Communication failure during handshake. Is there a server running on localhost:3306?</message>
+</sql-error>
+</ext-error>
+</data>

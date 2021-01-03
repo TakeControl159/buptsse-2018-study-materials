@@ -1,0 +1,4 @@
+testProgram.c：被扫描的C语言文件
+bianyi.java：实现词法分析器的java源程序
+文件夹bianyiyuanli：包含整个工程文件，运行环境为eclipse，java 1.8
+java可执行文件：在当前文件夹中打开命令行，使用 "java -jar java可执行文件.jar" 来执行可执行文件

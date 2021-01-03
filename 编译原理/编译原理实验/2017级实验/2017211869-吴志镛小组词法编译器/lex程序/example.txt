@@ -1,0 +1,27 @@
+int main(){
+	//测试浮点数识别
+	23 23.2 23E2 23.2E2
+
+	//测试字符串
+	"Hello world!"
+
+	/*测试注释结构
+	fdafdfa
+	*/
+
+	//识别错误
+	33213d
+	123fds
+
+	//测试各种符号和标识符, 关键字
+	int a_aa=1;
+	float b=a++;
+	c -= a-b;
+	if(c>=d&&c<=d||c==d){
+		printf("OK");
+	}
+	while(1){
+	}
+	return 0;
+}
+		

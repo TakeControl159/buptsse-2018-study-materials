@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://buptsse/" targetNamespace="http://buptsse/" version="1.0">
+
+  <xs:element name="addString" type="tns:addString"/>
+
+  <xs:element name="addStringResponse" type="tns:addStringResponse"/>
+
+  <xs:element name="isEqual" type="tns:isEqual"/>
+
+  <xs:element name="isEqualResponse" type="tns:isEqualResponse"/>
+
+  <xs:complexType name="addString">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="a" type="xs:string"/>
+      <xs:element minOccurs="0" name="b" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addStringResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isEqual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="a" type="xs:string"/>
+      <xs:element minOccurs="0" name="b" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isEqualResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
