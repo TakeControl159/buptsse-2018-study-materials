@@ -1,0 +1,16 @@
+E:\Study\C#\Game\Game\bin\Debug\Game.exe.config
+E:\Study\C#\Game\Game\bin\Debug\Game.exe
+E:\Study\C#\Game\Game\bin\Debug\Game.pdb
+E:\Study\C#\Game\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+E:\Study\C#\Game\Game\obj\Debug\Game.FormGame.resources
+E:\Study\C#\Game\Game\obj\Debug\Game.Properties.Resources.resources
+E:\Study\C#\Game\Game\obj\Debug\Game.csproj.GenerateResource.Cache
+E:\Study\C#\Game\Game\obj\Debug\Game.exe
+E:\Study\C#\Game\Game\obj\Debug\Game.pdb
+E:\Study\C#\Game\Game\obj\Debug\Game.AboutBoxGame.resources
+E:\Study\C#\Game\Game\obj\Debug\Game.RankingBoxScore.resources
+E:\Study\C#\Game\Game\bin\Debug\Game.exe.manifest
+E:\Study\C#\Game\Game\bin\Debug\Game.application
+E:\Study\C#\Game\Game\obj\Debug\Game.TrustInfo.xml
+E:\Study\C#\Game\Game\obj\Debug\Game.exe.manifest
+E:\Study\C#\Game\Game\obj\Debug\Game.application

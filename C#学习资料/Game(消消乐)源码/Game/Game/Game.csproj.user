@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>D:\Program Files %28x86%29\Program Czhy\Game\|http://www.czh60601.icoc.cc/|发布\</PublishUrlHistory>
+    <InstallUrlHistory>http://www.czh60601.icoc.cc/</InstallUrlHistory>
+    <SupportUrlHistory>http://www.czh60601.icoc.cc/</SupportUrlHistory>
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory>http://www.czh60601.icoc.cc/</ErrorReportUrlHistory>
+    <FallbackCulture>zh-CN</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

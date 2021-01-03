@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Game.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Player1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player1</Value>
+    </Setting>
+    <Setting Name="Player2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player2</Value>
+    </Setting>
+    <Setting Name="Player3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player3</Value>
+    </Setting>
+    <Setting Name="Player4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player4</Value>
+    </Setting>
+    <Setting Name="Player5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player5</Value>
+    </Setting>
+    <Setting Name="Player6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player6</Value>
+    </Setting>
+    <Setting Name="Player7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player7</Value>
+    </Setting>
+    <Setting Name="Player8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player8</Value>
+    </Setting>
+    <Setting Name="Player9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player9</Value>
+    </Setting>
+    <Setting Name="Player10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Player10</Value>
+    </Setting>
+    <Setting Name="Score1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="Score2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4500</Value>
+    </Setting>
+    <Setting Name="Score3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
+    <Setting Name="Score4" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3500</Value>
+    </Setting>
+    <Setting Name="Score5" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="Score6" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2500</Value>
+    </Setting>
+    <Setting Name="Score7" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="Score8" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="Score9" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="Score10" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
